@@ -68,9 +68,3 @@ The site uses GitHub Pages with custom domain `optiotech.de`.
 ## License
 
 Copyright © 2025 Maik Bludovsky. All rights reserved.
-
-## Contact
-
-- **Developer:** Maik Bludovsky
-- **Email:** optiotech@web.de
-- **Website:** optiotech.de
