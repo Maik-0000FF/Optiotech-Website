@@ -327,7 +327,7 @@ header nav .lang-switch:hover {
 /* Horizontal Scroll Container */
 .screenshot-scroll-wrapper {
     position: relative;
-    height: 400vh;
+    height: 200vh;
 }
 
 .screenshot-scroll-wrapper-inner {
@@ -599,7 +599,7 @@ footer a:hover {
     }
 
     .screenshot-scroll-wrapper {
-        height: 300vh;
+        height: 150vh;
     }
 
     .screenshot-scroll-container {
