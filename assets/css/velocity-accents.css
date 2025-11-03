@@ -274,6 +274,12 @@ header nav a:hover {
     background: var(--bg-white);
 }
 
+.screenshot-header {
+    text-align: center;
+    padding: 20px 0 40px 0;
+    background: var(--bg-white);
+}
+
 .screenshots h2 {
     font-size: 42px;
     font-weight: 700;
@@ -287,33 +293,23 @@ header nav a:hover {
     text-align: center;
     font-size: 18px;
     color: var(--text-light);
-    margin-bottom: 56px;
-}
-
-/* Large Screenshot */
-.screenshot-large {
-    max-width: 1000px;
-    margin: 0 auto 80px;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-}
-
-.screenshot-large img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* Horizontal Scroll Container */
 .screenshot-scroll-wrapper {
     position: relative;
-    height: 300vh;
+    height: 400vh;
+}
+
+.screenshot-scroll-wrapper-inner {
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    background: var(--bg-white);
+    padding-bottom: 40px;
 }
 
 .screenshot-scroll-container {
-    position: sticky;
-    top: 80px;
     height: 550px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -565,8 +561,16 @@ footer a:hover {
         font-size: 32px;
     }
 
+    .screenshot-scroll-wrapper-inner {
+        top: 50px;
+    }
+
+    .screenshot-header {
+        padding: 16px 0 32px 0;
+    }
+
     .screenshot-scroll-wrapper {
-        height: 200vh;
+        height: 300vh;
     }
 
     .screenshot-scroll-container {

@@ -90,17 +90,14 @@
     <!-- Screenshots Section -->
     <section class="screenshots" id="screenshots">
         <div class="container">
-            <h2>Easy to Use, Powerful to Master</h2>
-            <p class="screenshots-subtitle">Simple preferences, infinite possibilities</p>
-
-            <!-- Main Screenshot -->
-            <div class="screenshot-large">
-                <img src="../screenshots/light/preferences_general_language_dropdown.png" alt="Choose from 10+ language presets">
-            </div>
-
             <!-- Horizontal Scrolling Screenshots -->
             <div class="screenshot-scroll-wrapper">
-                <div class="screenshot-scroll-container">
+                <div class="screenshot-scroll-wrapper-inner">
+                    <div class="screenshot-header">
+                        <h2>Easy to Use, Powerful to Master</h2>
+                        <p class="screenshots-subtitle">Simple preferences, infinite possibilities</p>
+                    </div>
+                    <div class="screenshot-scroll-container">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
                             <img src="../screenshots/light/preferences_mappings_german.png" alt="German language mappings">
@@ -131,8 +128,9 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <p class="scroll-hint">↓ Scroll down to explore more features ↓</p>
                 </div>
-                <p class="scroll-hint">↓ Scroll down to explore more features ↓</p>
             </div>
         </div>
     </section>
@@ -140,12 +138,14 @@
     <!-- Screenshots Section 2 - Usage Examples -->
     <section class="screenshots screenshots-reverse" id="usage">
         <div class="container">
-            <h2>See It in Action</h2>
-            <p class="screenshots-subtitle">Real-world usage examples</p>
-
             <!-- Horizontal Scrolling Screenshots (Reverse) -->
             <div class="screenshot-scroll-wrapper screenshot-scroll-wrapper-reverse">
-                <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
+                <div class="screenshot-scroll-wrapper-inner">
+                    <div class="screenshot-header">
+                        <h2>See It in Action</h2>
+                        <p class="screenshots-subtitle">Real-world usage examples</p>
+                    </div>
+                    <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
                             <div class="screenshot-placeholder">
@@ -188,8 +188,9 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <p class="scroll-hint">↓ Keep scrolling to see usage examples ↓</p>
                 </div>
-                <p class="scroll-hint">↓ Keep scrolling to see usage examples ↓</p>
             </div>
         </div>
     </section>
@@ -248,13 +249,15 @@
 
     <script>
         // Horizontal scroll on vertical scroll effect - Handles both sections
-        function initHorizontalScroll(wrapperSelector, containerSelector, reverse = false) {
+        function initHorizontalScroll(wrapperSelector, innerSelector, containerSelector, reverse = false) {
             const scrollWrapper = document.querySelector(wrapperSelector);
+            const scrollWrapperInner = document.querySelector(innerSelector);
             const scrollContainer = document.querySelector(containerSelector);
 
-            if (!scrollWrapper || !scrollContainer) return;
+            if (!scrollWrapper || !scrollWrapperInner || !scrollContainer) return;
 
             let ticking = false;
+            const stickyTop = parseInt(getComputedStyle(scrollWrapperInner).top);
 
             function updateScrollPosition() {
                 const rect = scrollWrapper.getBoundingClientRect();
@@ -263,19 +266,19 @@
                 const viewportWidth = scrollContainer.offsetWidth;
                 const maxScroll = containerWidth - viewportWidth;
 
-                const containerRect = scrollContainer.getBoundingClientRect();
-                const containerCenter = containerRect.top + (containerRect.height / 2);
-                const viewportCenter = window.innerHeight / 2;
+                const innerRect = scrollWrapperInner.getBoundingClientRect();
+                const wrapperTop = rect.top;
 
-                const threshold = 100;
+                // Check if wrapper-inner is stuck (sticky active)
+                const isSticky = innerRect.top <= stickyTop + 1;
 
-                if (Math.abs(containerCenter - viewportCenter) < threshold) {
-                    const wrapperTop = rect.top;
-                    const scrollStart = viewportCenter - (containerRect.height / 2);
-                    const scrollRange = wrapperHeight - containerRect.height;
+                // Only start horizontal scrolling when inner is fully sticky
+                if (isSticky && wrapperTop <= 0) {
+                    const scrollRange = wrapperHeight - window.innerHeight;
+                    const scrolledPastSticky = Math.abs(wrapperTop);
 
                     let scrollProgress = Math.max(0, Math.min(1,
-                        (scrollStart - wrapperTop) / scrollRange
+                        scrolledPastSticky / scrollRange
                     ));
 
                     // Reverse direction for second section
@@ -284,10 +287,9 @@
                     }
 
                     scrollContainer.scrollLeft = scrollProgress * maxScroll;
-                } else if (containerCenter > viewportCenter + threshold) {
+                } else {
+                    // Before sticky - stay at start
                     scrollContainer.scrollLeft = reverse ? maxScroll : 0;
-                } else if (containerCenter < viewportCenter - threshold) {
-                    scrollContainer.scrollLeft = reverse ? 0 : maxScroll;
                 }
 
                 ticking = false;
@@ -307,12 +309,18 @@
         }
 
         // Initialize both scroll sections
-        initHorizontalScroll('.screenshot-scroll-wrapper:not(.screenshot-scroll-wrapper-reverse)',
-                            '.screenshot-scroll-container:not(.screenshot-scroll-container-reverse)',
-                            false);
-        initHorizontalScroll('.screenshot-scroll-wrapper-reverse',
-                            '.screenshot-scroll-container-reverse',
-                            true);
+        initHorizontalScroll(
+            '.screenshot-scroll-wrapper:not(.screenshot-scroll-wrapper-reverse)',
+            '.screenshot-scroll-wrapper-inner:not(.screenshot-scroll-wrapper-reverse .screenshot-scroll-wrapper-inner)',
+            '.screenshot-scroll-container:not(.screenshot-scroll-container-reverse)',
+            false
+        );
+        initHorizontalScroll(
+            '.screenshot-scroll-wrapper-reverse',
+            '.screenshot-scroll-wrapper-reverse .screenshot-scroll-wrapper-inner',
+            '.screenshot-scroll-container-reverse',
+            true
+        );
     </script>
 </body>
 </html>
