@@ -1,0 +1,10 @@
+# robots.txt for optiotech.de
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://optiotech.de/sitemap.xml
+
+# Crawl-delay (optional, nur bei Bedarf)
+# Crawl-delay: 1
