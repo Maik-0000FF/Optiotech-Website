@@ -40,8 +40,8 @@
         <div class="container">
             <h2>See It in Action</h2>
             <div class="video-wrapper">
-                <video controls autoplay loop muted playsinline>
-                    <source src="../videos/demo_video.mov" type="video/mp4">
+                <video id="demoVideo" controls autoplay loop muted playsinline>
+                    <source src="../videos/Demo_Video_01.mov" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -142,54 +142,42 @@
             <div class="screenshot-scroll-wrapper screenshot-scroll-wrapper-reverse">
                 <div class="screenshot-scroll-wrapper-inner">
                     <div class="screenshot-header">
-                        <h2>See It in Action</h2>
-                        <p class="screenshots-subtitle">Real-world usage examples</p>
+                        <h2>Customize Everything</h2>
+                        <p class="screenshots-subtitle">Preferences designed for power users</p>
                     </div>
                     <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <div class="screenshot-placeholder">
-                                <p>Usage Example 1</p>
-                                <span>Screenshot coming soon</span>
-                            </div>
+                            <img src="../screenshots/dark/preferences_general_menu.png" alt="General preferences menu">
                             <div class="screenshot-caption">
-                                <h4>TextEdit Demo</h4>
-                                <p>Typing accents in real-time</p>
+                                <h4>General Settings</h4>
+                                <p>Configure activation key and timing</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <div class="screenshot-placeholder">
-                                <p>Usage Example 2</p>
-                                <span>Screenshot coming soon</span>
-                            </div>
+                            <img src="../screenshots/dark/preferences_general_custom_dropdown.png" alt="Custom dropdown in preferences">
                             <div class="screenshot-caption">
-                                <h4>Safari Integration</h4>
-                                <p>Works in web forms seamlessly</p>
+                                <h4>Custom Dropdown</h4>
+                                <p>Select your preferred activation key</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <div class="screenshot-placeholder">
-                                <p>Usage Example 3</p>
-                                <span>Screenshot coming soon</span>
-                            </div>
+                            <img src="../screenshots/dark/preferences_general_scrolled_menu.png" alt="Scrolled preferences menu">
                             <div class="screenshot-caption">
-                                <h4>Code Editor</h4>
-                                <p>Perfect for documentation</p>
+                                <h4>Advanced Options</h4>
+                                <p>Fine-tune overlay position and behavior</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <div class="screenshot-placeholder">
-                                <p>Usage Example 4</p>
-                                <span>Screenshot coming soon</span>
-                            </div>
+                            <img src="../screenshots/dark/preferences_mappings_custom.png" alt="Custom character mappings">
                             <div class="screenshot-caption">
-                                <h4>Terminal Usage</h4>
-                                <p>Even works in command line</p>
+                                <h4>Custom Mappings</h4>
+                                <p>Create your own shortcuts and cycling</p>
                             </div>
                         </div>
                     </div>
                     </div>
-                    <p class="scroll-hint">↓ Keep scrolling to see usage examples ↓</p>
+                    <p class="scroll-hint">↓ Scroll down to explore preferences ↓</p>
                 </div>
             </div>
         </div>
@@ -248,6 +236,14 @@
     </footer>
 
     <script>
+        // Set video playback speed to 2x
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('demoVideo');
+            if (video) {
+                video.playbackRate = 2.0;
+            }
+        });
+
         // Horizontal scroll on vertical scroll effect - Handles both sections
         function initHorizontalScroll(wrapperSelector, innerSelector, containerSelector, reverse = false) {
             const scrollWrapper = document.querySelector(wrapperSelector);
