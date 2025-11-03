@@ -448,6 +448,20 @@ header nav .lang-switch:hover {
     text-align: center;
 }
 
+.download .download-app-icon {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.download .download-app-icon:hover {
+    transform: scale(1.05);
+}
+
 .download h2 {
     font-size: 42px;
     font-weight: 700;
