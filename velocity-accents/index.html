@@ -3,166 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PowerToys Quick Accent for macOS - Type accented characters instantly with zero lag">
-    <title>Velocity Accents - PowerToys Quick Accent for macOS</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <meta name="description" content="Velocity Accents - Quick Accent for macOS. Type accented characters instantly with zero lag. Inspired by Windows PowerToys Quick Accent.">
+    <title>Velocity Accents - Quick Accent for macOS</title>
+    <link rel="stylesheet" href="../assets/css/velocity-accents.css">
     <link rel="icon" type="image/png" href="../assets/images/velocity-accents-icon.png">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><a href="../" style="text-decoration: none; color: inherit;">optiotech</a></h1>
+            <h1><a href="../">optiotech</a></h1>
             <nav>
-                <a href="../#products">Products</a>
                 <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
                 <a href="#download">Download</a>
                 <a href="mailto:optiotech@web.de">Support</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <img src="../assets/images/velocity-accents-icon.png" alt="Velocity Accents" class="app-icon">
+            <img src="../assets/images/velocity-accents-icon.png" alt="Velocity Accents Icon" class="app-icon">
             <h1>Velocity Accents</h1>
-            <p>PowerToys Quick Accent for macOS</p>
-            <p style="font-size: 20px; margin-top: 20px;">Type accented characters (ä, ö, ü, é, ñ, etc.) as fast as you think</p>
-            <div style="margin-top: 40px;">
-                <a href="https://gumroad.com/l/velocity-accents" class="btn">Buy Now - $9.99</a>
-                <a href="#features" class="btn btn-secondary" style="margin-left: 12px;">Learn More</a>
+            <p class="subtitle">Quick Accent for macOS</p>
+            <p class="description">Type accented characters as fast as you think. Fully customizable and editable. Inspired by Windows PowerToys Quick Accent.</p>
+            <div class="hero-buttons">
+                <a href="https://gumroad.com/l/velocity-accents" class="btn btn-primary">Buy Now - $9.99</a>
+                <a href="#demo" class="btn btn-secondary">Watch Demo</a>
             </div>
         </div>
     </section>
 
+    <!-- Video Demo Section -->
+    <section class="video-section" id="demo">
+        <div class="container">
+            <h2>See It in Action</h2>
+            <div class="video-wrapper">
+                <video controls autoplay loop muted playsinline>
+                    <source src="../videos/demo_video.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <h2>Features</h2>
+            <h2>Why Velocity Accents?</h2>
             <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">🎯</div>
-                    <h3>PowerToys Gesture</h3>
-                    <p>Familiar hold & wait workflow from Windows PowerToys Quick Accent</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
+                <div class="feature-card">
+                    <span class="feature-icon">→</span>
                     <h3>Zero Lag</h3>
-                    <p>Characters appear instantly, no clipboard manipulation, no delays</p>
+                    <p>Characters appear instantly with no delays. No clipboard manipulation, just pure speed.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🌍</div>
-                    <h3>8 Languages</h3>
-                    <p>German, French, Spanish, Nordic, Portuguese, Italian, Multilingual, Emoji</p>
+                <div class="feature-card">
+                    <span class="feature-icon">A+</span>
+                    <h3>10+ Languages</h3>
+                    <p>German, French, Spanish, Polish, Nordic, Portuguese, Italian, Multilingual, Emoji, and Math symbols.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">✏️</div>
+                <div class="feature-card">
+                    <span class="feature-icon">⌨</span>
+                    <h3>PowerToys Gesture</h3>
+                    <p>Familiar hold & wait workflow from Windows PowerToys Quick Accent.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">±</span>
                     <h3>Custom Mappings</h3>
-                    <p>Create your own character shortcuts with full cycling support</p>
+                    <p>Create your own character shortcuts with full cycling support.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🎨</div>
+                <div class="feature-card">
+                    <span class="feature-icon">◉</span>
                     <h3>Visual Overlay</h3>
-                    <p>See cycling variants while typing with customizable position</p>
+                    <p>See cycling variants while typing with customizable position.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Fully Customizable</h3>
-                    <p>Adjust delays, leader keys, overlay position, and more</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Privacy First</h3>
-                    <p>All processing happens locally, no internet required</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Native Performance</h3>
-                    <p>Built with Swift for Apple Silicon and Intel Macs</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🔄</div>
+                <div class="feature-card">
+                    <span class="feature-icon">∞</span>
                     <h3>Universal Support</h3>
-                    <p>Works in all macOS apps - Safari, Terminal, VS Code, Office, etc.</p>
+                    <p>Works in all macOS apps - Safari, Terminal, VS Code, Office, and more.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="screenshots">
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
         <div class="container">
-            <h2>How It Works</h2>
-            <p style="color: var(--text-light); font-size: 18px; margin-bottom: 40px;">
-                Hold any key + press Space within 400ms → Get accented character
-            </p>
-            <div class="screenshot-placeholder">
-                Screenshots coming soon
+            <h2>Easy to Use, Powerful to Master</h2>
+            <p class="screenshots-subtitle">Simple preferences, infinite possibilities</p>
+
+            <!-- Main Screenshot -->
+            <div class="screenshot-large">
+                <img src="../screenshots/light/preferences_general_language_dropdown.png" alt="Choose from 10+ language presets">
             </div>
-            <p style="color: var(--text-light); margin-top: 20px;">
-                Example: Hold 'a' + press Space → ä<br>
-                Cycling: Hold 'e' + press Space → é → è → ê → ë
-            </p>
+
+            <!-- Horizontal Scrolling Screenshots -->
+            <div class="screenshot-scroll-wrapper">
+                <div class="screenshot-scroll-container">
+                    <div class="screenshot-grid">
+                        <div class="screenshot-item">
+                            <img src="../screenshots/light/preferences_mappings_german.png" alt="German language mappings">
+                            <div class="screenshot-caption">
+                                <h4>German Mappings</h4>
+                                <p>Perfect umlauts: ä, ö, ü, ß</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/light/preferences_mappings_french.png" alt="French language mappings with cycling">
+                            <div class="screenshot-caption">
+                                <h4>French Cycling</h4>
+                                <p>Cycle through: é → è → ê → ë</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/light/preferences_mappings_emoji.png" alt="Emoji mappings">
+                            <div class="screenshot-caption">
+                                <h4>Emoji Support</h4>
+                                <p>Quick access to hearts, smileys & more</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/light/preferences_mappings_math.png" alt="Math symbols">
+                            <div class="screenshot-caption">
+                                <h4>Math Symbols</h4>
+                                <p>Type π, α, β, √, ∫ instantly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="scroll-hint">↓ Scroll down to explore more features ↓</p>
+            </div>
         </div>
     </section>
 
-    <section class="features" id="download">
-        <div class="container" style="max-width: 800px;">
+    <!-- Screenshots Section 2 - Usage Examples -->
+    <section class="screenshots screenshots-reverse" id="usage">
+        <div class="container">
+            <h2>See It in Action</h2>
+            <p class="screenshots-subtitle">Real-world usage examples</p>
+
+            <!-- Horizontal Scrolling Screenshots (Reverse) -->
+            <div class="screenshot-scroll-wrapper screenshot-scroll-wrapper-reverse">
+                <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
+                    <div class="screenshot-grid">
+                        <div class="screenshot-item">
+                            <div class="screenshot-placeholder">
+                                <p>Usage Example 1</p>
+                                <span>Screenshot coming soon</span>
+                            </div>
+                            <div class="screenshot-caption">
+                                <h4>TextEdit Demo</h4>
+                                <p>Typing accents in real-time</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-placeholder">
+                                <p>Usage Example 2</p>
+                                <span>Screenshot coming soon</span>
+                            </div>
+                            <div class="screenshot-caption">
+                                <h4>Safari Integration</h4>
+                                <p>Works in web forms seamlessly</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-placeholder">
+                                <p>Usage Example 3</p>
+                                <span>Screenshot coming soon</span>
+                            </div>
+                            <div class="screenshot-caption">
+                                <h4>Code Editor</h4>
+                                <p>Perfect for documentation</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <div class="screenshot-placeholder">
+                                <p>Usage Example 4</p>
+                                <span>Screenshot coming soon</span>
+                            </div>
+                            <div class="screenshot-caption">
+                                <h4>Terminal Usage</h4>
+                                <p>Even works in command line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="scroll-hint">↓ Keep scrolling to see usage examples ↓</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
             <h2>Get Velocity Accents</h2>
-            <p style="text-align: center; font-size: 20px; color: var(--text-light); margin-bottom: 40px;">
-                One-time purchase, lifetime access
-            </p>
+            <p class="price-tag">One-time purchase • Lifetime access • No subscription</p>
+            <a href="https://gumroad.com/l/velocity-accents" class="btn btn-primary">Buy Now - $9.99</a>
 
-            <div style="text-align: center; margin-bottom: 40px;">
-                <a href="https://gumroad.com/l/velocity-accents" class="btn" style="font-size: 20px; padding: 18px 40px;">
-                    Buy Now - $9.99
-                </a>
-            </div>
+            <div class="requirements-box">
+                <div class="requirement-card">
+                    <h3>System Requirements</h3>
+                    <ul>
+                        <li>macOS 14.0 (Sonoma) or later</li>
+                        <li>Apple Silicon or Intel Mac</li>
+                        <li>Accessibility permissions (one-time setup)</li>
+                        <li>US keyboard layout recommended</li>
+                    </ul>
+                </div>
 
-            <div class="requirements">
-                <h3>System Requirements</h3>
-                <ul>
-                    <li>macOS 14.0 (Sonoma) or later</li>
-                    <li>Accessibility permissions (one-time setup)</li>
-                    <li>US keyboard layout recommended</li>
-                    <li>Works on Apple Silicon and Intel Macs</li>
-                </ul>
-            </div>
-
-            <div class="requirements" style="margin-top: 20px;">
-                <h3>Installation</h3>
-                <ul>
-                    <li>Download and unzip the DMG file</li>
-                    <li>Drag VelocityAccents.app to Applications</li>
-                    <li>Launch the app</li>
-                    <li>Grant Accessibility permissions when prompted</li>
-                    <li>Start typing with accents!</li>
-                </ul>
+                <div class="requirement-card">
+                    <h3>Quick Setup</h3>
+                    <ul>
+                        <li>Download and open the DMG file</li>
+                        <li>Drag to Applications folder</li>
+                        <li>Launch and grant permissions</li>
+                        <li>Start typing with accents!</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="features" style="background: var(--bg-gray);">
-        <div class="container" style="max-width: 800px; text-align: center;">
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
             <h2>Need Help?</h2>
-            <p style="font-size: 18px; color: var(--text-light); margin-bottom: 30px;">
-                Questions, feedback, or technical support?
-            </p>
-            <p style="font-size: 18px;">
-                <strong>Developer:</strong> Maik Bludovsky<br>
-                <strong>Email:</strong> <a href="mailto:optiotech@web.de">optiotech@web.de</a><br>
-                <strong>Website:</strong> <a href="https://optiotech.de">optiotech.de</a>
-            </p>
+            <p>Questions, feedback, or technical support?</p>
+            <p><strong>Developer:</strong> Maik Bludovsky</p>
+            <p><strong>Email:</strong> <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
+            <p><strong>Website:</strong> <a href="https://optiotech.de">optiotech.de</a></p>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p><strong>Velocity Accents</strong> by optiotech</p>
-            <p>PowerToys Quick Accent for macOS</p>
+            <p>Quick Accent for macOS • Inspired by Windows PowerToys Quick Accent</p>
             <p>Developer: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
-            <p style="margin-top: 20px; font-size: 14px;">
-                Logo ™ pending trademark<br>
-                Copyright © 2025 Maik Bludovsky. All rights reserved.
-            </p>
+            <p style="margin-top: 20px;">Velocity™ logo trademark pending<br>Copyright © 2025 Maik Bludovsky. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Horizontal scroll on vertical scroll effect - Handles both sections
+        function initHorizontalScroll(wrapperSelector, containerSelector, reverse = false) {
+            const scrollWrapper = document.querySelector(wrapperSelector);
+            const scrollContainer = document.querySelector(containerSelector);
+
+            if (!scrollWrapper || !scrollContainer) return;
+
+            let ticking = false;
+
+            function updateScrollPosition() {
+                const rect = scrollWrapper.getBoundingClientRect();
+                const wrapperHeight = scrollWrapper.offsetHeight;
+                const containerWidth = scrollContainer.scrollWidth;
+                const viewportWidth = scrollContainer.offsetWidth;
+                const maxScroll = containerWidth - viewportWidth;
+
+                const containerRect = scrollContainer.getBoundingClientRect();
+                const containerCenter = containerRect.top + (containerRect.height / 2);
+                const viewportCenter = window.innerHeight / 2;
+
+                const threshold = 100;
+
+                if (Math.abs(containerCenter - viewportCenter) < threshold) {
+                    const wrapperTop = rect.top;
+                    const scrollStart = viewportCenter - (containerRect.height / 2);
+                    const scrollRange = wrapperHeight - containerRect.height;
+
+                    let scrollProgress = Math.max(0, Math.min(1,
+                        (scrollStart - wrapperTop) / scrollRange
+                    ));
+
+                    // Reverse direction for second section
+                    if (reverse) {
+                        scrollProgress = 1 - scrollProgress;
+                    }
+
+                    scrollContainer.scrollLeft = scrollProgress * maxScroll;
+                } else if (containerCenter > viewportCenter + threshold) {
+                    scrollContainer.scrollLeft = reverse ? maxScroll : 0;
+                } else if (containerCenter < viewportCenter - threshold) {
+                    scrollContainer.scrollLeft = reverse ? 0 : maxScroll;
+                }
+
+                ticking = false;
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateScrollPosition);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', requestTick);
+            window.addEventListener('resize', requestTick);
+
+            updateScrollPosition();
+        }
+
+        // Initialize both scroll sections
+        initHorizontalScroll('.screenshot-scroll-wrapper:not(.screenshot-scroll-wrapper-reverse)',
+                            '.screenshot-scroll-container:not(.screenshot-scroll-container-reverse)',
+                            false);
+        initHorizontalScroll('.screenshot-scroll-wrapper-reverse',
+                            '.screenshot-scroll-container-reverse',
+                            true);
+    </script>
 </body>
 </html>
