@@ -81,6 +81,12 @@ header h1 a:hover {
     color: var(--primary-color);
 }
 
+header h1 .logo {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
 header nav {
     display: flex;
     gap: 32px;

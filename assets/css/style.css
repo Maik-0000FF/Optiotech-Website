@@ -68,6 +68,12 @@ header h1 {
     color: var(--text-dark);
 }
 
+header h1 .logo {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
 header nav a {
     margin-left: 30px;
     color: var(--text-dark);
