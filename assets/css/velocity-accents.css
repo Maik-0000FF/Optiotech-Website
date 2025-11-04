@@ -474,7 +474,7 @@ header .lang-switch:hover {
 /* Horizontal Scroll Container */
 .screenshot-scroll-wrapper {
     position: relative;
-    height: 200vh;
+    height: 250vh;
 }
 
 .screenshot-scroll-wrapper-inner {
@@ -798,7 +798,7 @@ footer a:hover {
     }
 
     .screenshot-scroll-wrapper {
-        height: 220vh;
+        height: 280vh;
     }
 
     .screenshot-scroll-container {
@@ -855,7 +855,7 @@ footer a:hover {
 
     /* Even smaller screenshots for very small phones */
     .screenshot-scroll-wrapper {
-        height: 240vh;
+        height: 300vh;
     }
 
     .screenshot-scroll-container {
