@@ -469,7 +469,7 @@ header .lang-switch:hover {
 }
 
 .screenshot-scroll-container {
-    height: 550px;
+    height: 620px;
     overflow-x: hidden;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
@@ -490,7 +490,7 @@ header .lang-switch:hover {
 
 .screenshot-item img {
     width: auto;
-    height: 420px;
+    height: 480px;
     display: block;
     object-fit: contain;
     border-radius: var(--radius-lg);
@@ -526,8 +526,8 @@ header .lang-switch:hover {
 
 /* Screenshot Placeholder */
 .screenshot-placeholder {
-    width: 600px;
-    height: 420px;
+    width: 680px;
+    height: 480px;
     background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--bg-light) 100%);
     display: flex;
     flex-direction: column;
@@ -725,6 +725,11 @@ footer a:hover {
         display: none;
     }
 
+    /* Smaller logo on mobile */
+    header h1 .logo {
+        height: 28px;
+    }
+
     .hero h1 {
         font-size: 40px;
     }
@@ -756,15 +761,15 @@ footer a:hover {
     }
 
     .screenshot-scroll-wrapper {
-        height: 150vh;
+        height: 220vh;
     }
 
     .screenshot-scroll-container {
-        height: 450px;
+        height: 320px;
     }
 
     .screenshot-item img {
-        height: 320px;
+        height: 240px;
     }
 
     .screenshot-caption h4 {
@@ -806,6 +811,19 @@ footer a:hover {
     .btn {
         padding: 12px 24px;
         font-size: 15px;
+    }
+
+    /* Even smaller screenshots for very small phones */
+    .screenshot-scroll-wrapper {
+        height: 240vh;
+    }
+
+    .screenshot-scroll-container {
+        height: 280px;
+    }
+
+    .screenshot-item img {
+        height: 200px;
     }
 }
 

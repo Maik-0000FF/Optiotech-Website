@@ -433,7 +433,9 @@
 
                 // Only start horizontal scrolling when inner is fully sticky
                 if (isSticky && wrapperTop <= 0) {
-                    const scrollRange = (wrapperHeight - window.innerHeight) * 0.65;
+                    // Mobile: slower scroll (0.45), Desktop: faster (0.8)
+                    const scrollMultiplier = window.innerWidth <= 768 ? 0.45 : 0.8;
+                    const scrollRange = (wrapperHeight - window.innerHeight) * scrollMultiplier;
                     const scrolledPastSticky = Math.abs(wrapperTop);
 
                     let scrollProgress = Math.max(0, Math.min(1,
