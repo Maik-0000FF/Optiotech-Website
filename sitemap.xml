@@ -5,21 +5,23 @@
     <!-- Main Page (German) -->
     <url>
         <loc>https://optiotech.de/</loc>
-        <lastmod>2025-01-03</lastmod>
+        <lastmod>2025-01-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html"/>
     </url>
 
     <!-- Main Page (English) -->
     <url>
         <loc>https://optiotech.de/en.html</loc>
-        <lastmod>2025-01-03</lastmod>
+        <lastmod>2025-01-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html"/>
     </url>
 
 </urlset>
