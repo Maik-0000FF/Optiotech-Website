@@ -486,7 +486,8 @@ header .lang-switch:hover {
 }
 
 .screenshot-scroll-container {
-    height: 650px;
+    height: auto;
+    min-height: 650px;
     overflow-x: hidden;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
@@ -506,11 +507,13 @@ header .lang-switch:hover {
 .screenshot-item {
     flex: 0 0 auto;
     position: relative;
+    max-width: 900px;
 }
 
 .screenshot-item img {
-    width: auto;
-    height: 506px;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
     display: block;
     object-fit: contain;
     border-radius: var(--radius-lg);
@@ -546,8 +549,9 @@ header .lang-switch:hover {
 
 /* Screenshot Placeholder */
 .screenshot-placeholder {
-    width: 720px;
-    height: 506px;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 3840 / 2150;
     background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--bg-light) 100%);
     display: flex;
     flex-direction: column;
@@ -800,11 +804,18 @@ footer a:hover {
     }
 
     .screenshot-scroll-container {
-        height: 280px;
+        height: auto;
+        min-height: 280px;
+    }
+
+    .screenshot-item {
+        max-width: 100%;
     }
 
     .screenshot-item img {
-        height: 200px;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
 
     .screenshot-caption h4 {
@@ -816,8 +827,9 @@ footer a:hover {
     }
 
     .screenshot-placeholder {
-        width: 400px;
-        height: 280px;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 3840 / 2150;
     }
 
     .screenshot-placeholder p {
@@ -854,11 +866,18 @@ footer a:hover {
     }
 
     .screenshot-scroll-container {
-        height: 240px;
+        height: auto;
+        min-height: 240px;
+    }
+
+    .screenshot-item {
+        max-width: 100%;
     }
 
     .screenshot-item img {
-        height: 160px;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
 }
 
