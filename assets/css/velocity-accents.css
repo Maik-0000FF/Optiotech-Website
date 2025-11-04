@@ -581,6 +581,18 @@ header .lang-switch:hover {
     background: var(--bg-light);
 }
 
+.screenshots-reverse .screenshot-scroll-wrapper-inner {
+    background: var(--bg-light);
+}
+
+.screenshots-reverse .screenshot-header {
+    background: var(--bg-light);
+}
+
+.screenshots-reverse .screenshot-caption {
+    background: var(--bg-light);
+}
+
 /* Scroll hint */
 .scroll-hint {
     text-align: center;
