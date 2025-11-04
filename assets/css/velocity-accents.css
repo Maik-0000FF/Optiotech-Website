@@ -397,10 +397,15 @@ header .lang-switch:hover {
 .feature-card {
     background: white;
     border-radius: var(--radius-lg);
-    padding: 32px;
+    padding: 56px 32px 32px;
     text-align: center;
     transition: all 0.3s;
     border: 1px solid var(--border-light);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .feature-card:hover {
@@ -411,6 +416,16 @@ header .lang-switch:hover {
 .feature-icon {
     font-size: 52px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    line-height: 1;
+}
+
+.feature-icon-svg {
+    width: 52px;
+    height: 52px;
     display: block;
 }
 
@@ -437,6 +452,8 @@ header .lang-switch:hover {
     text-align: center;
     padding: 20px 0 40px 0;
     background: var(--bg-white);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .screenshots h2 {
@@ -469,17 +486,19 @@ header .lang-switch:hover {
 }
 
 .screenshot-scroll-container {
-    height: 620px;
+    height: 650px;
     overflow-x: hidden;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 
 .screenshot-grid {
     display: flex;
     gap: 24px;
-    padding: 0 40px;
+    padding: 0;
     width: max-content;
 }
 
@@ -490,7 +509,7 @@ header .lang-switch:hover {
 
 .screenshot-item img {
     width: auto;
-    height: 480px;
+    height: 506px;
     display: block;
     object-fit: contain;
     border-radius: var(--radius-lg);
@@ -526,8 +545,8 @@ header .lang-switch:hover {
 
 /* Screenshot Placeholder */
 .screenshot-placeholder {
-    width: 680px;
-    height: 480px;
+    width: 720px;
+    height: 506px;
     background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--bg-light) 100%);
     display: flex;
     flex-direction: column;
@@ -564,6 +583,9 @@ header .lang-switch:hover {
     font-size: 14px;
     color: var(--text-light);
     animation: fadeInOut 2s infinite;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes fadeInOut {
@@ -647,10 +669,18 @@ header .lang-switch:hover {
 
 .requirement-card li::before {
     content: "✓";
-    color: var(--primary-color);
+    color: white;
     font-weight: bold;
     margin-right: 12px;
-    font-size: 18px;
+    font-size: 14px;
+    background: var(--primary-color);
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 /* Support Section */
@@ -752,6 +782,10 @@ footer a:hover {
         font-size: 32px;
     }
 
+    .feature-card {
+        padding: 40px 24px 24px;
+    }
+
     .screenshot-scroll-wrapper-inner {
         top: 50px;
     }
@@ -765,11 +799,11 @@ footer a:hover {
     }
 
     .screenshot-scroll-container {
-        height: 320px;
+        height: 280px;
     }
 
     .screenshot-item img {
-        height: 240px;
+        height: 200px;
     }
 
     .screenshot-caption h4 {
@@ -781,8 +815,8 @@ footer a:hover {
     }
 
     .screenshot-placeholder {
-        width: 480px;
-        height: 320px;
+        width: 400px;
+        height: 280px;
     }
 
     .screenshot-placeholder p {
@@ -819,11 +853,11 @@ footer a:hover {
     }
 
     .screenshot-scroll-container {
-        height: 280px;
+        height: 240px;
     }
 
     .screenshot-item img {
-        height: 200px;
+        height: 160px;
     }
 }
 
