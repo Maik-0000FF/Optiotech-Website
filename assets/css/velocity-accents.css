@@ -128,7 +128,7 @@ header .lang-switch {
     font-size: 15px;
     font-weight: 600;
     padding: 6px 12px;
-    border: 1.5px solid var(--border-light);
+    border: 2px solid var(--border-light);
     border-radius: 6px;
     transition: all 0.2s;
 }
@@ -241,7 +241,6 @@ header .lang-switch:hover {
 .mobile-nav a:active {
     background: var(--bg-light);
     color: var(--primary-color);
-    transform: translateX(-4px);
 }
 
 .mobile-nav .lang-switch-mobile {
@@ -255,7 +254,6 @@ header .lang-switch:hover {
 .mobile-nav .lang-switch-mobile:hover {
     background: var(--primary-color);
     color: white;
-    transform: translateX(0) scale(1.02);
 }
 
 /* Hero Section */
@@ -322,26 +320,21 @@ header .lang-switch:hover {
 .btn-primary {
     background: var(--primary-color);
     color: white;
-    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
 }
 
 .btn-primary:hover {
     background: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.4);
 }
 
 .btn-secondary {
     background: white;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
-    box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
     background: var(--primary-color);
     color: white;
-    transform: translateY(-2px);
 }
 
 /* Video Section */
@@ -409,8 +402,7 @@ header .lang-switch:hover {
 }
 
 .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    background: var(--bg-light);
 }
 
 .feature-icon {
@@ -622,13 +614,7 @@ header .lang-switch:hover {
     height: 96px;
     margin: 0 auto 24px;
     border-radius: 22px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     display: block;
-    transition: transform 0.3s ease;
-}
-
-.download .download-app-icon:hover {
-    transform: scale(1.05);
 }
 
 .download h2 {

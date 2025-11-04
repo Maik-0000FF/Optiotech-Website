@@ -130,12 +130,10 @@ header nav a:hover {
     font-size: 18px;
     font-weight: 500;
     transition: all 0.2s;
-    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+    opacity: 0.9;
 }
 
 .btn-secondary {
