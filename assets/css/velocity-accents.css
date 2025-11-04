@@ -492,6 +492,7 @@ header .lang-switch:hover {
     -webkit-overflow-scrolling: touch;
     max-width: 900px;
     margin: 0 auto;
+    border-radius: var(--radius-lg);
 }
 
 
@@ -523,7 +524,7 @@ header .lang-switch:hover {
     background: white;
     padding: 60px 20px 20px 20px;
     text-align: center;
-    border-radius: var(--radius-lg);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     box-shadow: var(--shadow-md);
     margin-top: -40px;
     position: relative;
