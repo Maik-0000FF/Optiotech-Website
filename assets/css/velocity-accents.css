@@ -421,12 +421,14 @@ header .lang-switch:hover {
     justify-content: center;
     height: 52px;
     line-height: 1;
+    color: var(--text-medium);
 }
 
 .feature-icon-svg {
     width: 52px;
     height: 52px;
     display: block;
+    filter: opacity(0.8);
 }
 
 .feature-card h3 {
