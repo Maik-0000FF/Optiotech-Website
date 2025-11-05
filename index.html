@@ -438,13 +438,15 @@
 
                 // Horizontal scroll ONLY when sticky is active
                 if (isSticky) {
-                    // Mobile: slower scroll (0.45), Desktop: faster (0.8)
-                    const scrollMultiplier = window.innerWidth <= 768 ? 0.45 : 0.8;
+                    // Base multiplier for height calculation (must match height calculation!)
+                    const baseMultiplier = window.innerWidth <= 768 ? 0.45 : 0.8;
+                    // Horizontal scroll speed factor (lower = slower horizontal movement)
+                    // Mobile: 0.67 makes it 33% slower, Desktop: 1.0 keeps same speed
+                    const horizontalSpeedFactor = window.innerWidth <= 768 ? 0.67 : 1.0;
 
-                    // Calculate scroll range based on actual horizontal scroll distance needed
-                    // This ensures horizontal scroll completes exactly when sticky ends
+                    // Calculate scroll range: multiply by speed factor to slow horizontal scroll
                     const horizontalScrollDistance = containerWidth - viewportWidth;
-                    const scrollRange = horizontalScrollDistance / scrollMultiplier;
+                    const scrollRange = (horizontalScrollDistance / baseMultiplier) / horizontalSpeedFactor;
 
                     // Calculate scrolled distance from when sticky became active
                     // Subtract the stickyTop offset to start from 0 when sticky activates
