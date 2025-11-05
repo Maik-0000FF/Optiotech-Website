@@ -468,7 +468,7 @@ header .lang-switch:hover {
 /* Horizontal Scroll Container */
 .screenshot-scroll-wrapper {
     position: relative;
-    height: 250vh;
+    height: 200vh;
 }
 
 .screenshot-scroll-wrapper-inner {
@@ -775,6 +775,7 @@ footer a:hover {
         flex-direction: column;
     }
 
+    .video-section h2,
     .features h2,
     .screenshots h2,
     .download h2 {
@@ -794,7 +795,7 @@ footer a:hover {
     }
 
     .screenshot-scroll-wrapper {
-        height: 280vh;
+        height: 180vh;
     }
 
     .screenshot-caption {
@@ -844,9 +845,13 @@ footer a:hover {
         font-size: 15px;
     }
 
+    .screenshot-caption h4 {
+        font-size: 15px;
+    }
+
     /* Even smaller screenshots for very small phones */
     .screenshot-scroll-wrapper {
-        height: 300vh;
+        height: 160vh;
     }
 
     .screenshot-caption {

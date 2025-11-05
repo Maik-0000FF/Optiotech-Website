@@ -437,15 +437,15 @@
                 // Check if wrapper-inner is stuck (sticky active)
                 const isSticky = innerRect.top <= stickyTop + 1;
 
-                // Only start horizontal scrolling when inner is fully sticky
+                // Only horizontal scroll when sticky is active and section is in view
                 if (isSticky && wrapperTop <= 0) {
                     // Mobile: slower scroll (0.45), Desktop: faster (0.8)
                     const scrollMultiplier = window.innerWidth <= 768 ? 0.45 : 0.8;
                     const scrollRange = (wrapperHeight - window.innerHeight) * scrollMultiplier;
-                    const scrolledPastSticky = Math.abs(wrapperTop);
+                    const scrolledDistance = Math.abs(wrapperTop);
 
                     let scrollProgress = Math.max(0, Math.min(1,
-                        scrolledPastSticky / scrollRange
+                        scrolledDistance / scrollRange
                     ));
 
                     // Reverse direction for second section
@@ -455,12 +455,12 @@
 
                     scrollContainer.scrollLeft = scrollProgress * maxScroll;
                 } else {
-                    // Determine if we're above or below the section
+                    // Immediate snap to start/end positions based on scroll direction
                     if (wrapperTop > 0) {
-                        // Above section (not reached yet)
+                        // Above section (not reached yet) - set to start position
                         scrollContainer.scrollLeft = reverse ? maxScroll : 0;
                     } else {
-                        // Below section (scrolled past)
+                        // Below section (passed) - set to end position
                         scrollContainer.scrollLeft = reverse ? 0 : maxScroll;
                     }
                 }
