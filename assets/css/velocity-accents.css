@@ -480,15 +480,13 @@ header .lang-switch:hover {
 }
 
 .screenshot-scroll-container {
-    height: 650px;
     overflow-x: hidden;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    max-width: 900px;
+    width: min(900px, calc(100vw - 48px));
     margin: 0 auto;
     border-radius: var(--radius-lg);
 }
-
 
 .screenshot-grid {
     display: flex;
@@ -500,14 +498,15 @@ header .lang-switch:hover {
 .screenshot-item {
     flex: 0 0 auto;
     position: relative;
+    width: min(900px, calc(100vw - 48px));
 }
 
 .screenshot-item img {
-    width: auto;
-    height: 506px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: var(--radius-lg);
     background: white;
     box-shadow: var(--shadow-md);
@@ -524,6 +523,7 @@ header .lang-switch:hover {
     margin-top: -40px;
     position: relative;
     z-index: 1;
+    flex-shrink: 0;
 }
 
 .screenshot-caption h4 {
@@ -801,14 +801,9 @@ footer a:hover {
         height: 280vh;
     }
 
-    .screenshot-scroll-container {
-        height: 320px;
-    }
-
-    .screenshot-item img {
-        height: 240px;
-        width: auto;
-        max-width: 100%;
+    .screenshot-caption {
+        padding: 50px 16px 16px 16px;
+        margin-top: -32px;
     }
 
     .screenshot-caption h4 {
@@ -858,14 +853,9 @@ footer a:hover {
         height: 300vh;
     }
 
-    .screenshot-scroll-container {
-        height: 280px;
-    }
-
-    .screenshot-item img {
-        height: 200px;
-        width: auto;
-        max-width: 100%;
+    .screenshot-caption {
+        padding: 40px 12px 12px 12px;
+        margin-top: -24px;
     }
 }
 
