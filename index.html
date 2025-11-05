@@ -504,20 +504,19 @@
                 const scrollDistance = scrollWidth - containerWidth;
 
                 // Calculate optimal height for perfect sync between sticky and horizontal scroll
-                // Using scrollMultiplier from the scroll function (0.45 mobile, 0.8 desktop)
                 const isMobile = window.innerWidth <= 768;
-                const scrollMultiplier = isMobile ? 0.45 : 0.8;
+                const baseMultiplier = isMobile ? 0.45 : 0.8;
+                const horizontalSpeedFactor = isMobile ? 0.67 : 1.0;
 
-                // Height = viewport + (horizontal scroll distance / multiplier)
-                // When vertical scroll = (height - viewport) × multiplier, horizontal scroll = 100%
-                // This ensures horizontal scroll completes EXACTLY when sticky ends
-                const calculatedHeight = window.innerHeight + (scrollDistance / scrollMultiplier);
+                // Height must account for both baseMultiplier AND speedFactor
+                // scrollRange = (scrollDistance / baseMultiplier) / speedFactor
+                // Height = viewport + scrollRange to ensure perfect sync
+                const calculatedHeight = window.innerHeight + (scrollDistance / baseMultiplier) / horizontalSpeedFactor;
 
                 wrapper.style.height = `${calculatedHeight}px`;
 
-                // Debug: verify the math
-                const expectedScrollRange = (calculatedHeight - window.innerHeight) * scrollMultiplier;
-                console.log(`Section height: ${calculatedHeight}px, Expected scroll range: ${expectedScrollRange}px, Actual scroll distance: ${scrollDistance}px`);
+                // Debug: verify sticky behavior
+                console.log(`Wrapper: ${wrapper.classList.contains('screenshot-scroll-wrapper-reverse') ? 'REVERSE' : 'NORMAL'}, Height: ${calculatedHeight}px, Viewport: ${window.innerHeight}px, Ratio: ${(calculatedHeight / window.innerHeight).toFixed(2)}x`);
             });
         }
 

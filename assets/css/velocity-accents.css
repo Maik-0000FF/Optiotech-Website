@@ -477,6 +477,7 @@ header .lang-switch:hover {
     z-index: 100;
     background: var(--bg-white);
     padding-bottom: 40px;
+    will-change: transform;
 }
 
 .screenshot-scroll-container {
