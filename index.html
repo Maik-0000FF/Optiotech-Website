@@ -432,6 +432,7 @@
 
                 const innerRect = scrollWrapperInner.getBoundingClientRect();
                 const wrapperTop = rect.top;
+                const wrapperBottom = rect.bottom;
 
                 // Check if wrapper-inner is stuck (sticky active)
                 const isSticky = innerRect.top <= stickyTop + 1;
@@ -454,8 +455,14 @@
 
                     scrollContainer.scrollLeft = scrollProgress * maxScroll;
                 } else {
-                    // Before sticky - stay at start
-                    scrollContainer.scrollLeft = reverse ? maxScroll : 0;
+                    // Determine if we're above or below the section
+                    if (wrapperTop > 0) {
+                        // Above section (not reached yet)
+                        scrollContainer.scrollLeft = reverse ? maxScroll : 0;
+                    } else {
+                        // Below section (scrolled past)
+                        scrollContainer.scrollLeft = reverse ? 0 : maxScroll;
+                    }
                 }
 
                 ticking = false;
