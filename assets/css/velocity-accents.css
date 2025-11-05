@@ -389,7 +389,7 @@ header .lang-switch:hover {
 .feature-card {
     background: white;
     border-radius: var(--radius-lg);
-    padding: 56px 32px 32px;
+    padding: 32px;
     text-align: center;
     transition: all 0.3s;
     border: 1px solid var(--border-light);
@@ -397,7 +397,8 @@ header .lang-switch:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 16px;
 }
 
 .feature-card:hover {
@@ -406,7 +407,6 @@ header .lang-switch:hover {
 
 .feature-icon {
     font-size: 52px;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,13 +426,14 @@ header .lang-switch:hover {
     font-size: 22px;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 12px;
+    margin: 0;
 }
 
 .feature-card p {
     color: var(--text-light);
     font-size: 16px;
     line-height: 1.6;
+    margin: 0;
 }
 
 /* Screenshots Gallery */
