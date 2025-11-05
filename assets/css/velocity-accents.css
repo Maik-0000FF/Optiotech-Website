@@ -357,7 +357,6 @@ header .lang-switch:hover {
     margin: 0 auto;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
 }
 
 .video-wrapper video {
@@ -468,7 +467,8 @@ header .lang-switch:hover {
 /* Horizontal Scroll Container */
 .screenshot-scroll-wrapper {
     position: relative;
-    height: 200vh;
+    /* Height dynamically set by JavaScript for perfect sync */
+    min-height: 100vh;
 }
 
 .screenshot-scroll-wrapper-inner {
@@ -794,10 +794,6 @@ footer a:hover {
         padding: 16px 0 32px 0;
     }
 
-    .screenshot-scroll-wrapper {
-        height: 180vh;
-    }
-
     .screenshot-caption {
         padding: 50px 16px 16px 16px;
         margin-top: -32px;
@@ -850,10 +846,6 @@ footer a:hover {
     }
 
     /* Even smaller screenshots for very small phones */
-    .screenshot-scroll-wrapper {
-        height: 160vh;
-    }
-
     .screenshot-caption {
         padding: 40px 12px 12px 12px;
         margin-top: -24px;

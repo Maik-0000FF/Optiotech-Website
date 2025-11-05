@@ -432,17 +432,23 @@
 
                 const innerRect = scrollWrapperInner.getBoundingClientRect();
                 const wrapperTop = rect.top;
-                const wrapperBottom = rect.bottom;
 
                 // Check if wrapper-inner is stuck (sticky active)
                 const isSticky = innerRect.top <= stickyTop + 1;
 
-                // Only horizontal scroll when sticky is active and section is in view
-                if (isSticky && wrapperTop <= 0) {
+                // Horizontal scroll ONLY when sticky is active
+                if (isSticky) {
                     // Mobile: slower scroll (0.45), Desktop: faster (0.8)
                     const scrollMultiplier = window.innerWidth <= 768 ? 0.45 : 0.8;
-                    const scrollRange = (wrapperHeight - window.innerHeight) * scrollMultiplier;
-                    const scrolledDistance = Math.abs(wrapperTop);
+
+                    // Calculate scroll range based on actual horizontal scroll distance needed
+                    // This ensures horizontal scroll completes exactly when sticky ends
+                    const horizontalScrollDistance = containerWidth - viewportWidth;
+                    const scrollRange = horizontalScrollDistance / scrollMultiplier;
+
+                    // Calculate scrolled distance from when sticky became active
+                    // Subtract the stickyTop offset to start from 0 when sticky activates
+                    const scrolledDistance = Math.max(0, Math.abs(wrapperTop) - stickyTop);
 
                     let scrollProgress = Math.max(0, Math.min(1,
                         scrolledDistance / scrollRange
@@ -455,12 +461,12 @@
 
                     scrollContainer.scrollLeft = scrollProgress * maxScroll;
                 } else {
-                    // Immediate snap to start/end positions based on scroll direction
+                    // Immediate snap to start/end positions when not sticky
                     if (wrapperTop > 0) {
-                        // Above section (not reached yet) - set to start position
+                        // Above section (sticky not active yet) - set to start position
                         scrollContainer.scrollLeft = reverse ? maxScroll : 0;
                     } else {
-                        // Below section (passed) - set to end position
+                        // Below section (sticky no longer active) - set to end position
                         scrollContainer.scrollLeft = reverse ? 0 : maxScroll;
                     }
                 }
@@ -481,6 +487,38 @@
             updateScrollPosition();
         }
 
+        // Dynamic height calculation for scroll wrappers
+        function setDynamicScrollHeight() {
+            const wrappers = document.querySelectorAll('.screenshot-scroll-wrapper');
+
+            wrappers.forEach(wrapper => {
+                const container = wrapper.querySelector('.screenshot-scroll-container');
+                const grid = wrapper.querySelector('.screenshot-grid');
+
+                if (!container || !grid) return;
+
+                const scrollWidth = grid.scrollWidth;
+                const containerWidth = container.offsetWidth;
+                const scrollDistance = scrollWidth - containerWidth;
+
+                // Calculate optimal height for perfect sync between sticky and horizontal scroll
+                // Using scrollMultiplier from the scroll function (0.45 mobile, 0.8 desktop)
+                const isMobile = window.innerWidth <= 768;
+                const scrollMultiplier = isMobile ? 0.45 : 0.8;
+
+                // Height = viewport + (horizontal scroll distance / multiplier)
+                // When vertical scroll = (height - viewport) × multiplier, horizontal scroll = 100%
+                // This ensures horizontal scroll completes EXACTLY when sticky ends
+                const calculatedHeight = window.innerHeight + (scrollDistance / scrollMultiplier);
+
+                wrapper.style.height = `${calculatedHeight}px`;
+
+                // Debug: verify the math
+                const expectedScrollRange = (calculatedHeight - window.innerHeight) * scrollMultiplier;
+                console.log(`Section height: ${calculatedHeight}px, Expected scroll range: ${expectedScrollRange}px, Actual scroll distance: ${scrollDistance}px`);
+            });
+        }
+
         // Initialize both scroll sections
         initHorizontalScroll(
             '.screenshot-scroll-wrapper:not(.screenshot-scroll-wrapper-reverse)',
@@ -494,6 +532,21 @@
             '.screenshot-scroll-container-reverse',
             true
         );
+
+        // Set initial heights and recalculate on resize/zoom
+        // Wait for all images to load before calculating heights
+        if (document.readyState === 'complete') {
+            setDynamicScrollHeight();
+        } else {
+            window.addEventListener('load', setDynamicScrollHeight);
+        }
+
+        // Also recalculate on resize/zoom
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(setDynamicScrollHeight, 100);
+        });
     </script>
 </body>
 </html>
