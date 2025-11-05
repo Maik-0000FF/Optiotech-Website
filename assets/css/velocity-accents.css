@@ -508,18 +508,15 @@ header .lang-switch:hover {
     display: block;
     object-fit: cover;
     border-radius: var(--radius-lg);
-    background: white;
-    box-shadow: var(--shadow-md);
     position: relative;
     z-index: 2;
 }
 
 .screenshot-caption {
-    background: white;
+    background: var(--bg-white);
     padding: 60px 20px 20px 20px;
     text-align: center;
     border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    box-shadow: var(--shadow-md);
     margin-top: -40px;
     position: relative;
     z-index: 1;
@@ -551,7 +548,6 @@ header .lang-switch:hover {
     justify-content: center;
     border: 2px dashed var(--border-light);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
     position: relative;
     z-index: 2;
 }
