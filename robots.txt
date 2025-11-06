@@ -3,8 +3,11 @@
 User-agent: *
 Allow: /
 
+# Prevent indexing of legal pages (keep them accessible but not in search results)
+Disallow: /impressum.html
+Disallow: /imprint.html
+Disallow: /datenschutz.html
+Disallow: /privacy.html
+
 # Sitemaps
 Sitemap: https://optiotech.de/sitemap.xml
-
-# Crawl-delay (optional, nur bei Bedarf)
-# Crawl-delay: 1
