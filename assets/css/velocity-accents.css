@@ -419,7 +419,6 @@ header .lang-switch:hover {
     width: 52px;
     height: 52px;
     display: block;
-    filter: opacity(0.8);
 }
 
 .feature-card h3 {
