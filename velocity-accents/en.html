@@ -610,16 +610,20 @@
             const sections = [
                 {
                     container: document.querySelector('.screenshot-scroll-container:not(.screenshot-scroll-container-reverse)'),
-                    pagination: document.getElementById('screenshot-pagination-1')
+                    pagination: document.getElementById('screenshot-pagination-1'),
+                    wrapper: document.querySelector('.screenshot-scroll-wrapper:not(.screenshot-scroll-wrapper-reverse)'),
+                    reverse: false
                 },
                 {
                     container: document.querySelector('.screenshot-scroll-container-reverse'),
-                    pagination: document.getElementById('screenshot-pagination-2')
+                    pagination: document.getElementById('screenshot-pagination-2'),
+                    wrapper: document.querySelector('.screenshot-scroll-wrapper-reverse'),
+                    reverse: true
                 }
             ];
 
             sections.forEach(section => {
-                if (!section.container || !section.pagination) return;
+                if (!section.container || !section.pagination || !section.wrapper) return;
 
                 const items = section.container.querySelectorAll('.screenshot-item');
                 const itemCount = items.length;
@@ -633,8 +637,41 @@
                     // Click to scroll to specific image
                     dot.addEventListener('click', () => {
                         const itemWidth = items[0].offsetWidth + 24; // item width + gap
-                        section.container.scrollTo({
-                            left: i * itemWidth,
+                        const targetScrollLeft = i * itemWidth;
+
+                        // Calculate required vertical scroll position
+                        const containerWidth = section.container.scrollWidth;
+                        const viewportWidth = section.container.offsetWidth;
+                        const maxScroll = containerWidth - viewportWidth;
+
+                        // Calculate scroll progress (0 to 1)
+                        let scrollProgress = maxScroll > 0 ? targetScrollLeft / maxScroll : 0;
+
+                        // Reverse direction for second section
+                        if (section.reverse) {
+                            scrollProgress = 1 - scrollProgress;
+                        }
+
+                        // Calculate vertical scroll position needed
+                        const isMobile = window.innerWidth <= 768;
+                        const baseMultiplier = isMobile ? 0.45 : 0.8;
+                        const horizontalSpeedFactor = isMobile ? 0.67 : 1.0;
+                        const horizontalScrollDistance = containerWidth - viewportWidth;
+                        const scrollRange = (horizontalScrollDistance / baseMultiplier) / horizontalSpeedFactor;
+
+                        const scrolledDistance = scrollProgress * scrollRange;
+
+                        // Get wrapper top offset
+                        const wrapperRect = section.wrapper.getBoundingClientRect();
+                        const wrapperTop = section.wrapper.offsetTop;
+                        const stickyTop = 80; // From CSS sticky positioning
+
+                        // Target vertical scroll position
+                        const targetVerticalScroll = wrapperTop + stickyTop + scrolledDistance;
+
+                        // Scroll to vertical position (this will trigger horizontal scroll via updateScrollPosition)
+                        window.scrollTo({
+                            top: targetVerticalScroll,
                             behavior: 'smooth'
                         });
                     });
