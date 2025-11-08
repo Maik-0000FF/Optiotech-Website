@@ -161,7 +161,7 @@
         <div class="container">
             <h2>See It in Action</h2>
             <div class="video-wrapper">
-                <video id="demoVideo" controls autoplay loop muted playsinline>
+                <video id="demoVideo" controls loop muted playsinline>
                     <source src="../videos/Demo_VelocityAccents.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -357,8 +357,8 @@
             <p>Quick Accent for macOS • Inspired by Windows PowerToys Quick Accent</p>
             <p>Developer: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
             <p style="margin-top: 20px;">
-                <a href="../imprint.html">Legal Notice</a> |
-                <a href="../privacy.html">Privacy Policy</a>
+                <a href="imprint.html">Legal Notice</a> |
+                <a href="privacy.html">Privacy Policy</a>
             </p>
             <p>Velocity™ logo trademark pending<br>Copyright © 2025 Maik Bludovsky. All rights reserved.</p>
         </div>
@@ -459,10 +459,11 @@
                 }
             });
 
-            // Set video playback speed to 2x
+            // Set video playback speed to 2x and autoplay
             const video = document.getElementById('demoVideo');
             if (video) {
                 video.playbackRate = 2.0;
+                video.play().catch(err => console.log('Autoplay prevented:', err));
             }
         });
 
