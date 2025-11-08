@@ -35,7 +35,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--text-medium);
     background: var(--bg-white);
     -webkit-font-smoothing: antialiased;
@@ -286,6 +286,8 @@ header .lang-switch:hover {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 24px;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
 }
 
 .hero .description {
@@ -350,6 +352,7 @@ header .lang-switch:hover {
     text-align: center;
     margin-bottom: 48px;
     letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 
 .video-wrapper {
@@ -378,6 +381,7 @@ header .lang-switch:hover {
     text-align: center;
     margin-bottom: 56px;
     letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 
 .features-grid {
@@ -426,6 +430,8 @@ header .lang-switch:hover {
     font-weight: 700;
     color: var(--text-dark);
     margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .feature-card p {
@@ -456,6 +462,7 @@ header .lang-switch:hover {
     text-align: center;
     margin-bottom: 16px;
     letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 
 .screenshots-subtitle {
@@ -529,6 +536,8 @@ header .lang-switch:hover {
     font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .screenshot-caption p {
@@ -619,6 +628,8 @@ header .lang-switch:hover {
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 
 .download .price-tag {
@@ -688,6 +699,8 @@ header .lang-switch:hover {
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 16px;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
 }
 
 .support p {
@@ -774,6 +787,7 @@ footer a:hover {
     .screenshots h2,
     .download h2 {
         font-size: 32px;
+        line-height: 1.15;
     }
 
     .feature-card {
@@ -864,6 +878,7 @@ footer a:hover {
     color: var(--text-dark);
     margin-bottom: 40px;
     letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 
 .legal-content h2 {
@@ -873,6 +888,7 @@ footer a:hover {
     margin-top: 48px;
     margin-bottom: 20px;
     letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .legal-content h3 {
@@ -881,6 +897,8 @@ footer a:hover {
     color: var(--text-dark);
     margin-top: 32px;
     margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .legal-content h4 {
@@ -889,6 +907,8 @@ footer a:hover {
     color: var(--text-dark);
     margin-top: 24px;
     margin-bottom: 12px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .legal-content p {
