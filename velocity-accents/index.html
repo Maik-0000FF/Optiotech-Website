@@ -161,7 +161,7 @@
         <div class="container">
             <h2>In Aktion erleben</h2>
             <div class="video-wrapper">
-                <video id="demoVideo" controls loop muted playsinline>
+                <video id="demoVideo" controls autoplay loop muted playsinline>
                     <source src="../videos/Demo_VelocityAccents.mp4" type="video/mp4">
                     Dein Browser unterstützt das Video-Tag nicht.
                 </video>
@@ -459,11 +459,16 @@
                 }
             });
 
-            // Set video playback speed to 2x and autoplay
+            // Set video playback speed to 2x
             const video = document.getElementById('demoVideo');
             if (video) {
-                video.playbackRate = 2.0;
-                video.play().catch(err => console.log('Autoplay prevented:', err));
+                video.addEventListener('loadedmetadata', function() {
+                    video.playbackRate = 2.0;
+                });
+                // Set immediately in case video is already loaded
+                if (video.readyState >= 1) {
+                    video.playbackRate = 2.0;
+                }
             }
         });
 
