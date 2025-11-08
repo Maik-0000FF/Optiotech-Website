@@ -220,6 +220,7 @@
                         </div>
                     </div>
                     </div>
+                    <div class="screenshot-pagination" id="screenshot-pagination-1"></div>
                     <p class="scroll-hint">↓ Scrolle nach unten für mehr Features ↓</p>
                 </div>
             </div>
@@ -268,6 +269,7 @@
                         </div>
                     </div>
                     </div>
+                    <div class="screenshot-pagination" id="screenshot-pagination-2"></div>
                     <p class="scroll-hint">↓ Scrolle nach unten um die Einstellungen zu erkunden ↓</p>
                 </div>
             </div>
@@ -571,6 +573,73 @@
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(setDynamicScrollHeight, 100);
         });
+
+        // Screenshot Pagination Dots
+        function initScreenshotPagination() {
+            const sections = [
+                {
+                    container: document.querySelector('.screenshot-scroll-container:not(.screenshot-scroll-container-reverse)'),
+                    pagination: document.getElementById('screenshot-pagination-1')
+                },
+                {
+                    container: document.querySelector('.screenshot-scroll-container-reverse'),
+                    pagination: document.getElementById('screenshot-pagination-2')
+                }
+            ];
+
+            sections.forEach(section => {
+                if (!section.container || !section.pagination) return;
+
+                const items = section.container.querySelectorAll('.screenshot-item');
+                const itemCount = items.length;
+
+                // Create pagination dots
+                for (let i = 0; i < itemCount; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'screenshot-pagination-dot';
+                    dot.dataset.index = i;
+
+                    // Click to scroll to specific image
+                    dot.addEventListener('click', () => {
+                        const itemWidth = items[0].offsetWidth + 24; // item width + gap
+                        section.container.scrollTo({
+                            left: i * itemWidth,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    section.pagination.appendChild(dot);
+                }
+
+                // Update active dot on scroll
+                function updateActiveDot() {
+                    const scrollLeft = section.container.scrollLeft;
+                    const itemWidth = items[0].offsetWidth + 24; // item width + gap
+                    const activeIndex = Math.round(scrollLeft / itemWidth);
+
+                    section.pagination.querySelectorAll('.screenshot-pagination-dot').forEach((dot, index) => {
+                        if (index === activeIndex) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Listen to scroll events
+                section.container.addEventListener('scroll', updateActiveDot);
+
+                // Set initial active dot
+                updateActiveDot();
+            });
+        }
+
+        // Initialize pagination after images load
+        if (document.readyState === 'complete') {
+            initScreenshotPagination();
+        } else {
+            window.addEventListener('load', initScreenshotPagination);
+        }
     </script>
 </body>
 </html>
