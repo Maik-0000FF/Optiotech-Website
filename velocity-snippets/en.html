@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Velocity Snippets - In Development</title>
+
+    <link rel="stylesheet" href="../assets/css/velocity-accents.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/velocity-snippets-favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/velocity-snippets-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/images/velocity-snippets-favicon-48x48.png">
+    <link rel="icon" type="image/png" href="../assets/images/velocity-snippets-icon.png">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-touch-icon-120x120.png">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Velocity Accents",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 14.0 or later",
+        "offers": {
+            "@type": "Offer",
+            "price": "9.99",
+            "priceCurrency": "USD",
+            "url": "https://optiotech.gumroad.com/l/velocity-accents"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "ratingCount": "1"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Maik Bludovsky"
+        },
+        "description": "Type accented characters as fast as you think. Fully customizable and editable. Inspired by Windows PowerToys Quick Accent.",
+        "image": "https://optiotech.de/assets/images/velocity-snippets-icon.png",
+        "softwareVersion": "1.0.0",
+        "releaseNotes": "Initial release with 10+ language presets",
+        "featureList": [
+            "Zero Lag typing",
+            "10+ Languages including German, French, Spanish",
+            "PowerToys gesture support",
+            "Custom character mappings",
+            "Visual overlay",
+            "Universal app support"
+        ]
+    }
+    </script>
+
+    <!-- Video Schema / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Velocity Accents Demo - Quick Accent for macOS",
+        "description": "Demo video of Velocity Accents in action. Type special characters as fast as you think with PowerToys-style gesture.",
+        "thumbnailUrl": "https://optiotech.de/assets/images/velocity-snippets-icon.png",
+        "uploadDate": "2025-11-06",
+        "contentUrl": "https://optiotech.de/videos/Demo_Video_01.mp4",
+        "embedUrl": "https://optiotech.de/videos/Demo_Video_01.mp4",
+        "duration": "PT1M",
+        "publisher": {
+            "@type": "Organization",
+            "name": "optiotech",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://optiotech.de/assets/images/optiotech.svg"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/"><img src="../assets/images/optiotech.svg" alt="optiotech" class="logo" width="212" height="43"></a></h1>
+
+            <!-- Mobile Header Right (Language + Hamburger) -->
+            <div class="mobile-header-right">
+                <a href="/" class="lang-switch">DE</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#download">Download</a>
+                <a href="mailto:optiotech@web.de">Support</a>
+                <a href="/" class="lang-switch">DE</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="mobile-nav">
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#download">Download</a>
+                <a href="mailto:optiotech@web.de">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Velocity Accents</h1>
+            <p class="subtitle">Quick Accent for macOS</p>
+            <p class="description">Type accented characters as fast as you think. Fully customizable and editable. Inspired by Windows PowerToys Quick Accent.</p>
+            <div class="hero-buttons">
+                <div class="btn btn-primary btn-disabled" style="cursor: not-allowed; opacity: 0.6; background: #6c757d;">Coming Soon</div>
+                <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+            </div>
+            <p style="margin-top: 20px; color: #f0ad4e; font-weight: 500;">⚠️ This page is currently being updated. Please wait for the official announcement.</p>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="video-section" id="demo">
+        <div class="container">
+            <h2>See It in Action</h2>
+            <div class="video-wrapper">
+                <video id="demoVideo" controls autoplay loop muted playsinline>
+                    <source src="../videos/Demo_Video_01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Velocity Accents?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">→</span>
+                    <h3>Zero Lag</h3>
+                    <p>Characters appear instantly with no delays. No clipboard manipulation, just pure speed.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">A+</span>
+                    <h3>10+ Languages</h3>
+                    <p>German, French, Spanish, Nordic, Portuguese, Italian, Multilingual, Emoji, and Math symbols.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><img src="../assets/images/keyboard-svgrepo-com.svg" alt="Keyboard" class="feature-icon-svg"></span>
+                    <h3>PowerToys Gesture</h3>
+                    <p>Familiar hold & wait workflow from Windows PowerToys Quick Accent.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">±</span>
+                    <h3>Custom Mappings</h3>
+                    <p>Create your own character shortcuts with full cycling support.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">◉</span>
+                    <h3>Visual Overlay</h3>
+                    <p>See cycling variants while typing with customizable position.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">∞</span>
+                    <h3>Universal Support</h3>
+                    <p>Works in all macOS apps - Safari, Terminal, VS Code, Office, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <!-- Horizontal Scrolling Screenshots -->
+            <div class="screenshot-scroll-wrapper">
+                <div class="screenshot-scroll-wrapper-inner">
+                    <div class="screenshot-header">
+                        <h2>Easy to Use, Powerful to Master</h2>
+                        <p class="screenshots-subtitle">Simple preferences, infinite possibilities</p>
+                    </div>
+                    <div class="screenshot-scroll-container">
+                    <div class="screenshot-grid">
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_mappings_german.webp" alt="German language mappings">
+                            <div class="screenshot-caption">
+                                <h4>German Mappings</h4>
+                                <p>Perfect umlauts: ä, ö, ü, ß</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_mappings_french.webp" alt="French language mappings with cycling">
+                            <div class="screenshot-caption">
+                                <h4>French Cycling</h4>
+                                <p>Cycle through: é → è → ê → ë</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_mappings_emoji.webp" alt="Emoji mappings">
+                            <div class="screenshot-caption">
+                                <h4>Emoji Support</h4>
+                                <p>Quick access to hearts, smileys & more</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_mappings_math.webp" alt="Math symbols">
+                            <div class="screenshot-caption">
+                                <h4>Math Symbols</h4>
+                                <p>Type π, α, β, √, ∫ instantly</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <p class="scroll-hint">↓ Scroll down to explore more features ↓</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section 2 - Usage Examples -->
+    <section class="screenshots screenshots-reverse" id="usage">
+        <div class="container">
+            <!-- Horizontal Scrolling Screenshots (Reverse) -->
+            <div class="screenshot-scroll-wrapper screenshot-scroll-wrapper-reverse">
+                <div class="screenshot-scroll-wrapper-inner">
+                    <div class="screenshot-header">
+                        <h2>Customize Everything</h2>
+                        <p class="screenshots-subtitle">Preferences designed for power users</p>
+                    </div>
+                    <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
+                    <div class="screenshot-grid">
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_general_menu.webp" alt="General preferences menu">
+                            <div class="screenshot-caption">
+                                <h4>General Settings</h4>
+                                <p>Configure activation key and timing</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_general_custom_dropdown.webp" alt="Custom dropdown in preferences">
+                            <div class="screenshot-caption">
+                                <h4>Custom Dropdown</h4>
+                                <p>Select your preferred activation key</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_general_scrolled_menu.webp" alt="Scrolled preferences menu">
+                            <div class="screenshot-caption">
+                                <h4>Advanced Options</h4>
+                                <p>Fine-tune overlay position and behavior</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../screenshots/velocity-snippets/preferences_mappings_custom.webp" alt="Custom character mappings">
+                            <div class="screenshot-caption">
+                                <h4>Custom Mappings</h4>
+                                <p>Create your own shortcuts and cycling</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <p class="scroll-hint">↓ Scroll down to explore preferences ↓</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <img src="../assets/images/velocity-snippets-icon.png" alt="Velocity Accents Icon" class="download-app-icon" width="1024" height="1024">
+            <h2>Get Velocity Accents</h2>
+            <p class="price-tag">One-time purchase • Free updates up to v2 • No subscription</p>
+            <div class="btn btn-primary btn-disabled" style="cursor: not-allowed; opacity: 0.6; background: #6c757d;">Coming Soon</div>
+            <p style="margin-top: 20px; color: #f0ad4e; font-weight: 500;">⚠️ This page is currently being updated. Please wait for the official announcement.</p>
+
+            <div class="requirements-box">
+                <div class="requirement-card">
+                    <h3>System Requirements</h3>
+                    <ul>
+                        <li>macOS 14.0 (Sonoma) or later</li>
+                        <li>Apple Silicon or Intel Mac</li>
+                        <li>Accessibility permissions (one-time setup)</li>
+                        <li>US keyboard layout recommended</li>
+                    </ul>
+                </div>
+
+                <div class="requirement-card">
+                    <h3>Quick Setup</h3>
+                    <ul>
+                        <li>Download and open the DMG file</li>
+                        <li>Drag to Applications folder</li>
+                        <li>Launch and grant permissions</li>
+                        <li>Start typing with accents!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
+            <h2>Need Help?</h2>
+            <p>Questions, feedback, or technical support?</p>
+            <p><strong>Developer:</strong> Maik Bludovsky</p>
+            <p><strong>Email:</strong> <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
+            <p><strong>Website:</strong> <a href="https://optiotech.de">optiotech.de</a></p>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Velocity Accents</strong> by optiotech</p>
+            <p>Quick Accent for macOS • Inspired by Windows PowerToys Quick Accent</p>
+            <p>Developer: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
+            <p style="margin-top: 20px;">
+                <a href="/imprint.html">Legal Notice</a> |
+                <a href="/privacy.html">Privacy Policy</a>
+            </p>
+            <p>Velocity™ logo trademark pending<br>Copyright © 2025 Maik Bludovsky. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Switch - Preserve Scroll Position
+        document.querySelectorAll('.lang-switch').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                sessionStorage.setItem('scrollPosition', window.pageYOffset);
+                window.location.href = this.getAttribute('href');
+            });
+        });
+
+        // Restore scroll position after language switch
+        window.addEventListener('load', function() {
+            const scrollPosition = sessionStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                setTimeout(() => {
+                    window.scrollTo(0, parseInt(scrollPosition));
+                    sessionStorage.removeItem('scrollPosition');
+                }, 100);
+            }
+        });
+
+        // Hamburger Menu Toggle & Hide-on-Scroll Header
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            const header = document.querySelector('header');
+
+            // Toggle menu
+            function toggleMenu() {
+                hamburger.classList.toggle('active');
+                mobileNavOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileNavOverlay.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Open/close menu on hamburger click
+            hamburger.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking overlay
+            mobileNavOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileNavOverlay) {
+                    toggleMenu();
+                }
+            });
+
+            // Close menu when clicking any link
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            // Close menu on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileNavOverlay.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+
+            // Hide-on-Scroll Header
+            let lastScrollTop = 0;
+            const scrollThreshold = 100;
+            let ticking = false;
+
+            function updateHeaderVisibility() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // Don't hide if menu is open
+                if (mobileNavOverlay.classList.contains('active')) {
+                    ticking = false;
+                    return;
+                }
+
+                // Show header at top of page
+                if (scrollTop < scrollThreshold) {
+                    header.classList.remove('header-hidden');
+                }
+                // Hide on scroll down, show on scroll up
+                else if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('header-hidden');
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateHeaderVisibility);
+                    ticking = true;
+                }
+            });
+
+            // Set video playback speed to 2x
+            const video = document.getElementById('demoVideo');
+            if (video) {
+                video.playbackRate = 2.0;
+            }
+        });
+
+        // Horizontal scroll on vertical scroll effect - Handles both sections
+        function initHorizontalScroll(wrapperSelector, innerSelector, containerSelector, reverse = false) {
+            const scrollWrapper = document.querySelector(wrapperSelector);
+            const scrollWrapperInner = document.querySelector(innerSelector);
+            const scrollContainer = document.querySelector(containerSelector);
+
+            if (!scrollWrapper || !scrollWrapperInner || !scrollContainer) return;
+
+            let ticking = false;
+            const stickyTop = parseInt(getComputedStyle(scrollWrapperInner).top);
+
+            function updateScrollPosition() {
+                const rect = scrollWrapper.getBoundingClientRect();
+                const wrapperHeight = scrollWrapper.offsetHeight;
+                const containerWidth = scrollContainer.scrollWidth;
+                const viewportWidth = scrollContainer.offsetWidth;
+                const maxScroll = containerWidth - viewportWidth;
+
+                const innerRect = scrollWrapperInner.getBoundingClientRect();
+                const wrapperTop = rect.top;
+
+                // Check if wrapper-inner is stuck (sticky active)
+                const isSticky = innerRect.top <= stickyTop + 1;
+
+                // Horizontal scroll ONLY when sticky is active
+                if (isSticky) {
+                    // Base multiplier for height calculation (must match height calculation!)
+                    const baseMultiplier = window.innerWidth <= 768 ? 0.45 : 0.8;
+                    // Horizontal scroll speed factor (lower = slower horizontal movement)
+                    // Mobile: 0.67 makes it 33% slower, Desktop: 1.0 keeps same speed
+                    const horizontalSpeedFactor = window.innerWidth <= 768 ? 0.67 : 1.0;
+
+                    // Calculate scroll range: multiply by speed factor to slow horizontal scroll
+                    const horizontalScrollDistance = containerWidth - viewportWidth;
+                    const scrollRange = (horizontalScrollDistance / baseMultiplier) / horizontalSpeedFactor;
+
+                    // Calculate scrolled distance from when sticky became active
+                    // Subtract the stickyTop offset to start from 0 when sticky activates
+                    const scrolledDistance = Math.max(0, Math.abs(wrapperTop) - stickyTop);
+
+                    let scrollProgress = Math.max(0, Math.min(1,
+                        scrolledDistance / scrollRange
+                    ));
+
+                    // Reverse direction for second section
+                    if (reverse) {
+                        scrollProgress = 1 - scrollProgress;
+                    }
+
+                    scrollContainer.scrollLeft = scrollProgress * maxScroll;
+                } else {
+                    // Immediate snap to start/end positions when not sticky
+                    if (wrapperTop > 0) {
+                        // Above section (sticky not active yet) - set to start position
+                        scrollContainer.scrollLeft = reverse ? maxScroll : 0;
+                    } else {
+                        // Below section (sticky no longer active) - set to end position
+                        scrollContainer.scrollLeft = reverse ? 0 : maxScroll;
+                    }
+                }
+
+                ticking = false;
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateScrollPosition);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', requestTick);
+            window.addEventListener('resize', requestTick);
+
+            updateScrollPosition();
+        }
+
+        // Dynamic height calculation for scroll wrappers
+        function setDynamicScrollHeight() {
+            const wrappers = document.querySelectorAll('.screenshot-scroll-wrapper');
+
+            wrappers.forEach(wrapper => {
+                const container = wrapper.querySelector('.screenshot-scroll-container');
+                const grid = wrapper.querySelector('.screenshot-grid');
+
+                if (!container || !grid) return;
+
+                const scrollWidth = grid.scrollWidth;
+                const containerWidth = container.offsetWidth;
+                const scrollDistance = scrollWidth - containerWidth;
+
+                // Calculate optimal height for perfect sync between sticky and horizontal scroll
+                const isMobile = window.innerWidth <= 768;
+                const baseMultiplier = isMobile ? 0.45 : 0.8;
+                const horizontalSpeedFactor = isMobile ? 0.67 : 1.0;
+
+                // Height must account for both baseMultiplier AND speedFactor
+                // scrollRange = (scrollDistance / baseMultiplier) / speedFactor
+                // Height = viewport + scrollRange to ensure perfect sync
+                const calculatedHeight = window.innerHeight + (scrollDistance / baseMultiplier) / horizontalSpeedFactor;
+
+                wrapper.style.height = `${calculatedHeight}px`;
+
+                // Debug: verify sticky behavior
+                console.log(`Wrapper: ${wrapper.classList.contains('screenshot-scroll-wrapper-reverse') ? 'REVERSE' : 'NORMAL'}, Height: ${calculatedHeight}px, Viewport: ${window.innerHeight}px, Ratio: ${(calculatedHeight / window.innerHeight).toFixed(2)}x`);
+            });
+        }
+
+        // Initialize both scroll sections
+        initHorizontalScroll(
+            '.screenshot-scroll-wrapper:not(.screenshot-scroll-wrapper-reverse)',
+            '.screenshot-scroll-wrapper-inner:not(.screenshot-scroll-wrapper-reverse .screenshot-scroll-wrapper-inner)',
+            '.screenshot-scroll-container:not(.screenshot-scroll-container-reverse)',
+            false
+        );
+        initHorizontalScroll(
+            '.screenshot-scroll-wrapper-reverse',
+            '.screenshot-scroll-wrapper-reverse .screenshot-scroll-wrapper-inner',
+            '.screenshot-scroll-container-reverse',
+            true
+        );
+
+        // Set initial heights and recalculate on resize/zoom
+        // Wait for all images to load before calculating heights
+        if (document.readyState === 'complete') {
+            setDynamicScrollHeight();
+        } else {
+            window.addEventListener('load', setDynamicScrollHeight);
+        }
+
+        // Also recalculate on resize/zoom
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(setDynamicScrollHeight, 100);
+        });
+    </script>
+</body>
+</html>

@@ -3,106 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Velocity Accents - Schnelle Akzente für macOS. Tippe Sonderzeichen blitzschnell. Inspiriert von Windows PowerToys Quick Accent.">
-    <meta name="keywords" content="macOS, Akzente, Umlaute, Sonderzeichen, US Tastatur, Velocity Accents, PowerToys, Quick Accent, Produktivität">
+    <meta name="description" content="optiotech - Productivity Tools für macOS. Velocity Accents und Velocity Snippets machen deinen Mac-Workflow schneller und smarter.">
+    <meta name="keywords" content="macOS, Produktivität, Tools, Velocity Accents, Velocity Snippets, optiotech">
     <meta name="author" content="Maik Bludovsky">
-    <title>Velocity Accents - Schnelle Akzente für macOS</title>
+    <title>optiotech - Productivity Tools für macOS</title>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://optiotech.de/">
-    <meta property="og:title" content="Velocity Accents - Schnelle Akzente für macOS">
-    <meta property="og:description" content="Tippe Sonderzeichen so schnell wie du denkst. Vollständig anpassbar. Perfekt für US-Tastatur-Nutzer die deutsche Umlaute brauchen.">
-    <meta property="og:image" content="https://optiotech.de/assets/images/velocity-accents-icon.png">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:title" content="optiotech - Productivity Tools für macOS">
+    <meta property="og:description" content="Velocity Accents und Velocity Snippets - Professionelle Productivity Tools für macOS-Nutzer.">
+    <meta property="og:image" content="https://optiotech.de/assets/images/optiotech.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://optiotech.de/">
-    <meta property="twitter:title" content="Velocity Accents - Schnelle Akzente für macOS">
-    <meta property="twitter:description" content="Tippe Sonderzeichen so schnell wie du denkst. Vollständig anpassbar. Perfekt für US-Tastatur-Nutzer die deutsche Umlaute brauchen.">
-    <meta property="twitter:image" content="https://optiotech.de/assets/images/velocity-accents-icon.png">
+    <meta property="twitter:title" content="optiotech - Productivity Tools für macOS">
+    <meta property="twitter:description" content="Velocity Accents und Velocity Snippets - Professionelle Productivity Tools für macOS-Nutzer.">
+    <meta property="twitter:image" content="https://optiotech.de/assets/images/optiotech.svg">
 
     <!-- Canonical & Language -->
     <link rel="canonical" href="https://optiotech.de/">
     <link rel="alternate" hreflang="de" href="https://optiotech.de/">
     <link rel="alternate" hreflang="en" href="https://optiotech.de/en.html">
-    <link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://optiotech.de/">
 
     <link rel="stylesheet" href="assets/css/velocity-accents.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48x48.png">
-    <link rel="icon" type="image/png" href="assets/images/velocity-accents-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/velocity-favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/velocity-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/images/velocity-favicon-48x48.png">
 
     <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/velocity-apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/velocity-apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/velocity-apple-touch-icon-120x120.png">
 
-    <!-- Structured Data / JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Velocity Accents",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "macOS 14.0 or later",
-        "offers": {
-            "@type": "Offer",
-            "price": "9.99",
-            "priceCurrency": "USD",
-            "url": "https://optiotech.gumroad.com/l/velocity-accents"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "1"
-        },
-        "author": {
-            "@type": "Person",
-            "name": "Maik Bludovsky"
-        },
-        "description": "Tippe Sonderzeichen so schnell wie du denkst. Vollständig anpassbar und editierbar. Inspiriert von Windows PowerToys Quick Accent.",
-        "image": "https://optiotech.de/assets/images/velocity-accents-icon.png",
-        "softwareVersion": "1.0.0",
-        "releaseNotes": "Initial release with 10+ language presets",
-        "featureList": [
-            "Zero Lag typing",
-            "10+ Languages including German, French, Spanish",
-            "PowerToys gesture support",
-            "Custom character mappings",
-            "Visual overlay",
-            "Universal app support"
-        ]
-    }
-    </script>
+    <style>
+        body {
+            padding-top: 64px;
+        }
 
-    <!-- Video Schema / JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Velocity Accents Demo - Schnelle Akzente für macOS",
-        "description": "Demo-Video von Velocity Accents in Aktion. Tippe Sonderzeichen so schnell wie du denkst mit der PowerToys-Geste.",
-        "thumbnailUrl": "https://optiotech.de/assets/images/velocity-accents-icon.png",
-        "uploadDate": "2025-11-06",
-        "contentUrl": "https://optiotech.de/videos/Demo_Video_01.mp4",
-        "embedUrl": "https://optiotech.de/videos/Demo_Video_01.mp4",
-        "duration": "PT1M",
-        "publisher": {
-            "@type": "Organization",
-            "name": "optiotech",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://optiotech.de/assets/images/optiotech.svg"
+        .hero p {
+            font-size: 28px;
+            line-height: 1.4;
+            font-weight: 400;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .products {
+            padding: 80px 5%;
+            background: var(--bg-light);
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: var(--text-dark);
+        }
+
+        .product-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            flex-shrink: 0;
+        }
+
+        .product-info h3 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .product-info p {
+            color: var(--text-light);
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-status {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--bg-lighter);
+            color: var(--text-light);
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .product-status.coming-soon {
+            background: #f59e0b;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                flex-direction: column;
+                text-align: center;
             }
         }
-    }
-    </script>
+    </style>
 </head>
 <body>
     <header>
@@ -121,10 +144,7 @@
 
             <!-- Desktop Navigation -->
             <nav class="desktop-nav">
-                <a href="#features">Features</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#download">Download</a>
-                <a href="mailto:optiotech@web.de">Support</a>
+                <a href="#products">Produkte</a>
                 <a href="/en.html" class="lang-switch">EN</a>
             </nav>
         </div>
@@ -132,233 +152,60 @@
         <!-- Mobile Navigation Overlay -->
         <div class="mobile-nav-overlay" id="mobileNavOverlay">
             <nav class="mobile-nav">
-                <a href="#features">Features</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#download">Download</a>
-                <a href="mailto:optiotech@web.de">Support</a>
+                <a href="#products">Produkte</a>
             </nav>
         </div>
     </header>
 
     <main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Velocity Accents</h1>
-            <p class="subtitle">Schnelle Akzente für macOS</p>
-            <p class="description">Tippe Sonderzeichen so schnell wie du denkst. Vollständig anpassbar und editierbar. Inspiriert von Windows PowerToys Quick Accent.</p>
-            <div class="hero-buttons">
-                <div class="btn btn-primary btn-disabled" style="cursor: not-allowed; opacity: 0.6; background: #6c757d;">Coming Soon</div>
-                <a href="#demo" class="btn btn-secondary">Demo ansehen</a>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Productivity Tools für macOS</h1>
+                <p>Professionelle Apps, die deinen Workflow schneller und smarter machen</p>
             </div>
-            <p style="margin-top: 20px; color: #f0ad4e; font-weight: 500;">⚠️ Diese Seite wird gerade überarbeitet. Bitte warte auf die offizielle Ankündigung.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Video Demo Section -->
-    <section class="video-section" id="demo">
-        <div class="container">
-            <h2>In Aktion erleben</h2>
-            <div class="video-wrapper">
-                <video id="demoVideo" controls autoplay loop muted playsinline>
-                    <source src="videos/Demo_Video_01.mp4" type="video/mp4">
-                    Dein Browser unterstützt das Video-Tag nicht.
-                </video>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2>Warum Velocity Accents?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">→</span>
-                    <h3>Keine Verzögerung</h3>
-                    <p>Zeichen erscheinen sofort ohne Verzögerung. Keine Zwischenablage-Manipulation, nur pure Geschwindigkeit.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">A+</span>
-                    <h3>10+ Sprachen</h3>
-                    <p>Deutsch, Französisch, Spanisch, Nordisch, Portugiesisch, Italienisch, Mehrsprachig, Emoji und Mathematik-Symbole.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon"><img src="assets/images/keyboard-svgrepo-com.svg" alt="Keyboard" class="feature-icon-svg"></span>
-                    <h3>PowerToys Geste</h3>
-                    <p>Vertrauter Halten & Warten Workflow von Windows PowerToys Quick Accent.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">±</span>
-                    <h3>Eigene Mappings</h3>
-                    <p>Erstelle deine eigenen Zeichen-Shortcuts mit voller Cycling-Unterstützung.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">◉</span>
-                    <h3>Visuelles Overlay</h3>
-                    <p>Sehe Cycling-Varianten während des Tippens mit anpassbarer Position.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">∞</span>
-                    <h3>Universelle Unterstützung</h3>
-                    <p>Funktioniert in allen macOS Apps - Safari, Terminal, VS Code, Office und mehr.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section class="screenshots" id="screenshots">
-        <div class="container">
-            <!-- Horizontal Scrolling Screenshots -->
-            <div class="screenshot-scroll-wrapper">
-                <div class="screenshot-scroll-wrapper-inner">
-                    <div class="screenshot-header">
-                        <h2>Einfach zu bedienen, mächtig zu meistern</h2>
-                        <p class="screenshots-subtitle">Simple Einstellungen, unendliche Möglichkeiten</p>
-                    </div>
-                    <div class="screenshot-scroll-container">
-                    <div class="screenshot-grid">
-                        <div class="screenshot-item">
-                            <img src="screenshots/light/preferences_mappings_german.webp" alt="Deutsche Sprach-Mappings">
-                            <div class="screenshot-caption">
-                                <h4>Deutsche Mappings</h4>
-                                <p>Perfekte Umlaute: ä, ö, ü, ß</p>
-                            </div>
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="screenshots/light/preferences_mappings_french.webp" alt="Französische Sprach-Mappings mit Cycling">
-                            <div class="screenshot-caption">
-                                <h4>Französisches Cycling</h4>
-                                <p>Durchlaufe: é → è → ê → ë</p>
-                            </div>
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="screenshots/light/preferences_mappings_emoji.webp" alt="Emoji Mappings">
-                            <div class="screenshot-caption">
-                                <h4>Emoji Support</h4>
-                                <p>Schneller Zugriff auf Herzen, Smileys & mehr</p>
-                            </div>
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="screenshots/light/preferences_mappings_math.webp" alt="Mathematik-Symbole">
-                            <div class="screenshot-caption">
-                                <h4>Mathematik-Symbole</h4>
-                                <p>Tippe π, α, β, √, ∫ sofort</p>
-                            </div>
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="container">
+                <!-- Velocity Accents -->
+                <a href="/velocity-accents/" style="text-decoration: none; color: inherit;">
+                    <div class="product-card">
+                        <img src="assets/images/velocity-accents-icon.png" alt="Velocity Accents Icon" width="120" height="120">
+                        <div class="product-info">
+                            <h3>Velocity Accents</h3>
+                            <p>Tippe Umlaute und Akzente so schnell wie du denkst. Perfekt für mehrsprachige Aufgaben. 8 Sprachen inklusive. Inspiriert von Windows PowerToys Quick Accent.</p>
+                            <span class="product-status">$4.99</span>
                         </div>
                     </div>
+                </a>
+
+                <!-- Velocity Snippets -->
+                <div class="product-card" style="cursor: default;">
+                    <img src="assets/images/logos/VelocitySnippets_Logo.svg" alt="Velocity Snippets Icon" width="120" height="120">
+                    <div class="product-info">
+                        <h3>Velocity Snippets</h3>
+                        <p>Die gleiche Quick Accent Geste, unbegrenzte Möglichkeiten. Weise jeder Taste Sonderzeichen, Mathe-Symbole, Pfeile, Emojis, Code-Snippets oder ganze Textbausteine zu. Vollständig anpassbar.</p>
+                        <span class="product-status coming-soon">Demnächst</span>
                     </div>
-                    <p class="scroll-hint">↓ Scrolle nach unten für mehr Features ↓</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Section 2 - Usage Examples -->
-    <section class="screenshots screenshots-reverse" id="usage">
-        <div class="container">
-            <!-- Horizontal Scrolling Screenshots (Reverse) -->
-            <div class="screenshot-scroll-wrapper screenshot-scroll-wrapper-reverse">
-                <div class="screenshot-scroll-wrapper-inner">
-                    <div class="screenshot-header">
-                        <h2>Alles anpassbar</h2>
-                        <p class="screenshots-subtitle">Einstellungen für Power-User</p>
-                    </div>
-                    <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
-                    <div class="screenshot-grid">
-                        <div class="screenshot-item">
-                            <img src="screenshots/dark/preferences_general_menu.webp" alt="Allgemeine Einstellungen-Menü">
-                            <div class="screenshot-caption">
-                                <h4>Allgemeine Einstellungen</h4>
-                                <p>Konfiguriere Aktivierungstaste und Timing</p>
-                            </div>
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="screenshots/dark/preferences_general_custom_dropdown.webp" alt="Benutzerdefiniertes Dropdown in Einstellungen">
-                            <div class="screenshot-caption">
-                                <h4>Benutzerdefiniertes Dropdown</h4>
-                                <p>Wähle deine bevorzugte Aktivierungstaste</p>
-                            </div>
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="screenshots/dark/preferences_general_scrolled_menu.webp" alt="Gescrolltes Einstellungen-Menü">
-                            <div class="screenshot-caption">
-                                <h4>Erweiterte Optionen</h4>
-                                <p>Feinabstimmung der Overlay-Position und Verhalten</p>
-                            </div>
-                        </div>
-                        <div class="screenshot-item">
-                            <img src="screenshots/dark/preferences_mappings_custom.webp" alt="Benutzerdefinierte Zeichen-Mappings">
-                            <div class="screenshot-caption">
-                                <h4>Eigene Mappings</h4>
-                                <p>Erstelle deine eigenen Shortcuts und Cycling</p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <p class="scroll-hint">↓ Scrolle nach unten um die Einstellungen zu erkunden ↓</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section class="download" id="download">
-        <div class="container">
-            <img src="assets/images/velocity-accents-icon.png" alt="Velocity Accents Icon" class="download-app-icon" width="1024" height="1024">
-            <h2>Velocity Accents erhalten</h2>
-            <p class="price-tag">Einmaliger Kauf • Kostenlose Updates bis Version 2 • Kein Abo</p>
-            <div class="btn btn-primary btn-disabled" style="cursor: not-allowed; opacity: 0.6; background: #6c757d;">Coming Soon</div>
-            <p style="margin-top: 20px; color: #f0ad4e; font-weight: 500;">⚠️ Diese Seite wird gerade überarbeitet. Bitte warte auf die offizielle Ankündigung.</p>
-
-            <div class="requirements-box">
-                <div class="requirement-card">
-                    <h3>Systemanforderungen</h3>
-                    <ul>
-                        <li>macOS 14.0 (Sonoma) oder neuer</li>
-                        <li>Apple Silicon oder Intel Mac</li>
-                        <li>Bedienungshilfen-Berechtigung (einmalige Einrichtung)</li>
-                        <li>US Tastatur-Layout empfohlen</li>
-                    </ul>
-                </div>
-
-                <div class="requirement-card">
-                    <h3>Schnelle Einrichtung</h3>
-                    <ul>
-                        <li>DMG-Datei herunterladen und öffnen</li>
-                        <li>In den Programme-Ordner ziehen</li>
-                        <li>Starten und Berechtigungen erteilen</li>
-                        <li>Los tippen mit Akzenten!</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Support Section -->
-    <section class="support">
-        <div class="container">
-            <h2>Brauchst du Hilfe?</h2>
-            <p>Fragen, Feedback oder technischer Support?</p>
-            <p><strong>Entwickler:</strong> Maik Bludovsky</p>
-            <p><strong>E-Mail:</strong> <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
-            <p><strong>Website:</strong> <a href="https://optiotech.de">optiotech.de</a></p>
-        </div>
-    </section>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p><strong>Velocity Accents</strong> by optiotech</p>
-            <p>Schnelle Akzente für macOS • Inspiriert von Windows PowerToys Quick Accent</p>
+            <p><strong>optiotech</strong> - Productivity Tools für macOS</p>
             <p>Entwickler: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
             <p style="margin-top: 20px;">
                 <a href="/impressum.html">Impressum</a> |
-                <a href="/datenschutz.html">Datenschutz</a>
+                <a href="/datenschutz.html">Datenschutz</a> |
+                <a href="/imprint.html">Legal Notice</a> |
+                <a href="/privacy.html">Privacy Policy</a>
             </p>
-            <p>Velocity™ Logo Marke angemeldet<br>Copyright © 2025 Maik Bludovsky. Alle Rechte vorbehalten.</p>
+            <p>Velocity™ logo trademark pending<br>Copyright © 2025 Maik Bludovsky. All rights reserved.</p>
         </div>
     </footer>
 
@@ -456,149 +303,6 @@
                     ticking = true;
                 }
             });
-
-            // Set video playback speed to 2x
-            const video = document.getElementById('demoVideo');
-            if (video) {
-                video.playbackRate = 2.0;
-            }
-        });
-
-        // Horizontal scroll on vertical scroll effect - Handles both sections
-        function initHorizontalScroll(wrapperSelector, innerSelector, containerSelector, reverse = false) {
-            const scrollWrapper = document.querySelector(wrapperSelector);
-            const scrollWrapperInner = document.querySelector(innerSelector);
-            const scrollContainer = document.querySelector(containerSelector);
-
-            if (!scrollWrapper || !scrollWrapperInner || !scrollContainer) return;
-
-            let ticking = false;
-            const stickyTop = parseInt(getComputedStyle(scrollWrapperInner).top);
-
-            function updateScrollPosition() {
-                const rect = scrollWrapper.getBoundingClientRect();
-                const wrapperHeight = scrollWrapper.offsetHeight;
-                const containerWidth = scrollContainer.scrollWidth;
-                const viewportWidth = scrollContainer.offsetWidth;
-                const maxScroll = containerWidth - viewportWidth;
-
-                const innerRect = scrollWrapperInner.getBoundingClientRect();
-                const wrapperTop = rect.top;
-
-                // Check if wrapper-inner is stuck (sticky active)
-                const isSticky = innerRect.top <= stickyTop + 1;
-
-                // Horizontal scroll ONLY when sticky is active
-                if (isSticky) {
-                    // Base multiplier for height calculation (must match height calculation!)
-                    const baseMultiplier = window.innerWidth <= 768 ? 0.45 : 0.8;
-                    // Horizontal scroll speed factor (lower = slower horizontal movement)
-                    // Mobile: 0.67 makes it 33% slower, Desktop: 1.0 keeps same speed
-                    const horizontalSpeedFactor = window.innerWidth <= 768 ? 0.67 : 1.0;
-
-                    // Calculate scroll range: multiply by speed factor to slow horizontal scroll
-                    const horizontalScrollDistance = containerWidth - viewportWidth;
-                    const scrollRange = (horizontalScrollDistance / baseMultiplier) / horizontalSpeedFactor;
-
-                    // Calculate scrolled distance from when sticky became active
-                    // Subtract the stickyTop offset to start from 0 when sticky activates
-                    const scrolledDistance = Math.max(0, Math.abs(wrapperTop) - stickyTop);
-
-                    let scrollProgress = Math.max(0, Math.min(1,
-                        scrolledDistance / scrollRange
-                    ));
-
-                    // Reverse direction for second section
-                    if (reverse) {
-                        scrollProgress = 1 - scrollProgress;
-                    }
-
-                    scrollContainer.scrollLeft = scrollProgress * maxScroll;
-                } else {
-                    // Immediate snap to start/end positions when not sticky
-                    if (wrapperTop > 0) {
-                        // Above section (sticky not active yet) - set to start position
-                        scrollContainer.scrollLeft = reverse ? maxScroll : 0;
-                    } else {
-                        // Below section (sticky no longer active) - set to end position
-                        scrollContainer.scrollLeft = reverse ? 0 : maxScroll;
-                    }
-                }
-
-                ticking = false;
-            }
-
-            function requestTick() {
-                if (!ticking) {
-                    window.requestAnimationFrame(updateScrollPosition);
-                    ticking = true;
-                }
-            }
-
-            window.addEventListener('scroll', requestTick);
-            window.addEventListener('resize', requestTick);
-
-            updateScrollPosition();
-        }
-
-        // Dynamic height calculation for scroll wrappers
-        function setDynamicScrollHeight() {
-            const wrappers = document.querySelectorAll('.screenshot-scroll-wrapper');
-
-            wrappers.forEach(wrapper => {
-                const container = wrapper.querySelector('.screenshot-scroll-container');
-                const grid = wrapper.querySelector('.screenshot-grid');
-
-                if (!container || !grid) return;
-
-                const scrollWidth = grid.scrollWidth;
-                const containerWidth = container.offsetWidth;
-                const scrollDistance = scrollWidth - containerWidth;
-
-                // Calculate optimal height for perfect sync between sticky and horizontal scroll
-                const isMobile = window.innerWidth <= 768;
-                const baseMultiplier = isMobile ? 0.45 : 0.8;
-                const horizontalSpeedFactor = isMobile ? 0.67 : 1.0;
-
-                // Height must account for both baseMultiplier AND speedFactor
-                // scrollRange = (scrollDistance / baseMultiplier) / speedFactor
-                // Height = viewport + scrollRange to ensure perfect sync
-                const calculatedHeight = window.innerHeight + (scrollDistance / baseMultiplier) / horizontalSpeedFactor;
-
-                wrapper.style.height = `${calculatedHeight}px`;
-
-                // Debug: verify sticky behavior
-                console.log(`Wrapper: ${wrapper.classList.contains('screenshot-scroll-wrapper-reverse') ? 'REVERSE' : 'NORMAL'}, Height: ${calculatedHeight}px, Viewport: ${window.innerHeight}px, Ratio: ${(calculatedHeight / window.innerHeight).toFixed(2)}x`);
-            });
-        }
-
-        // Initialize both scroll sections
-        initHorizontalScroll(
-            '.screenshot-scroll-wrapper:not(.screenshot-scroll-wrapper-reverse)',
-            '.screenshot-scroll-wrapper-inner:not(.screenshot-scroll-wrapper-reverse .screenshot-scroll-wrapper-inner)',
-            '.screenshot-scroll-container:not(.screenshot-scroll-container-reverse)',
-            false
-        );
-        initHorizontalScroll(
-            '.screenshot-scroll-wrapper-reverse',
-            '.screenshot-scroll-wrapper-reverse .screenshot-scroll-wrapper-inner',
-            '.screenshot-scroll-container-reverse',
-            true
-        );
-
-        // Set initial heights and recalculate on resize/zoom
-        // Wait for all images to load before calculating heights
-        if (document.readyState === 'complete') {
-            setDynamicScrollHeight();
-        } else {
-            window.addEventListener('load', setDynamicScrollHeight);
-        }
-
-        // Also recalculate on resize/zoom
-        let resizeTimeout;
-        window.addEventListener('resize', function() {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(setDynamicScrollHeight, 100);
         });
     </script>
 </body>

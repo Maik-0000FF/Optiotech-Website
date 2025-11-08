@@ -7,66 +7,86 @@
     <!-- Main Page (German) -->
     <url>
         <loc>https://optiotech.de/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/"/>
+    </url>
+
+    <!-- Main Page (English) -->
+    <url>
+        <loc>https://optiotech.de/en.html</loc>
+        <lastmod>2025-11-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/"/>
+    </url>
+
+    <!-- Velocity Accents Product Page (German) -->
+    <url>
+        <loc>https://optiotech.de/velocity-accents/</loc>
+        <lastmod>2025-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/"/>
 
         <!-- Demo Video -->
         <video:video>
             <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-icon.png</video:thumbnail_loc>
             <video:title>Velocity Accents Demo - Schnelle Akzente für macOS</video:title>
-            <video:description>Demo-Video von Velocity Accents in Aktion. Tippe Sonderzeichen so schnell wie du denkst mit der PowerToys-Geste.</video:description>
-            <video:content_loc>https://optiotech.de/videos/Demo_Video_01.mp4</video:content_loc>
-            <video:duration>60</video:duration>
-            <video:publication_date>2025-11-06</video:publication_date>
+            <video:description>Demo-Video von Velocity Accents in Aktion. Tippe Umlaute, Akzente und Sonderzeichen so schnell wie du denkst.</video:description>
+            <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
+            <video:duration>125</video:duration>
+            <video:publication_date>2025-11-08</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
         </video:video>
 
-        <!-- Screenshots - Light Theme -->
+        <!-- Screenshots -->
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_german.webp</image:loc>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/german_mapping.webp</image:loc>
             <image:title>Deutsche Sprach-Mappings - Velocity Accents</image:title>
             <image:caption>Perfekte Umlaute: ä, ö, ü, ß mit Velocity Accents</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_french.webp</image:loc>
-            <image:title>Französische Sprach-Mappings mit Cycling</image:title>
-            <image:caption>Durchlaufe französische Akzente: é → è → ê → ë</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/french_mapping.webp</image:loc>
+            <image:title>Französische Sprach-Mappings - Velocity Accents</image:title>
+            <image:caption>Französische Akzente: é, è, ê, ë mit Velocity Accents</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_emoji.webp</image:loc>
-            <image:title>Emoji Mappings - Velocity Accents</image:title>
-            <image:caption>Schneller Zugriff auf Herzen, Smileys und mehr</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/spanish_mapping.webp</image:loc>
+            <image:title>Spanische Sprach-Mappings - Velocity Accents</image:title>
+            <image:caption>Spanische Akzente: á, é, í, ó, ú, ñ mit Velocity Accents</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_math.webp</image:loc>
-            <image:title>Mathematik-Symbole - Velocity Accents</image:title>
-            <image:caption>Tippe π, α, β, √, ∫ sofort mit Velocity Accents</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/multilingual_mapping.webp</image:loc>
+            <image:title>Mehrsprachige Mappings - Velocity Accents</image:title>
+            <image:caption>8 Sprachen in einer App - Velocity Accents</image:caption>
         </image:image>
-
-        <!-- Screenshots - Dark Theme -->
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_general_menu.webp</image:loc>
-            <image:title>Allgemeine Einstellungen - Velocity Accents</image:title>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/preferences_menu.webp</image:loc>
+            <image:title>Einstellungen - Velocity Accents</image:title>
             <image:caption>Konfiguriere Aktivierungstaste und Timing</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_general_custom_dropdown.webp</image:loc>
-            <image:title>Benutzerdefiniertes Dropdown - Velocity Accents</image:title>
-            <image:caption>Wähle deine bevorzugte Aktivierungstaste</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/preferences_dropdown_presets.webp</image:loc>
+            <image:title>Sprach-Presets - Velocity Accents</image:title>
+            <image:caption>Wähle aus 8 vorinstallierten Sprachen</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_general_scrolled_menu.webp</image:loc>
-            <image:title>Erweiterte Optionen - Velocity Accents</image:title>
-            <image:caption>Feinabstimmung der Overlay-Position und Verhalten</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/custom_math_mapping.webp</image:loc>
+            <image:title>Benutzerdefinierte Math-Mappings - Velocity Accents</image:title>
+            <image:caption>Erstelle eigene Shortcuts für Mathe-Symbole</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_mappings_custom.webp</image:loc>
-            <image:title>Benutzerdefinierte Zeichen-Mappings</image:title>
-            <image:caption>Erstelle deine eigenen Shortcuts und Cycling mit Velocity Accents</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/custom_math_symbols_writing.webp</image:loc>
+            <image:title>Mathe-Symbole in Aktion - Velocity Accents</image:title>
+            <image:caption>Tippe π, α, β, √, ∫ sofort mit Velocity Accents</image:caption>
         </image:image>
 
         <!-- App Icon -->
@@ -77,69 +97,67 @@
         </image:image>
     </url>
 
-    <!-- Main Page (English) -->
+    <!-- Velocity Accents Product Page (English) -->
     <url>
-        <loc>https://optiotech.de/en.html</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://optiotech.de/velocity-accents/en.html</loc>
+        <lastmod>2025-11-08</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/"/>
 
         <!-- Demo Video -->
         <video:video>
             <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-icon.png</video:thumbnail_loc>
             <video:title>Velocity Accents Demo - Quick Accent for macOS</video:title>
-            <video:description>Demo video of Velocity Accents in action. Type special characters as fast as you think with PowerToys-style gesture.</video:description>
-            <video:content_loc>https://optiotech.de/videos/Demo_Video_01.mp4</video:content_loc>
-            <video:duration>60</video:duration>
-            <video:publication_date>2025-11-06</video:publication_date>
+            <video:description>Demo video of Velocity Accents in action. Type accents and special characters as fast as you think.</video:description>
+            <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
+            <video:duration>125</video:duration>
+            <video:publication_date>2025-11-08</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
         </video:video>
 
-        <!-- Screenshots - Light Theme -->
+        <!-- Screenshots -->
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_german.webp</image:loc>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/german_mapping.webp</image:loc>
             <image:title>German Language Mappings - Velocity Accents</image:title>
             <image:caption>Perfect umlauts: ä, ö, ü, ß with Velocity Accents</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_french.webp</image:loc>
-            <image:title>French Language Mappings with Cycling</image:title>
-            <image:caption>Cycle through French accents: é → è → ê → ë</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/french_mapping.webp</image:loc>
+            <image:title>French Language Mappings - Velocity Accents</image:title>
+            <image:caption>French accents: é, è, ê, ë with Velocity Accents</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_emoji.webp</image:loc>
-            <image:title>Emoji Mappings - Velocity Accents</image:title>
-            <image:caption>Quick access to hearts, smileys and more</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/spanish_mapping.webp</image:loc>
+            <image:title>Spanish Language Mappings - Velocity Accents</image:title>
+            <image:caption>Spanish accents: á, é, í, ó, ú, ñ with Velocity Accents</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/light/preferences_mappings_math.webp</image:loc>
-            <image:title>Math Symbols - Velocity Accents</image:title>
-            <image:caption>Type π, α, β, √, ∫ instantly with Velocity Accents</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/multilingual_mapping.webp</image:loc>
+            <image:title>Multilingual Mappings - Velocity Accents</image:title>
+            <image:caption>8 languages in one app - Velocity Accents</image:caption>
         </image:image>
-
-        <!-- Screenshots - Dark Theme -->
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_general_menu.webp</image:loc>
-            <image:title>General Settings - Velocity Accents</image:title>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/preferences_menu.webp</image:loc>
+            <image:title>Preferences - Velocity Accents</image:title>
             <image:caption>Configure activation key and timing</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_general_custom_dropdown.webp</image:loc>
-            <image:title>Custom Dropdown - Velocity Accents</image:title>
-            <image:caption>Choose your preferred activation key</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/preferences_dropdown_presets.webp</image:loc>
+            <image:title>Language Presets - Velocity Accents</image:title>
+            <image:caption>Choose from 8 pre-installed languages</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_general_scrolled_menu.webp</image:loc>
-            <image:title>Advanced Options - Velocity Accents</image:title>
-            <image:caption>Fine-tune overlay position and behavior</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/custom_math_mapping.webp</image:loc>
+            <image:title>Custom Math Mappings - Velocity Accents</image:title>
+            <image:caption>Create your own shortcuts for math symbols</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://optiotech.de/screenshots/dark/preferences_mappings_custom.webp</image:loc>
-            <image:title>Custom Character Mappings</image:title>
-            <image:caption>Create your own shortcuts and cycling with Velocity Accents</image:caption>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/custom_math_symbols_writing.webp</image:loc>
+            <image:title>Math Symbols in Action - Velocity Accents</image:title>
+            <image:caption>Type π, α, β, √, ∫ instantly with Velocity Accents</image:caption>
         </image:image>
 
         <!-- App Icon -->
