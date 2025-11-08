@@ -462,13 +462,7 @@
             // Set video playback speed to 2x
             const video = document.getElementById('demoVideo');
             if (video) {
-                video.addEventListener('loadedmetadata', function() {
-                    video.playbackRate = 2.0;
-                });
-                // Set immediately in case video is already loaded
-                if (video.readyState >= 1) {
-                    video.playbackRate = 2.0;
-                }
+                video.playbackRate = 2.0;
             }
         });
 
