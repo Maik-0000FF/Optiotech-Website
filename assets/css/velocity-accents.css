@@ -25,6 +25,11 @@
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
+
+    /* Apple-style easing functions */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 * {
@@ -90,7 +95,7 @@ header h1 {
 header h1 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.2s;
+    transition: color 0.2s var(--ease-in-out-smooth);
 }
 
 header h1 a:hover {
@@ -114,7 +119,7 @@ header nav a {
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color 0.2s var(--ease-in-out-smooth);
 }
 
 header nav a:hover {
@@ -130,7 +135,9 @@ header .lang-switch {
     padding: 6px 12px;
     border: 2px solid var(--border-light);
     border-radius: 6px;
-    transition: all 0.2s;
+    transition: background-color 0.2s var(--ease-in-out-smooth),
+                border-color 0.2s var(--ease-in-out-smooth),
+                color 0.2s var(--ease-in-out-smooth);
 }
 
 header .lang-switch:hover {
@@ -233,7 +240,8 @@ header .lang-switch:hover {
     font-weight: 600;
     padding: 16px 20px;
     border-radius: var(--radius-sm);
-    transition: all 0.2s;
+    transition: background-color 0.2s var(--ease-in-out-smooth),
+                color 0.2s var(--ease-in-out-smooth);
     display: block;
 }
 
@@ -314,7 +322,9 @@ header .lang-switch:hover {
     font-weight: 600;
     border-radius: var(--radius-md);
     text-decoration: none;
-    transition: all 0.3s;
+    transition: transform 0.2s var(--ease-out-expo),
+                background-color 0.2s var(--ease-in-out-smooth),
+                box-shadow 0.2s var(--ease-in-out-smooth);
     border: none;
     cursor: pointer;
 }
@@ -326,6 +336,12 @@ header .lang-switch:hover {
 
 .btn-primary:hover {
     background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }
 
 .btn-secondary {
@@ -337,6 +353,11 @@ header .lang-switch:hover {
 .btn-secondary:hover {
     background: var(--primary-color);
     color: white;
+    transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
 }
 
 /* Video Section */
@@ -395,7 +416,9 @@ header .lang-switch:hover {
     border-radius: var(--radius-lg);
     padding: 32px;
     text-align: center;
-    transition: all 0.3s;
+    transition: transform 0.2s var(--ease-out-expo),
+                background-color 0.2s var(--ease-in-out-smooth),
+                box-shadow 0.2s var(--ease-in-out-smooth);
     border: 1px solid var(--border-light);
     aspect-ratio: 1 / 1;
     display: flex;
@@ -407,6 +430,8 @@ header .lang-switch:hover {
 
 .feature-card:hover {
     background: var(--bg-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .feature-icon {
@@ -484,7 +509,6 @@ header .lang-switch:hover {
     z-index: 100;
     background: var(--bg-white);
     padding-bottom: 40px;
-    will-change: transform;
 }
 
 .screenshot-scroll-container {
@@ -743,10 +767,12 @@ header .lang-switch:hover {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
+    transition: opacity 0.2s var(--ease-in-out-smooth);
 }
 
 .support a:hover {
     text-decoration: underline;
+    opacity: 0.8;
 }
 
 /* Footer */
@@ -770,10 +796,12 @@ footer strong {
 footer a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: opacity 0.2s var(--ease-in-out-smooth);
 }
 
 footer a:hover {
     text-decoration: underline;
+    opacity: 0.8;
 }
 
 /* Responsive Design */
@@ -1005,5 +1033,31 @@ footer a:hover {
     .legal-content p,
     .legal-content ul li {
         font-size: 16px;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY: Reduced Motion Support
+   =================================== */
+
+/* Apple-style: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Keep some subtle transitions for better UX */
+    .btn,
+    header nav a,
+    header .lang-switch,
+    .mobile-nav a {
+        transition: color 0.15s ease,
+                    background-color 0.15s ease,
+                    opacity 0.15s ease !important;
     }
 }
