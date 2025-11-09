@@ -40,10 +40,12 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
     line-height: 1.6;
     color: var(--text-medium);
     background: var(--bg-white);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     padding-top: 64px;
 }
 
@@ -267,7 +269,7 @@ header .lang-switch:hover {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
-    padding: 80px 0 100px;
+    padding: clamp(4rem, 8vw, 6rem) 0 clamp(5rem, 10vw, 8rem);
     text-align: center;
 }
 
@@ -281,29 +283,29 @@ header .lang-switch:hover {
 }
 
 .hero h1 {
-    font-size: 56px;
+    font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
     font-weight: 800;
     color: var(--text-dark);
-    margin-bottom: 16px;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    letter-spacing: -0.025em;
+    line-height: 1.05;
 }
 
 .hero .subtitle {
-    font-size: 24px;
+    font-size: clamp(1.25rem, 2.5vw + 0.5rem, 1.75rem);
     color: var(--primary-color);
     font-weight: 600;
-    margin-bottom: 24px;
-    letter-spacing: -0.015em;
-    line-height: 1.2;
+    margin-bottom: clamp(1.25rem, 3vw, 2rem);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
 }
 
 .hero .description {
-    font-size: 20px;
+    font-size: clamp(1.125rem, 2vw + 0.5rem, 1.375rem);
     color: var(--text-light);
     max-width: 700px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
+    margin: 0 auto clamp(2rem, 4vw, 3rem);
+    line-height: 1.65;
 }
 
 .hero-buttons {
@@ -362,18 +364,18 @@ header .lang-switch:hover {
 
 /* Video Section */
 .video-section {
-    padding: 80px 0;
+    padding: clamp(4rem, 8vw, 6rem) 0;
     background: var(--bg-white);
 }
 
 .video-section h2 {
-    font-size: 42px;
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
     font-weight: 700;
     color: var(--text-dark);
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
     letter-spacing: -0.02em;
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
 .video-wrapper {
@@ -391,18 +393,18 @@ header .lang-switch:hover {
 
 /* Features Section */
 .features {
-    padding: 80px 0;
+    padding: clamp(4rem, 8vw, 6rem) 0;
     background: var(--bg-light);
 }
 
 .features h2 {
-    font-size: 42px;
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
     font-weight: 700;
     color: var(--text-dark);
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
     letter-spacing: -0.02em;
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
 .features-grid {
@@ -451,49 +453,50 @@ header .lang-switch:hover {
 }
 
 .feature-card h3 {
-    font-size: 22px;
+    font-size: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
     font-weight: 700;
     color: var(--text-dark);
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     line-height: 1.2;
 }
 
 .feature-card p {
     color: var(--text-light);
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: clamp(0.9375rem, 1.5vw + 0.25rem, 1.0625rem);
+    line-height: 1.65;
     margin: 0;
 }
 
 /* Screenshots Gallery */
 .screenshots {
-    padding: 80px 0;
+    padding: clamp(4rem, 8vw, 6rem) 0;
     background: var(--bg-white);
 }
 
 .screenshot-header {
     text-align: center;
-    padding: 20px 0 40px 0;
+    padding: clamp(1.25rem, 3vw, 2rem) 0 clamp(2rem, 4vw, 3rem) 0;
     background: var(--bg-white);
     max-width: 900px;
     margin: 0 auto;
 }
 
 .screenshots h2 {
-    font-size: 42px;
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
     font-weight: 700;
     color: var(--text-dark);
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
     letter-spacing: -0.02em;
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
 .screenshots-subtitle {
     text-align: center;
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw + 0.25rem, 1.25rem);
     color: var(--text-light);
+    line-height: 1.5;
 }
 
 /* Horizontal Scroll Container */
@@ -556,18 +559,18 @@ header .lang-switch:hover {
 }
 
 .screenshot-caption h4 {
-    font-size: 18px;
+    font-size: clamp(1rem, 1.75vw + 0.25rem, 1.25rem);
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 8px;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+    margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+    letter-spacing: -0.015em;
+    line-height: 1.3;
 }
 
 .screenshot-caption p {
-    font-size: 15px;
+    font-size: clamp(0.875rem, 1.5vw + 0.125rem, 1.0625rem);
     color: var(--text-light);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Screenshot Placeholder */
@@ -664,32 +667,32 @@ header .lang-switch:hover {
 
 /* Download Section */
 .download {
-    padding: 80px 0;
+    padding: clamp(4rem, 8vw, 6rem) 0;
     background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
     text-align: center;
 }
 
 .download .download-app-icon {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 24px;
+    width: clamp(80px, 10vw, 112px);
+    height: clamp(80px, 10vw, 112px);
+    margin: 0 auto clamp(1.25rem, 3vw, 2rem);
     border-radius: 22px;
     display: block;
 }
 
 .download h2 {
-    font-size: 42px;
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 16px;
+    margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
     letter-spacing: -0.02em;
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
 .download .price-tag {
-    font-size: 20px;
+    font-size: clamp(1.125rem, 2vw + 0.25rem, 1.375rem);
     color: var(--text-light);
-    margin-bottom: 40px;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .download .btn-primary {
@@ -714,10 +717,11 @@ header .lang-switch:hover {
 }
 
 .requirement-card h3 {
-    font-size: 20px;
+    font-size: clamp(1.125rem, 2vw + 0.25rem, 1.375rem);
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 16px;
+    margin-bottom: clamp(0.875rem, 2vw, 1.25rem);
+    letter-spacing: -0.01em;
 }
 
 .requirement-card ul {
@@ -725,11 +729,12 @@ header .lang-switch:hover {
 }
 
 .requirement-card li {
-    padding: 8px 0;
+    padding: clamp(0.375rem, 1vw, 0.625rem) 0;
     color: var(--text-medium);
-    font-size: 15px;
+    font-size: clamp(0.9375rem, 1.5vw + 0.125rem, 1.0625rem);
     display: flex;
     align-items: flex-start;
+    line-height: 1.65;
 }
 
 .requirement-card li::before {
@@ -743,24 +748,25 @@ header .lang-switch:hover {
 
 /* Support Section */
 .support {
-    padding: 60px 0;
+    padding: clamp(3.5rem, 7vw, 5rem) 0;
     background: var(--bg-light);
     text-align: center;
 }
 
 .support h2 {
-    font-size: 32px;
+    font-size: clamp(1.75rem, 3.5vw + 0.5rem, 2.25rem);
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 16px;
+    margin-bottom: clamp(0.875rem, 2vw, 1.25rem);
     letter-spacing: -0.015em;
     line-height: 1.15;
 }
 
 .support p {
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw + 0.25rem, 1.25rem);
     color: var(--text-light);
-    margin-bottom: 12px;
+    margin-bottom: clamp(0.625rem, 1.5vw, 1rem);
+    line-height: 1.6;
 }
 
 .support a {
@@ -777,7 +783,7 @@ header .lang-switch:hover {
 
 /* Footer */
 footer {
-    padding: 48px 0;
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
     background: var(--bg-white);
     border-top: 1px solid var(--border-light);
     text-align: center;
@@ -785,8 +791,9 @@ footer {
 
 footer p {
     color: var(--text-light);
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-size: clamp(0.8125rem, 1.25vw + 0.125rem, 0.9375rem);
+    margin-bottom: clamp(0.375rem, 1vw, 0.625rem);
+    line-height: 1.6;
 }
 
 footer strong {
@@ -927,65 +934,65 @@ footer a:hover {
 .legal-content .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 80px 5% 60px;
+    padding: clamp(4rem, 8vw, 6rem) 5% clamp(3rem, 6vw, 5rem);
 }
 
 .legal-content h1 {
-    font-size: 42px;
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 40px;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
     letter-spacing: -0.02em;
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
 .legal-content h2 {
-    font-size: 28px;
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
     font-weight: 700;
     color: var(--text-dark);
-    margin-top: 48px;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    letter-spacing: -0.015em;
     line-height: 1.2;
 }
 
 .legal-content h3 {
-    font-size: 22px;
+    font-size: clamp(1.25rem, 2.5vw + 0.25rem, 1.625rem);
     font-weight: 600;
     color: var(--text-dark);
-    margin-top: 32px;
-    margin-bottom: 16px;
+    margin-top: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
     letter-spacing: -0.01em;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .legal-content h4 {
-    font-size: 18px;
+    font-size: clamp(1.0625rem, 2vw + 0.125rem, 1.375rem);
     font-weight: 600;
     color: var(--text-dark);
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-top: clamp(1.25rem, 3vw, 2rem);
+    margin-bottom: clamp(0.625rem, 1.5vw, 1rem);
     letter-spacing: -0.01em;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .legal-content p {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: clamp(1rem, 1.5vw + 0.125rem, 1.125rem);
+    line-height: 1.7;
     color: var(--text-medium);
-    margin-bottom: 16px;
+    margin-bottom: clamp(0.875rem, 2vw, 1.25rem);
 }
 
 .legal-content ul {
-    margin: 16px 0;
-    padding-left: 24px;
+    margin: clamp(0.875rem, 2vw, 1.25rem) 0;
+    padding-left: clamp(1.25rem, 3vw, 2rem);
 }
 
 .legal-content ul li {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: clamp(1rem, 1.5vw + 0.125rem, 1.125rem);
+    line-height: 1.7;
     color: var(--text-medium);
-    margin-bottom: 8px;
+    margin-bottom: clamp(0.375rem, 1vw, 0.625rem);
 }
 
 .legal-content a {
