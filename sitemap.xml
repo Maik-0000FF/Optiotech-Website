@@ -7,7 +7,7 @@
     <!-- Main Page (German) -->
     <url>
         <loc>https://optiotech.de/</loc>
-        <lastmod>2025-11-08</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
@@ -18,7 +18,7 @@
     <!-- Main Page (English) -->
     <url>
         <loc>https://optiotech.de/en.html</loc>
-        <lastmod>2025-11-08</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
@@ -29,7 +29,7 @@
     <!-- Velocity Accents Product Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/</loc>
-        <lastmod>2025-11-08</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/"/>
@@ -38,7 +38,7 @@
 
         <!-- Demo Video -->
         <video:video>
-            <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-icon.png</video:thumbnail_loc>
+            <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
             <video:title>Velocity Accents Demo - Schnelle Akzente für macOS</video:title>
             <video:description>Demo-Video von Velocity Accents in Aktion. Tippe Umlaute, Akzente und Sonderzeichen so schnell wie du denkst.</video:description>
             <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
@@ -106,7 +106,7 @@
     <!-- Velocity Accents Product Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/en.html</loc>
-        <lastmod>2025-11-08</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
@@ -115,7 +115,7 @@
 
         <!-- Demo Video -->
         <video:video>
-            <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-icon.png</video:thumbnail_loc>
+            <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
             <video:title>Velocity Accents Demo - Quick Accent for macOS</video:title>
             <video:description>Demo video of Velocity Accents in action. Type accents and special characters as fast as you think.</video:description>
             <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
