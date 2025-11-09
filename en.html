@@ -120,7 +120,7 @@
 
         .product-info h3 {
             font-size: 32px;
-            margin-bottom: 12px;
+            margin: 0 0 12px 0;
             color: var(--text-dark);
             line-height: 1.15;
             letter-spacing: -0.015em;
@@ -147,6 +147,18 @@
         .product-status.coming-soon {
             background: #f59e0b;
             color: white;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
         }
 
         @media (max-width: 768px) {
@@ -199,6 +211,7 @@
         <!-- Products Section -->
         <section class="products" id="products">
             <div class="container">
+                <h2 class="visually-hidden">Our Products</h2>
                 <!-- Velocity Accents -->
                 <a href="/velocity-accents/en.html" style="text-decoration: none; color: inherit;">
                     <div class="product-card">
