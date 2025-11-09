@@ -10,7 +10,9 @@
 
     <title>Velocity Snippets - In Development</title>
 
-    <link rel="stylesheet" href="../assets/css/velocity-accents.css">
+    <!-- Preload critical CSS for faster LCP -->
+    <link rel="preload" href="../assets/css/velocity-accents.css" as="style">
+    <link rel="stylesheet" href="../assets/css/velocity-accents.css" fetchpriority="high">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/velocity-snippets-favicon-16x16.png">

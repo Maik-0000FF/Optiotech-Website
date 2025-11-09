@@ -31,7 +31,9 @@
     <link rel="alternate" hreflang="de" href="https://optiotech.de/">
     <link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html">
 
-    <link rel="stylesheet" href="assets/css/velocity-accents.css">
+    <!-- Preload critical CSS for faster LCP -->
+    <link rel="preload" href="assets/css/velocity-accents.css" as="style">
+    <link rel="stylesheet" href="assets/css/velocity-accents.css" fetchpriority="high">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/velocity-favicon-16x16.png">
@@ -44,8 +46,27 @@
     <link rel="apple-touch-icon" sizes="120x120" href="assets/images/velocity-apple-touch-icon-120x120.png">
 
     <style>
+        /* Critical CSS for LCP optimization */
         body {
             padding-top: 64px;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+            padding: 4rem 0 5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+            font-weight: 800;
+            color: #1d1d1f;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            line-height: 1.05;
         }
 
         .hero p {
@@ -55,6 +76,7 @@
             max-width: 900px;
             margin: 0 auto;
             letter-spacing: -0.015em;
+            color: #515154;
         }
 
         .products {
