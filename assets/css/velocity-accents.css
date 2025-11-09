@@ -38,6 +38,18 @@
     box-sizing: border-box;
 }
 
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
@@ -47,6 +59,22 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding-top: 64px;
+}
+
+/* ===================================
+   ACCESSIBILITY: Focus Styles
+   =================================== */
+
+/* Remove default focus outline */
+*:focus {
+    outline: none;
+}
+
+/* Add beautiful focus-visible for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .container {
@@ -121,11 +149,25 @@ header nav a {
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    transition: color 0.2s var(--ease-in-out-smooth);
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: color 0.2s var(--ease-in-out-smooth),
+                background-color 0.2s var(--ease-in-out-smooth);
 }
 
 header nav a:hover {
     color: var(--primary-color);
+    background: rgba(14, 165, 233, 0.08);
+}
+
+header nav a:active {
+    background: rgba(14, 165, 233, 0.15);
+    transform: scale(0.98);
+}
+
+header nav a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 /* Language Switcher (works in both desktop nav and mobile header) */
@@ -146,6 +188,16 @@ header .lang-switch:hover {
     background: var(--bg-light);
     border-color: var(--primary-color);
     color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+header .lang-switch:active {
+    transform: scale(0.98);
+}
+
+header .lang-switch:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -343,7 +395,13 @@ header .lang-switch:hover {
 }
 
 .btn-primary:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 .btn-secondary {
@@ -359,7 +417,7 @@ header .lang-switch:hover {
 }
 
 .btn-secondary:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(0.98);
 }
 
 /* Video Section */
@@ -418,9 +476,10 @@ header .lang-switch:hover {
     border-radius: var(--radius-lg);
     padding: 32px;
     text-align: center;
-    transition: transform 0.2s var(--ease-out-expo),
+    transition: transform 0.25s var(--ease-out-expo),
                 background-color 0.2s var(--ease-in-out-smooth),
-                box-shadow 0.2s var(--ease-in-out-smooth);
+                box-shadow 0.25s var(--ease-in-out-smooth),
+                border-color 0.2s var(--ease-in-out-smooth);
     border: 1px solid var(--border-light);
     aspect-ratio: 1 / 1;
     display: flex;
@@ -428,12 +487,18 @@ header .lang-switch:hover {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    cursor: default;
 }
 
 .feature-card:hover {
     background: var(--bg-light);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border-color: rgba(14, 165, 233, 0.2);
+}
+
+.feature-card:active {
+    transform: translateY(-2px) scale(1.01);
 }
 
 .feature-icon {
@@ -650,7 +715,9 @@ header .lang-switch:hover {
     height: 8px;
     border-radius: 50%;
     background: #E2E8F0;
-    transition: all 0.3s ease;
+    transition: background 0.2s var(--ease-in-out-smooth),
+                width 0.3s var(--ease-out-expo),
+                transform 0.2s var(--ease-out-expo);
     cursor: pointer;
 }
 
@@ -663,6 +730,16 @@ header .lang-switch:hover {
 .screenshot-pagination-dot:hover {
     background: #475569;
     opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.screenshot-pagination-dot:active {
+    transform: scale(1.1);
+}
+
+.screenshot-pagination-dot:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 /* Download Section */
@@ -773,12 +850,21 @@ header .lang-switch:hover {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    transition: opacity 0.2s var(--ease-in-out-smooth);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: opacity 0.2s var(--ease-in-out-smooth),
+                background-color 0.2s var(--ease-in-out-smooth);
 }
 
 .support a:hover {
     text-decoration: underline;
     opacity: 0.8;
+    background: rgba(14, 165, 233, 0.08);
+}
+
+.support a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 /* Footer */
@@ -803,12 +889,21 @@ footer strong {
 footer a {
     color: var(--primary-color);
     text-decoration: none;
-    transition: opacity 0.2s var(--ease-in-out-smooth);
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: opacity 0.2s var(--ease-in-out-smooth),
+                background-color 0.2s var(--ease-in-out-smooth);
 }
 
 footer a:hover {
     text-decoration: underline;
     opacity: 0.8;
+    background: rgba(14, 165, 233, 0.06);
+}
+
+footer a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 /* Responsive Design */
@@ -998,11 +1093,21 @@ footer a:hover {
 .legal-content a {
     color: var(--primary-color);
     text-decoration: none;
-    transition: opacity 0.2s;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: opacity 0.2s var(--ease-in-out-smooth),
+                background-color 0.2s var(--ease-in-out-smooth);
 }
 
 .legal-content a:hover {
     opacity: 0.8;
+    background: rgba(14, 165, 233, 0.08);
+    text-decoration: underline;
+}
+
+.legal-content a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .legal-content .legal-date {
