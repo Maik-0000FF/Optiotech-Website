@@ -467,8 +467,40 @@ header .lang-switch:focus-visible {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Mobile/Tablet: 1 column when hamburger menu is active */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Extra small mobile: adjust sizing */
+@media (max-width: 480px) {
+    .features-grid {
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 24px;
+        gap: 12px;
+    }
+
+    .feature-icon {
+        font-size: 42px;
+        height: 42px;
+    }
+
+    .feature-icon-svg {
+        width: 42px;
+        height: 42px;
+    }
 }
 
 .feature-card {

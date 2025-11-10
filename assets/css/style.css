@@ -1,7 +1,7 @@
 /* Optiotech Website - Modern, Responsive Design */
 
 :root {
-    --primary-color: #007AFF;
+    --primary-color: #0EA5E9;
     --secondary-color: #5856D6;
     --text-dark: #1d1d1f;
     --text-light: #86868b;
@@ -167,27 +167,77 @@ header nav a:hover {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Mobile/Tablet: 1 column when hamburger menu is active */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* Extra small mobile: adjust sizing */
+@media (max-width: 480px) {
+    .features-grid {
+        gap: 24px;
+    }
+
+    .feature {
+        padding: 24px;
+        gap: 12px;
+    }
+
+    .feature-icon {
+        font-size: 40px;
+    }
+
+    .feature h3 {
+        font-size: 20px;
+    }
+
+    .feature p {
+        font-size: 15px;
+    }
 }
 
 .feature {
     text-align: center;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 32px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
 }
 
 .feature-icon {
     font-size: 48px;
-    margin-bottom: 20px;
 }
 
 .feature h3 {
     font-size: 24px;
-    margin-bottom: 12px;
+    margin: 0;
 }
 
 .feature p {
     color: var(--text-light);
     font-size: 17px;
+    margin: 0;
 }
 
 /* Products Section */
