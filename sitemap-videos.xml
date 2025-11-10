@@ -10,7 +10,6 @@
       <video:description>Demo-Video von Velocity Accents in Aktion. Tippe Sonderzeichen so schnell wie du denkst mit der PowerToys-Geste. Zeigt deutsche Umlaute, französische Akzente und spanische Sonderzeichen in Echtzeit.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
-      <video:player_loc>https://optiotech.de/velocity-accents/#demo</video:player_loc>
       <video:duration>125</video:duration>
       <video:publication_date>2025-11-08</video:publication_date>
       <video:tag>macOS</video:tag>
@@ -31,7 +30,6 @@
       <video:description>Demo video of Velocity Accents in action. Type special characters as fast as you think with the PowerToys gesture. Shows German umlauts, French accents, and Spanish special characters in real-time.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
-      <video:player_loc>https://optiotech.de/velocity-accents/en.html#demo</video:player_loc>
       <video:duration>125</video:duration>
       <video:publication_date>2025-11-08</video:publication_date>
       <video:tag>macOS</video:tag>
@@ -52,7 +50,6 @@
       <video:description>Demo-Video von Velocity Snippets in Aktion. Die gleiche Quick Accent Geste, unbegrenzte Möglichkeiten. Zeigt Text-Snippets, Emojis, Mathematik-Symbole und Drag & Drop Editor.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-thumbnail-1024x1024.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets.mp4</video:content_loc>
-      <video:player_loc>https://optiotech.de/velocity-snippets/#demo</video:player_loc>
       <video:duration>115</video:duration>
       <video:publication_date>2025-11-10</video:publication_date>
       <video:tag>macOS</video:tag>
@@ -73,7 +70,6 @@
       <video:description>Demo video of Velocity Snippets in action. The same Quick Accent gesture, unlimited possibilities. Shows text snippets, emojis, math symbols, and Drag & Drop editor.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-thumbnail-1024x1024.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets.mp4</video:content_loc>
-      <video:player_loc>https://optiotech.de/velocity-snippets/en.html#demo</video:player_loc>
       <video:duration>115</video:duration>
       <video:publication_date>2025-11-10</video:publication_date>
       <video:tag>macOS</video:tag>
