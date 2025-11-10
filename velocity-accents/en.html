@@ -29,6 +29,11 @@
     <meta property="twitter:title" content="Velocity Accents - Quick Accent for macOS">
     <meta property="twitter:description" content="Type accents and umlauts as fast as you think. Fully customizable. Perfect for US keyboard users working multilingually.">
     <meta property="twitter:image" content="https://optiotech.de/assets/images/velocity-accents-icon.png">
+    <meta name="twitter:player" content="https://optiotech.de/velocity-accents/en.html#demo">
+    <meta name="twitter:player:width" content="1920">
+    <meta name="twitter:player:height" content="1080">
+    <meta name="twitter:player:stream" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
+    <meta name="twitter:player:stream:content_type" content="video/mp4">
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self' https://optiotech.gumroad.com;">
@@ -259,8 +264,10 @@
         <div class="container">
             <h2>See It in Action</h2>
             <div class="video-wrapper">
-                <video id="demoVideo" controls autoplay loop muted playsinline>
+                <video id="demoVideo" autoplay controls loop muted playsinline>
                     <source src="../videos/Demo_VelocityAccents.mp4" type="video/mp4">
+                    <track kind="captions" src="../videos/captions-velocity-accents-en.vtt" srclang="en" label="English" default>
+                    <track kind="captions" src="../videos/captions-velocity-accents-de.vtt" srclang="de" label="Deutsch">
                     Your browser does not support the video tag.
                 </video>
             </div>

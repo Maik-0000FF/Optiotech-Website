@@ -9,6 +9,33 @@
 
     <title>Velocity Snippets - In Entwicklung</title>
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://optiotech.de/velocity-snippets/">
+    <meta property="og:title" content="Velocity Snippets - Intelligente Text-Expansion für macOS">
+    <meta property="og:description" content="Erweitere Text so schnell wie du denkst. Snippets, Emojis, Symbole – alles per Geste. Die gleiche Quick Accent Geste, unbegrenzte Möglichkeiten.">
+    <meta property="og:image" content="https://optiotech.de/assets/images/velocity-snippets-icon.png">
+    <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocitySnippets.mp4">
+    <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocitySnippets.mp4">
+    <meta property="og:video:secure_url" content="https://optiotech.de/videos/Demo_VelocitySnippets.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1920">
+    <meta property="og:video:height" content="1080">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://optiotech.de/velocity-snippets/">
+    <meta property="twitter:title" content="Velocity Snippets - Intelligente Text-Expansion für macOS">
+    <meta property="twitter:description" content="Erweitere Text so schnell wie du denkst. Snippets, Emojis, Symbole – alles per Geste. Die gleiche Quick Accent Geste, unbegrenzte Möglichkeiten.">
+    <meta property="twitter:image" content="https://optiotech.de/assets/images/velocity-snippets-icon.png">
+    <meta name="twitter:player" content="https://optiotech.de/velocity-snippets/#demo">
+    <meta name="twitter:player:width" content="1920">
+    <meta name="twitter:player:height" content="1080">
+    <meta name="twitter:player:stream" content="https://optiotech.de/videos/Demo_VelocitySnippets.mp4">
+    <meta name="twitter:player:stream:content_type" content="video/mp4">
+
     <!-- Preload critical CSS for faster LCP -->
     <link rel="preload" href="../assets/css/velocity-accents.css" as="style">
     <link rel="stylesheet" href="../assets/css/velocity-accents.css" fetchpriority="high">
@@ -219,8 +246,10 @@
         <div class="container">
             <h2>In Aktion erleben</h2>
             <div class="video-wrapper">
-                <video id="demoVideo" controls autoplay loop muted playsinline>
+                <video id="demoVideo" autoplay controls loop muted playsinline>
                     <source src="../videos/Demo_VelocitySnippets.mp4" type="video/mp4">
+                    <track kind="captions" src="../videos/captions-velocity-snippets-de.vtt" srclang="de" label="Deutsch" default>
+                    <track kind="captions" src="../videos/captions-velocity-snippets-en.vtt" srclang="en" label="English">
                     Dein Browser unterstützt das Video-Tag nicht.
                 </video>
             </div>
