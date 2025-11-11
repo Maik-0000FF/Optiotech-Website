@@ -478,7 +478,21 @@ header .lang-switch:focus-visible {
     .features-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+        display: flex;
+        flex-direction: column;
     }
+
+    .feature-card {
+        position: sticky;
+        top: 100px;
+    }
+
+    .feature-card:nth-child(1) { z-index: 1; }
+    .feature-card:nth-child(2) { z-index: 2; }
+    .feature-card:nth-child(3) { z-index: 3; }
+    .feature-card:nth-child(4) { z-index: 4; }
+    .feature-card:nth-child(5) { z-index: 5; }
+    .feature-card:nth-child(6) { z-index: 6; }
 }
 
 /* Extra small mobile: adjust sizing */
@@ -490,6 +504,8 @@ header .lang-switch:focus-visible {
     .feature-card {
         padding: 24px;
         gap: 12px;
+        position: sticky;
+        top: 90px;
     }
 
     .feature-icon {
@@ -522,15 +538,18 @@ header .lang-switch:focus-visible {
     cursor: default;
 }
 
-.feature-card:hover {
-    background: var(--bg-light);
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-    border-color: rgba(14, 165, 233, 0.2);
-}
+/* Hover effects only on desktop (larger than mobile breakpoint) */
+@media (min-width: 769px) {
+    .feature-card:hover {
+        background: var(--bg-light);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        border-color: rgba(14, 165, 233, 0.2);
+    }
 
-.feature-card:active {
-    transform: translateY(-2px) scale(1.01);
+    .feature-card:active {
+        transform: translateY(-2px) scale(1.01);
+    }
 }
 
 .feature-icon {
