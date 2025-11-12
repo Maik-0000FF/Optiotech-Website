@@ -47,11 +47,11 @@
     <loc>https://optiotech.de/velocity-snippets/#demo</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Intelligente Text-Expansion für macOS</video:title>
-      <video:description>Demo-Video von Velocity Snippets in Aktion. Die gleiche Quick Accent Geste, unbegrenzte Möglichkeiten. Zeigt Text-Snippets, Emojis, Mathematik-Symbole und Drag &amp; Drop Editor.</video:description>
+      <video:description>Echtzeit-Demo von Velocity Snippets. Custom Mappings, Bracket Pairs, Bullet Styles, Mathematik-Symbole, Neovim Markdown Rendering, WezTerm Terminal-Befehle. Unbegrenzte Möglichkeiten mit der Quick Accent Geste.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-thumbnail-1024x1024.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets.mp4</video:content_loc>
-      <video:duration>115</video:duration>
-      <video:publication_date>2025-11-10</video:publication_date>
+      <video:duration>154</video:duration>
+      <video:publication_date>2025-11-12</video:publication_date>
       <video:tag>macOS</video:tag>
       <video:tag>Produktivität</video:tag>
       <video:tag>Snippets</video:tag>
@@ -67,11 +67,11 @@
     <loc>https://optiotech.de/velocity-snippets/en.html#demo</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Smart Text Expansion for macOS</video:title>
-      <video:description>Demo video of Velocity Snippets in action. The same Quick Accent gesture, unlimited possibilities. Shows text snippets, emojis, math symbols, and Drag &amp; Drop editor.</video:description>
+      <video:description>Real-time demo of Velocity Snippets. Custom mappings, bracket pairs, bullet styles, math symbols, Neovim markdown rendering, WezTerm terminal commands. Unlimited possibilities with the Quick Accent gesture.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-thumbnail-1024x1024.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets.mp4</video:content_loc>
-      <video:duration>115</video:duration>
-      <video:publication_date>2025-11-10</video:publication_date>
+      <video:duration>154</video:duration>
+      <video:publication_date>2025-11-12</video:publication_date>
       <video:tag>macOS</video:tag>
       <video:tag>productivity</video:tag>
       <video:tag>snippets</video:tag>
