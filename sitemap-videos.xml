@@ -48,7 +48,7 @@
     <video:video>
       <video:title>Velocity Snippets Demo - Intelligente Text-Expansion für macOS</video:title>
       <video:description>Echtzeit-Demo von Velocity Snippets. Custom Mappings, Bracket Pairs, Bullet Styles, Mathematik-Symbole, Neovim Markdown Rendering, WezTerm Terminal-Befehle. Unbegrenzte Möglichkeiten mit der Quick Accent Geste.</video:description>
-      <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-thumbnail-1024x1024.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4</video:content_loc>
       <video:duration>154</video:duration>
       <video:publication_date>2025-11-12</video:publication_date>
@@ -68,7 +68,7 @@
     <video:video>
       <video:title>Velocity Snippets Demo - Smart Text Expansion for macOS</video:title>
       <video:description>Real-time demo of Velocity Snippets. Custom mappings, bracket pairs, bullet styles, math symbols, Neovim markdown rendering, WezTerm terminal commands. Unlimited possibilities with the Quick Accent gesture.</video:description>
-      <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-thumbnail-1024x1024.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4</video:content_loc>
       <video:duration>154</video:duration>
       <video:publication_date>2025-11-12</video:publication_date>
