@@ -10,8 +10,8 @@
 
         if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
             const langMap = {
-                '/velocity-accents/': 'en.html',
-                '/velocity-accents/index.html': 'en.html'
+                '/velocity-accents/': '/velocity-accents/en.html',
+                '/velocity-accents/index.html': '/velocity-accents/en.html'
             };
             const targetUrl = langMap[path];
             if (targetUrl && savedLang === 'en') {

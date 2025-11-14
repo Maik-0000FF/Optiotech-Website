@@ -10,8 +10,8 @@
 
         if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
             const langMap = {
-                '/velocity-snippets/': 'en.html',
-                '/velocity-snippets/index.html': 'en.html'
+                '/velocity-snippets/': '/velocity-snippets/en.html',
+                '/velocity-snippets/index.html': '/velocity-snippets/en.html'
             };
             const targetUrl = langMap[path];
             if (targetUrl && savedLang === 'en') {
