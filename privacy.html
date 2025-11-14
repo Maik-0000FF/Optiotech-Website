@@ -43,6 +43,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/velocity-apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/images/velocity-apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="120x120" href="assets/images/velocity-apple-touch-icon-120x120.png">
+
 </head>
 <body>
     <header>
@@ -61,6 +62,7 @@
 
             <!-- Desktop Navigation -->
             <nav class="desktop-nav">
+                <a href="#" class="product-back-link" style="display: none;"></a>
                 <a href="/en.html#products">Products</a>
                 <a href="/datenschutz.html" class="lang-switch">DE</a>
             </nav>
@@ -69,6 +71,7 @@
         <!-- Mobile Navigation Overlay -->
         <div class="mobile-nav-overlay" id="mobileNavOverlay">
             <nav class="mobile-nav">
+                <a href="#" class="product-back-link-mobile" style="display: none;"></a>
                 <a href="/en.html#products">Products</a>
             </nav>
         </div>
@@ -399,6 +402,38 @@
     </footer>
 
     <script>
+        // Dynamic product back-link in navigation
+        (function() {
+            const productBackLink = document.querySelector('.product-back-link');
+            const productBackLinkMobile = document.querySelector('.product-back-link-mobile');
+
+            if (!productBackLink || !productBackLinkMobile) return;
+
+            const referrer = document.referrer;
+            let productName = '';
+            let productUrl = '';
+
+            // Check referrer for product pages (only use referrer, no localStorage fallback)
+            if (referrer.includes('/velocity-accents')) {
+                productName = 'Velocity Accents';
+                productUrl = '/velocity-accents/en.html';
+            } else if (referrer.includes('/velocity-snippets')) {
+                productName = 'Velocity Snippets';
+                productUrl = '/velocity-snippets/en.html';
+            }
+
+            // Show product link only if we came directly from a product page
+            if (productName && productUrl) {
+                productBackLink.href = productUrl;
+                productBackLink.textContent = productName;
+                productBackLink.style.display = '';
+
+                productBackLinkMobile.href = productUrl;
+                productBackLinkMobile.textContent = productName;
+                productBackLinkMobile.style.display = '';
+            }
+        })();
+
         // Language Switch - Save preference and preserve scroll position
         document.querySelectorAll('.lang-switch').forEach(link => {
             link.addEventListener('click', function(e) {

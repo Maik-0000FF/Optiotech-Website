@@ -282,6 +282,7 @@ header .lang-switch:focus-visible {
     box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding: 80px 32px 32px;
     gap: 8px;
     transform: translateX(100%);
@@ -302,6 +303,7 @@ header .lang-switch:focus-visible {
     transition: background-color 0.2s var(--ease-in-out-smooth),
                 color 0.2s var(--ease-in-out-smooth);
     display: block;
+    text-align: left;
 }
 
 .mobile-nav a:hover,
@@ -1240,4 +1242,14 @@ footer a:focus-visible {
                     background-color 0.15s ease,
                     opacity 0.15s ease !important;
     }
+}
+
+/* ============================================
+   Dynamic Product Back-Link in Navigation
+   ============================================ */
+
+/* Product back-link is a normal nav link, no special styling needed */
+.product-back-link,
+.product-back-link-mobile {
+    /* Inherits nav link styles automatically */
 }

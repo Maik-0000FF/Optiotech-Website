@@ -522,6 +522,9 @@
     </footer>
 
     <script>
+        // Track product visit for breadcrumb navigation
+        localStorage.setItem('lastVisitedProduct', 'velocity-accents');
+
         // Language Switch - Save preference and preserve scroll position
         document.querySelectorAll('.lang-switch').forEach(link => {
             link.addEventListener('click', function(e) {
