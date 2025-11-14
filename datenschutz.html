@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <script>
+    // Language Persistence System
+    (function() {
+        const currentLang = document.documentElement.lang;
+        const savedLang = localStorage.getItem('preferredLanguage');
+        const path = window.location.pathname;
+
+        if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
+            const langMap = {
+                '/datenschutz.html': '/privacy.html'
+            };
+            const targetUrl = langMap[path];
+            if (targetUrl && savedLang === 'en') {
+                sessionStorage.setItem('languageRedirecting', '1');
+                window.location.replace(targetUrl);
+            }
+        }
+        window.addEventListener('load', function() {
+            sessionStorage.removeItem('languageRedirecting');
+        });
+    })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Datenschutzerklärung - optiotech">
@@ -345,8 +367,10 @@
                 Server-Log-Dateien, die vom Hosting-Provider (GitHub Pages) automatisch erfasst werden.
             </p>
 
-            <h2>7. Verwendung der Software Velocity Accents</h2>
-            <h3>Datenschutz in der Anwendung</h3>
+            <h2>7. Verwendung der optiotech Software-Anwendungen</h2>
+
+            <h3 id="velocity-accents">7.1 Velocity Accents</h3>
+            <h4>Datenschutz in der Anwendung</h4>
             <p>
                 Die macOS-Anwendung "Velocity Accents" verarbeitet alle Daten ausschließlich lokal auf Ihrem Gerät.
                 Es findet keine Datenübertragung an externe Server statt. Die Anwendung:
@@ -354,6 +378,25 @@
             <ul>
                 <li>Erfordert Accessibility-Berechtigungen zur Tastatursimulation</li>
                 <li>Speichert Ihre persönlichen Einstellungen und Mappings lokal</li>
+                <li>Sendet keine Daten an den Entwickler oder Dritte</li>
+                <li>Führt keine Telemetrie oder Analyse durch</li>
+                <li>Benötigt keine Internetverbindung</li>
+                <li>Erfasst keine persönlichen Informationen</li>
+            </ul>
+            <p>
+                Alle Konfigurationsdaten verbleiben auf Ihrem Mac und können jederzeit durch Deinstallation der
+                Anwendung vollständig entfernt werden.
+            </p>
+
+            <h3 id="velocity-snippets">7.2 Velocity Snippets</h3>
+            <h4>Datenschutz in der Anwendung</h4>
+            <p>
+                Die macOS-Anwendung "Velocity Snippets" verarbeitet alle Daten ausschließlich lokal auf Ihrem Gerät.
+                Es findet keine Datenübertragung an externe Server statt. Die Anwendung:
+            </p>
+            <ul>
+                <li>Erfordert Accessibility-Berechtigungen zur Tastatursimulation und Text-Expansion</li>
+                <li>Speichert Ihre persönlichen Einstellungen, Mappings und Snippets lokal</li>
                 <li>Sendet keine Daten an den Entwickler oder Dritte</li>
                 <li>Führt keine Telemetrie oder Analyse durch</li>
                 <li>Benötigt keine Internetverbindung</li>
@@ -373,9 +416,8 @@
 
     <footer>
         <div class="container">
-            <p><strong>Velocity Accents</strong> by optiotech</p>
-            <p>Quick Accent for macOS - Inspired by Windows PowerToys Quick Accent</p>
-            <p>Developer: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
+            <p><strong>optiotech</strong> - Productivity Tools für macOS</p>
+            <p>Entwickler: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
             <p style="margin-top: 20px;">
                 <a href="/impressum.html">Impressum</a> |
                 <a href="/datenschutz.html">Datenschutz</a>
@@ -385,10 +427,12 @@
     </footer>
 
     <script>
-        // Language Switch - Preserve Scroll Position
+        // Language Switch - Save preference and preserve scroll position
         document.querySelectorAll('.lang-switch').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
+                const targetLang = this.textContent.trim().toLowerCase();
+                localStorage.setItem('preferredLanguage', targetLang);
                 sessionStorage.setItem('scrollPosition', window.pageYOffset);
                 window.location.href = this.getAttribute('href');
             });

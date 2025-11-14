@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    // Language Persistence System
+    (function() {
+        const currentLang = document.documentElement.lang;
+        const savedLang = localStorage.getItem('preferredLanguage');
+        const path = window.location.pathname;
+
+        if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
+            const langMap = {
+                '/velocity-snippets/en.html': '/velocity-snippets/'
+            };
+            const targetUrl = langMap[path];
+            if (targetUrl && savedLang === 'de') {
+                sessionStorage.setItem('languageRedirecting', '1');
+                window.location.replace(targetUrl);
+            }
+        }
+        window.addEventListener('load', function() {
+            sessionStorage.removeItem('languageRedirecting');
+        });
+    })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Velocity Snippets - PowerToys Quick Accent Alternative + Text Expansion for Mac. All Velocity Accents features included, plus unlimited snippets.">
@@ -494,18 +516,20 @@
             <p>Smart Text Expansion for macOS</p>
             <p>Developer: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
             <p style="margin-top: 20px;">
-                <a href="imprint.html">Legal Notice</a> |
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="/imprint.html">Legal Notice</a> |
+                <a href="/privacy.html#velocity-snippets">Privacy Policy</a>
             </p>
             <p>Velocity™ logo trademark pending<br>Copyright © 2025 Maik Bludovsky. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Language Switch - Preserve Scroll Position
+        // Language Switch - Save preference and preserve scroll position
         document.querySelectorAll('.lang-switch').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
+                const targetLang = this.textContent.trim().toLowerCase();
+                localStorage.setItem('preferredLanguage', targetLang);
                 sessionStorage.setItem('scrollPosition', window.pageYOffset);
                 window.location.href = this.getAttribute('href');
             });

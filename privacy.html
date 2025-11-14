@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    // Language Persistence System
+    (function() {
+        const currentLang = document.documentElement.lang;
+        const savedLang = localStorage.getItem('preferredLanguage');
+        const path = window.location.pathname;
+
+        if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
+            const langMap = {
+                '/privacy.html': '/datenschutz.html'
+            };
+            const targetUrl = langMap[path];
+            if (targetUrl && savedLang === 'de') {
+                sessionStorage.setItem('languageRedirecting', '1');
+                window.location.replace(targetUrl);
+            }
+        }
+        window.addEventListener('load', function() {
+            sessionStorage.removeItem('languageRedirecting');
+        });
+    })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Privacy Policy - optiotech">
@@ -319,8 +341,10 @@
                 automatically collected by the hosting provider (GitHub Pages).
             </p>
 
-            <h2>7. Use of Velocity Accents Software</h2>
-            <h3>Privacy in the Application</h3>
+            <h2>7. Use of optiotech Software Applications</h2>
+
+            <h3 id="velocity-accents">7.1 Velocity Accents</h3>
+            <h4>Privacy in the Application</h4>
             <p>
                 The macOS application "Velocity Accents" processes all data exclusively locally on your device. There is no data
                 transmission to external servers. The application:
@@ -328,6 +352,24 @@
             <ul>
                 <li>Requires accessibility permissions for keyboard simulation</li>
                 <li>Stores your personal settings and mappings locally</li>
+                <li>Does not send data to the developer or third parties</li>
+                <li>Does not perform telemetry or analysis</li>
+                <li>Does not require an internet connection</li>
+                <li>Does not collect personal information</li>
+            </ul>
+            <p>
+                All configuration data remains on your Mac and can be completely removed at any time by uninstalling the application.
+            </p>
+
+            <h3 id="velocity-snippets">7.2 Velocity Snippets</h3>
+            <h4>Privacy in the Application</h4>
+            <p>
+                The macOS application "Velocity Snippets" processes all data exclusively locally on your device. There is no data
+                transmission to external servers. The application:
+            </p>
+            <ul>
+                <li>Requires accessibility permissions for keyboard simulation and text expansion</li>
+                <li>Stores your personal settings, mappings, and snippets locally</li>
                 <li>Does not send data to the developer or third parties</li>
                 <li>Does not perform telemetry or analysis</li>
                 <li>Does not require an internet connection</li>
@@ -346,8 +388,7 @@
 
     <footer>
         <div class="container">
-            <p><strong>Velocity Accents</strong> by optiotech</p>
-            <p>Quick Accent for macOS - Inspired by Windows PowerToys Quick Accent</p>
+            <p><strong>optiotech</strong> - Productivity Tools for macOS</p>
             <p>Developer: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
             <p style="margin-top: 20px;">
                 <a href="/imprint.html">Legal Notice</a> |
@@ -358,10 +399,12 @@
     </footer>
 
     <script>
-        // Language Switch - Preserve Scroll Position
+        // Language Switch - Save preference and preserve scroll position
         document.querySelectorAll('.lang-switch').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
+                const targetLang = this.textContent.trim().toLowerCase();
+                localStorage.setItem('preferredLanguage', targetLang);
                 sessionStorage.setItem('scrollPosition', window.pageYOffset);
                 window.location.href = this.getAttribute('href');
             });
