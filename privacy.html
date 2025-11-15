@@ -344,6 +344,19 @@
                 automatically collected by the hosting provider (GitHub Pages).
             </p>
 
+            <h3>Use of Web Storage (localStorage/sessionStorage)</h3>
+            <p>
+                This website uses localStorage and sessionStorage exclusively for functional purposes:
+            </p>
+            <ul>
+                <li><strong>localStorage:</strong> Storage of your language preference (German/English)</li>
+                <li><strong>sessionStorage:</strong> Temporary storage of navigation contexts and scroll position during your browser session</li>
+            </ul>
+            <p>
+                This data is only stored locally in your browser, never transmitted to external servers, and does not
+                contain any personal information. You can delete this data at any time by clearing your browser storage.
+            </p>
+
             <h2>7. Use of optiotech Software Applications</h2>
 
             <h3 id="velocity-accents">7.1 Velocity Accents</h3>
@@ -413,7 +426,7 @@
             let productName = '';
             let productUrl = '';
 
-            // Check referrer for product pages (only use referrer, no localStorage fallback)
+            // Check referrer first for product pages (takes priority)
             if (referrer.includes('/velocity-accents')) {
                 productName = 'Velocity Accents';
                 productUrl = '/velocity-accents/en.html';
@@ -421,9 +434,28 @@
                 productName = 'Velocity Snippets';
                 productUrl = '/velocity-snippets/en.html';
             }
+            // If not from a product page, check sessionStorage for persisted context
+            else {
+                const storedContext = sessionStorage.getItem('productContext');
+                if (storedContext) {
+                    try {
+                        const context = JSON.parse(storedContext);
+                        productName = context.name;
+                        // Adjust URL for English pages
+                        productUrl = context.url.replace(/\/$/, '/en.html');
+                    } catch (e) {
+                        sessionStorage.removeItem('productContext');
+                    }
+                }
+            }
 
-            // Show product link only if we came directly from a product page
+            // Save product context to sessionStorage for persistence across legal pages
             if (productName && productUrl) {
+                sessionStorage.setItem('productContext', JSON.stringify({
+                    name: productName,
+                    url: productUrl
+                }));
+
                 productBackLink.href = productUrl;
                 productBackLink.textContent = productName;
                 productBackLink.style.display = '';
