@@ -864,12 +864,15 @@
             window.addEventListener('load', initScreenshotPagination);
         }
 
-        // Video click opens dedicated playback page
+        // Video click opens dedicated playback page (desktop only)
         const demoVideo = document.getElementById('demoVideo');
         if (demoVideo) {
             demoVideo.style.cursor = 'pointer';
             demoVideo.addEventListener('click', function(e) {
-                window.location.href = '/velocity-accents/demo.html';
+                // Only redirect on desktop (>768px), on mobile play normally
+                if (window.innerWidth > 768) {
+                    window.location.href = '/velocity-accents/demo.html';
+                }
             });
         }
     </script>
