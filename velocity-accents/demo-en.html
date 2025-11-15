@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Velocity Accents Demo - Quick Accent for macOS in action. Demo video shows German umlauts, French accents, and Spanish special characters in real-time.">
+    <meta name="keywords" content="velocity accents demo, quick accent demo, macos accent demo, powertoys quick accent alternative demo">
+    <meta name="author" content="Maik Bludovsky">
+
+    <title>Velocity Accents Demo - Quick Accent for macOS</title>
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self' https://optiotech.gumroad.com;">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="video.other">
+    <meta property="og:url" content="https://optiotech.de/velocity-accents/demo-en.html">
+    <meta property="og:title" content="Velocity Accents Demo - Quick Accent for macOS">
+    <meta property="og:description" content="Demo video of Velocity Accents in action. Type special characters as fast as you think with the PowerToys gesture. Shows German umlauts, French accents, and Spanish special characters in real-time.">
+    <meta property="og:image" content="https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg">
+    <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
+    <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
+    <meta property="og:video:secure_url" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="3840">
+    <meta property="og:video:height" content="2160">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="player">
+    <meta property="twitter:url" content="https://optiotech.de/velocity-accents/demo-en.html">
+    <meta property="twitter:title" content="Velocity Accents Demo - Quick Accent for macOS">
+    <meta property="twitter:description" content="Demo video of Velocity Accents in action. Type special characters as fast as you think with the PowerToys gesture.">
+    <meta property="twitter:image" content="https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg">
+    <meta name="twitter:player" content="https://optiotech.de/velocity-accents/demo-en.html">
+    <meta name="twitter:player:width" content="3840">
+    <meta name="twitter:player:height" content="2160">
+    <meta name="twitter:player:stream" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
+    <meta name="twitter:player:stream:content_type" content="video/mp4">
+
+    <!-- Canonical & Language -->
+    <link rel="canonical" href="https://optiotech.de/velocity-accents/demo-en.html">
+    <link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/demo.html">
+    <link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/demo-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/demo-en.html">
+
+    <link rel="stylesheet" href="../assets/css/velocity-accents.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/velocity-favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/velocity-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/images/velocity-favicon-48x48.png">
+    <link rel="icon" type="image/png" href="../assets/images/velocity-accents-icon.png">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/velocity-apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/velocity-apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/velocity-apple-touch-icon-120x120.png">
+
+    <!-- Video Schema / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Velocity Accents Demo - Quick Accent for macOS",
+        "description": "Demo video of Velocity Accents in action. Type special characters as fast as you think with the PowerToys gesture. Shows German umlauts, French accents, and Spanish special characters in real-time.",
+        "thumbnailUrl": "https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg",
+        "uploadDate": "2025-11-08",
+        "duration": "PT2M5S",
+        "contentUrl": "https://optiotech.de/videos/Demo_VelocityAccents.mp4",
+        "embedUrl": "https://optiotech.de/velocity-accents/demo-en.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "optiotech",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://optiotech.de/assets/images/optiotech.svg"
+            }
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://optiotech.de/en.html"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Velocity Accents",
+            "item": "https://optiotech.de/velocity-accents/en.html"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Demo",
+            "item": "https://optiotech.de/velocity-accents/demo-en.html"
+        }]
+    }
+    </script>
+
+    <style>
+        .video-playback-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-playback-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: var(--bg-light);
+        }
+
+        .video-playback-container {
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        .video-playback-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            background: #000;
+        }
+
+        .video-playback-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-playback-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .video-playback-info h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .video-duration {
+            display: inline-block;
+            background: var(--bg-gray);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .video-playback-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .video-playback-info h1 {
+                font-size: 24px;
+            }
+            .video-playback-info p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="video-playback-page">
+    <header>
+        <div class="container">
+            <div class="logo-container"><a href="/en.html"><img src="../assets/images/optiotech.svg" alt="optiotech" class="logo" width="212" height="43"></a></div>
+
+            <!-- Mobile Header Right (Language + Hamburger) -->
+            <div class="mobile-header-right">
+                <a href="demo.html" class="lang-switch">DE</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="/velocity-accents/en.html">Velocity Accents</a>
+                <a href="/en.html#products">Products</a>
+                <a href="demo.html" class="lang-switch">DE</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="mobile-nav">
+                <a href="/velocity-accents/en.html">Velocity Accents</a>
+                <a href="/en.html#products">Products</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="video-playback-main">
+        <div class="video-playback-container">
+            <div class="video-playback-wrapper">
+                <video controls autoplay playsinline poster="../assets/images/velocity-accents-video-thumbnail.jpg">
+                    <source src="../videos/Demo_VelocityAccents.mp4" type="video/mp4">
+                    <track kind="captions" src="../videos/captions-velocity-accents-de.vtt" srclang="de" label="Deutsch">
+                    <track kind="captions" src="../videos/captions-velocity-accents-en.vtt" srclang="en" label="English" default>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-playback-info">
+                <span class="video-duration">⏱️ 2:05 min</span>
+                <h1>Velocity Accents Demo</h1>
+                <p>
+                    Demo video of Velocity Accents in action. Type special characters as fast as you think with the PowerToys gesture.
+                    Shows German umlauts, French accents, and Spanish special characters in real-time.
+                </p>
+                <a href="/velocity-accents/en.html" class="btn btn-primary">Learn more about Velocity Accents</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>Velocity Accents</strong> by optiotech</p>
+            <p>Quick Accent for macOS - Inspired by Windows PowerToys Quick Accent</p>
+            <p>Developer: Maik Bludovsky | <a href="mailto:optiotech@web.de">optiotech@web.de</a></p>
+            <p style="margin-top: 20px;">
+                <a href="/imprint.html">Legal Notice</a> |
+                <a href="/privacy.html">Privacy Policy</a>
+            </p>
+            <p>Velocity™ logo trademark pending<br>Copyright © 2025 Maik Bludovsky. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+
+            function toggleMenu() {
+                hamburger.classList.toggle('active');
+                mobileNavOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileNavOverlay.classList.contains('active') ? 'hidden' : '';
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+
+            mobileNavOverlay.addEventListener('click', function(e) {
+                if (e.target === mobileNavOverlay) {
+                    toggleMenu();
+                }
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileNavOverlay.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Language Switch - Save preference
+        document.querySelectorAll('.lang-switch').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetLang = this.textContent.trim().toLowerCase();
+                localStorage.setItem('preferredLanguage', targetLang);
+                window.location.href = this.getAttribute('href');
+            });
+        });
+    </script>
+</body>
+</html>

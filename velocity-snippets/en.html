@@ -122,10 +122,10 @@
         "@type": "VideoObject",
         "name": "Velocity Snippets Demo - Smart Text Expansion for macOS",
         "description": "Demo video of Velocity Snippets in action. PowerToys Quick Accent Alternative with Text Expansion for macOS. All Velocity Accents features plus snippets and emojis.",
-        "thumbnailUrl": "https://optiotech.de/assets/images/velocity-snippets-icon.png",
+        "thumbnailUrl": "https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg",
         "uploadDate": "2025-11-12",
         "contentUrl": "https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4",
-        "embedUrl": "https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4",
+        "embedUrl": "https://optiotech.de/velocity-snippets/demo-en.html",
         "duration": "PT2M34S",
         "publisher": {
             "@type": "Organization",
@@ -869,6 +869,15 @@
             initScreenshotPagination();
         } else {
             window.addEventListener('load', initScreenshotPagination);
+        }
+
+        // Video click opens dedicated playback page
+        const demoVideo = document.getElementById('demoVideo');
+        if (demoVideo) {
+            demoVideo.style.cursor = 'pointer';
+            demoVideo.addEventListener('click', function(e) {
+                window.location.href = '/velocity-snippets/demo-en.html';
+            });
         }
     </script>
 </body>

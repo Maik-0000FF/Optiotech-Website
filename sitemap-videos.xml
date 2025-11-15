@@ -4,7 +4,7 @@
 
   <!-- Velocity Accents Demo Video (German) -->
   <url>
-    <loc>https://optiotech.de/velocity-accents/#demo</loc>
+    <loc>https://optiotech.de/velocity-accents/demo.html</loc>
     <video:video>
       <video:title>Velocity Accents Demo - Schnelle Akzente für macOS</video:title>
       <video:description>Demo-Video von Velocity Accents in Aktion. Tippe Sonderzeichen so schnell wie du denkst mit der PowerToys-Geste. Zeigt deutsche Umlaute, französische Akzente und spanische Sonderzeichen in Echtzeit.</video:description>
@@ -24,7 +24,7 @@
 
   <!-- Velocity Accents Demo Video (English) -->
   <url>
-    <loc>https://optiotech.de/velocity-accents/en.html#demo</loc>
+    <loc>https://optiotech.de/velocity-accents/demo-en.html</loc>
     <video:video>
       <video:title>Velocity Accents Demo - Quick Accent for macOS</video:title>
       <video:description>Demo video of Velocity Accents in action. Type special characters as fast as you think with the PowerToys gesture. Shows German umlauts, French accents, and Spanish special characters in real-time.</video:description>
@@ -44,7 +44,7 @@
 
   <!-- Velocity Snippets Demo Video (German) -->
   <url>
-    <loc>https://optiotech.de/velocity-snippets/#demo</loc>
+    <loc>https://optiotech.de/velocity-snippets/demo.html</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Intelligente Text-Expansion für macOS</video:title>
       <video:description>Echtzeit-Demo von Velocity Snippets. Custom Mappings, Bracket Pairs, Bullet Styles, Mathematik-Symbole, Neovim Markdown Rendering, WezTerm Terminal-Befehle. Unbegrenzte Möglichkeiten mit der Quick Accent Geste.</video:description>
@@ -64,7 +64,7 @@
 
   <!-- Velocity Snippets Demo Video (English) -->
   <url>
-    <loc>https://optiotech.de/velocity-snippets/en.html#demo</loc>
+    <loc>https://optiotech.de/velocity-snippets/demo-en.html</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Smart Text Expansion for macOS</video:title>
       <video:description>Real-time demo of Velocity Snippets. Custom mappings, bracket pairs, bullet styles, math symbols, Neovim markdown rendering, WezTerm terminal commands. Unlimited possibilities with the Quick Accent gesture.</video:description>
