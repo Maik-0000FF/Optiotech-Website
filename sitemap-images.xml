@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Velocity Accents Screenshots -->
+    <url>
+        <loc>https://optiotech.de/velocity-accents/</loc>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/german_mapping.webp</image:loc>
+            <image:title>Deutsche Sprach-Mappings - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents App Screenshot zeigt deutsche Umlaute ä, ö, ü, ß für US-Tastatur unter macOS. Quick Accent Alternative für schnelles Tippen deutscher Sonderzeichen.</image:caption>
+            <image:geo_location>Germany</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/french_mapping.webp</image:loc>
+            <image:title>Französische Sprach-Mappings - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents Screenshot für französische Akzente é, è, ê, ë mit Cycling-Funktion. PowerToys Quick Accent Alternative für macOS US-Tastatur.</image:caption>
+            <image:geo_location>France</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/spanish_mapping.webp</image:loc>
+            <image:title>Spanische Sprach-Mappings - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents App zeigt alle spanischen Sonderzeichen ñ, á, é, í, ó, ú für macOS US-Tastatur. Quick Accent equivalent für Mac.</image:caption>
+            <image:geo_location>Spain</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/multilingual_mapping.webp</image:loc>
+            <image:title>Mehrsprachige Mappings - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents Screenshot zeigt mehrsprachige Unterstützung: 7+ Sprachen gleichzeitig nutzen. PowerToys Quick Accent Alternative für internationales Arbeiten auf macOS.</image:caption>
+            <image:geo_location>Global</image:geo_location>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/preferences_menu.webp</image:loc>
+            <image:title>Einstellungen Menü - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents Einstellungen Screenshot: Overlay-Position, Aktivierungstaste, Timing und Autostart für macOS anpassen. Quick Accent Alternative mit flexiblen Optionen.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/preferences_dropdown_presets.webp</image:loc>
+            <image:title>Sprach-Presets Dropdown - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents Screenshot zeigt 7+ vorinstallierte Sprach-Presets: Deutsch, Französisch, Spanisch, Nordisch, Italienisch und mehr. PowerToys equivalent für macOS.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/custom_math_mapping.webp</image:loc>
+            <image:title>Benutzerdefinierte Math-Symbole - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents Screenshot für eigene Mathe-Symbole Mappings: π, ∞, ±, √, ∫ und mehr mathematische Zeichen schnell tippen auf macOS. Quick Accent Alternative mit Custom Mappings.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-accents/custom_math_symbols_writing.webp</image:loc>
+            <image:title>Mathe-Symbole Schreiben - Velocity Accents für macOS</image:title>
+            <image:caption>Velocity Accents in Aktion: Screenshot zeigt schnelles Schreiben von π, α, β, √, ∫ Symbolen direkt im Text auf macOS. PowerToys Quick Accent equivalent.</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Velocity Snippets Screenshots -->
+    <url>
+        <loc>https://optiotech.de/velocity-snippets/</loc>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/preferences_dropdown_presets_velocitysnippets.webp</image:loc>
+            <image:title>Voreingestellte Sprach-Mappings - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets Dropdown-Menü mit 10+ Sprach-Presets für macOS. Quick Accent Alternative mit Text-Expansion und unbegrenzten Snippets.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/multilingual_mapping_velocitysnippets.webp</image:loc>
+            <image:title>Mehrsprachige Zeichen-Mappings - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets mehrsprachige Unterstützung für Deutsch, Französisch, Spanisch und mehr. PowerToys Quick Accent equivalent mit Text Expansion für macOS.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/emoji_mapping_velocitysnippets.webp</image:loc>
+            <image:title>Emoji-Mappings - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets Emoji-Unterstützung mit schnellem Zugriff auf Herzen, Smileys und mehr. Quick Accent Alternative mit Emoji-Expansion für macOS.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/math_mapping_velocitysnippets.webp</image:loc>
+            <image:title>Mathematik-Symbole Mappings - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets Mathematik-Symbole π, α, β, √, ∫ sofort verfügbar. PowerToys equivalent mit Text-Expansion und Math-Symbolen für macOS.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/emoji_in_action_velocitysnippets.webp</image:loc>
+            <image:title>Emoji Snippets in Aktion - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets zeigt Emoji-Expansion live während des Tippens auf macOS. Quick Accent Alternative mit Emoji-Support und Text-Expansion.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/math_in_action_velocitysnippets.webp</image:loc>
+            <image:title>Mathematik-Symbole in Aktion - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets Mathematik-Symbole live während des Tippens auf macOS. PowerToys Quick Accent equivalent mit Math-Symbolen und Text-Expansion.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/spanish_in_action_velocitysnippets.webp</image:loc>
+            <image:title>Spanische Akzente in Aktion - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets spanische Sonderzeichen live beim Tippen auf macOS. Quick Accent Alternative mit Text-Expansion für mehrsprachiges Arbeiten.</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://optiotech.de/screenshots/velocity-snippets/custom_mapping_velocitysnippets.webp</image:loc>
+            <image:title>Benutzerdefinierte Zeichen-Mappings - Velocity Snippets für macOS</image:title>
+            <image:caption>Velocity Snippets Custom Mappings Editor für eigene Shortcuts auf macOS. PowerToys equivalent mit unbegrenzten Custom Mappings und Text-Expansion.</image:caption>
+        </image:image>
+    </url>
+
+    <!-- App Icons -->
+    <url>
+        <loc>https://optiotech.de/velocity-accents/</loc>
+        <image:image>
+            <image:loc>https://optiotech.de/assets/images/velocity-accents-icon.png</image:loc>
+            <image:title>Velocity Accents App Icon - Quick Accent für macOS</image:title>
+            <image:caption>Velocity Accents App Icon. PowerToys Quick Accent Alternative für macOS - Schnelle Akzente und Umlaute für US-Tastatur.</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://optiotech.de/velocity-snippets/</loc>
+        <image:image>
+            <image:loc>https://optiotech.de/assets/images/velocity-snippets-icon.png</image:loc>
+            <image:title>Velocity Snippets App Icon - Text-Expansion für macOS</image:title>
+            <image:caption>Velocity Snippets App Icon. Quick Accent Alternative mit Text-Expansion für macOS - Snippets, Emojis und unbegrenzte Möglichkeiten.</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Video Thumbnails -->
+    <url>
+        <loc>https://optiotech.de/velocity-accents/</loc>
+        <image:image>
+            <image:loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</image:loc>
+            <image:title>Velocity Accents Demo Video Thumbnail - Quick Accent für macOS</image:title>
+            <image:caption>Velocity Accents Demo Video zeigt die App in Aktion. PowerToys Quick Accent equivalent für macOS - Deutsche Umlaute, französische Akzente, spanische Sonderzeichen.</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://optiotech.de/velocity-snippets/</loc>
+        <image:image>
+            <image:loc>https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg</image:loc>
+            <image:title>Velocity Snippets Demo Video Thumbnail - Text-Expansion für macOS</image:title>
+            <image:caption>Velocity Snippets Demo Video zeigt Text-Expansion in Aktion. Quick Accent Alternative mit Snippets, Emojis und Custom Mappings für macOS.</image:caption>
+        </image:image>
+    </url>
+
+</urlset>
