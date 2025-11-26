@@ -11,7 +11,7 @@
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
       <video:duration>125</video:duration>
-      <video:publication_date>2025-11-08</video:publication_date>
+      <video:publication_date>2025-11-08T00:00:00+01:00</video:publication_date>
       <video:tag>macOS</video:tag>
       <video:tag>Produktivität</video:tag>
       <video:tag>Text-Expansion</video:tag>
@@ -31,7 +31,7 @@
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
       <video:duration>125</video:duration>
-      <video:publication_date>2025-11-08</video:publication_date>
+      <video:publication_date>2025-11-08T00:00:00+01:00</video:publication_date>
       <video:tag>macOS</video:tag>
       <video:tag>productivity</video:tag>
       <video:tag>text expansion</video:tag>
@@ -51,7 +51,7 @@
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4</video:content_loc>
       <video:duration>154</video:duration>
-      <video:publication_date>2025-11-12</video:publication_date>
+      <video:publication_date>2025-11-12T00:00:00+01:00</video:publication_date>
       <video:tag>macOS</video:tag>
       <video:tag>Produktivität</video:tag>
       <video:tag>Snippets</video:tag>
@@ -71,7 +71,7 @@
       <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4</video:content_loc>
       <video:duration>154</video:duration>
-      <video:publication_date>2025-11-12</video:publication_date>
+      <video:publication_date>2025-11-12T00:00:00+01:00</video:publication_date>
       <video:tag>macOS</video:tag>
       <video:tag>productivity</video:tag>
       <video:tag>snippets</video:tag>

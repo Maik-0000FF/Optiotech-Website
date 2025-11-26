@@ -7,7 +7,7 @@
     <!-- Main Page (German) -->
     <url>
         <loc>https://optiotech.de/</loc>
-        <lastmod>2025-11-24</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
@@ -18,7 +18,7 @@
     <!-- Main Page (English) -->
     <url>
         <loc>https://optiotech.de/en.html</loc>
-        <lastmod>2025-11-24</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
@@ -29,7 +29,7 @@
     <!-- Velocity Accents Product Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/</loc>
-        <lastmod>2025-11-24</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/"/>
@@ -44,7 +44,7 @@
             <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
             <video:player_loc>https://optiotech.de/velocity-accents/demo.html</video:player_loc>
             <video:duration>125</video:duration>
-            <video:publication_date>2025-11-08T00:00:00+00:00</video:publication_date>
+            <video:publication_date>2025-11-08T00:00:00+01:00</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
             <video:live>no</video:live>
         </video:video>
@@ -106,7 +106,7 @@
     <!-- Velocity Accents Product Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/en.html</loc>
-        <lastmod>2025-11-24</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
@@ -121,7 +121,7 @@
             <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
             <video:player_loc>https://optiotech.de/velocity-accents/demo-en.html</video:player_loc>
             <video:duration>125</video:duration>
-            <video:publication_date>2025-11-08T00:00:00+00:00</video:publication_date>
+            <video:publication_date>2025-11-08T00:00:00+01:00</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
             <video:live>no</video:live>
         </video:video>
@@ -183,7 +183,7 @@
     <!-- Velocity Snippets Product Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/</loc>
-        <lastmod>2025-11-24</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/"/>
@@ -201,7 +201,7 @@
     <!-- Velocity Snippets Product Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/en.html</loc>
-        <lastmod>2025-11-24</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/en.html"/>
@@ -219,7 +219,7 @@
     <!-- Velocity Snippets Demo Playback Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/demo.html</loc>
-        <lastmod>2025-11-15</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/demo.html"/>
@@ -230,7 +230,7 @@
     <!-- Velocity Snippets Demo Playback Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/demo-en.html</loc>
-        <lastmod>2025-11-15</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
@@ -241,7 +241,7 @@
     <!-- Velocity Accents Demo Playback Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/demo.html</loc>
-        <lastmod>2025-11-15</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/demo.html"/>
@@ -252,7 +252,7 @@
     <!-- Velocity Accents Demo Playback Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/demo-en.html</loc>
-        <lastmod>2025-11-15</lastmod>
+        <lastmod>2025-11-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/demo-en.html"/>
