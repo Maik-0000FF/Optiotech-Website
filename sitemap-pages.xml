@@ -36,19 +36,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/"/>
 
-        <!-- Demo Video -->
-        <video:video>
-            <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
-            <video:title>Velocity Accents Demo - Schnelle Akzente für macOS</video:title>
-            <video:description>Demo-Video von Velocity Accents in Aktion. Tippe Umlaute, Akzente und Sonderzeichen so schnell wie du denkst.</video:description>
-            <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
-            <video:player_loc>https://optiotech.de/velocity-accents/demo.html</video:player_loc>
-            <video:duration>125</video:duration>
-            <video:publication_date>2025-11-08T00:00:00+01:00</video:publication_date>
-            <video:family_friendly>yes</video:family_friendly>
-            <video:live>no</video:live>
-        </video:video>
-
         <!-- Screenshots -->
         <image:image>
             <image:loc>https://optiotech.de/screenshots/velocity-accents/german_mapping.webp</image:loc>
@@ -112,19 +99,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/"/>
-
-        <!-- Demo Video -->
-        <video:video>
-            <video:thumbnail_loc>https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg</video:thumbnail_loc>
-            <video:title>Velocity Accents Demo - Quick Accent for macOS</video:title>
-            <video:description>Demo video of Velocity Accents in action. Type accents and special characters as fast as you think.</video:description>
-            <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
-            <video:player_loc>https://optiotech.de/velocity-accents/demo-en.html</video:player_loc>
-            <video:duration>125</video:duration>
-            <video:publication_date>2025-11-08T00:00:00+01:00</video:publication_date>
-            <video:family_friendly>yes</video:family_friendly>
-            <video:live>no</video:live>
-        </video:video>
 
         <!-- Screenshots -->
         <image:image>
