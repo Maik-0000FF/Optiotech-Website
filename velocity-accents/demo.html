@@ -102,92 +102,11 @@
         }]
     }
     </script>
-
-    <style>
-        .video-playback-page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .video-playback-main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            background: var(--bg-light);
-        }
-
-        .video-playback-container {
-            max-width: 1400px;
-            width: 100%;
-        }
-
-        .video-playback-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            background: #000;
-        }
-
-        .video-playback-wrapper video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .video-playback-info {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .video-playback-info h1 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text-dark);
-        }
-
-        .video-duration {
-            display: inline-block;
-            background: var(--bg-gray);
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 15px;
-        }
-
-        .video-playback-info p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: var(--text-light);
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        @media (max-width: 768px) {
-            .video-playback-info h1 {
-                font-size: 24px;
-            }
-            .video-playback-info p {
-                font-size: 16px;
-            }
-        }
-    </style>
 </head>
 <body class="video-playback-page">
     <header>
         <div class="container">
-            <div class="logo-container"><a href="../" aria-label="optiotech"></a></div>
+            <div class="logo-container"><a href="/" aria-label="optiotech"></a></div>
 
             <!-- Mobile Header Right (Language + Hamburger) -->
             <div class="mobile-header-right">
@@ -294,5 +213,6 @@
             });
         });
     </script>
+    <script src="../assets/js/logo.js"></script>
 </body>
 </html>
