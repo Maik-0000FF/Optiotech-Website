@@ -1,44 +1,45 @@
 /* ==========================================================================
    Optiotech Website - Unified CSS System
    Modern, maintainable, and scalable stylesheet
+   Apple Design System Implementation
    ========================================================================== */
-
-/* Import Inter Font */
-@import url('inter-font.css');
 
 /* ==========================================================================
    1. CSS CUSTOM PROPERTIES (Design Tokens)
    ========================================================================== */
 
 :root {
-    /* Friendly, modern colors */
-    --primary-color: #0EA5E9;
-    --primary-hover: #0284C7;
+    /* Apple color palette */
+    --primary-color: #0071E3;
+    --primary-hover: #0077ED;
     --secondary-color: #06B6D4;
     --accent-color: #8B5CF6;
 
     /* Backgrounds */
     --bg-white: #FFFFFF;
-    --bg-light: #FFFFFF;
-    --bg-lighter: #FFFFFF;
+    --bg-light: #F5F5F7;
+    --bg-lighter: #FBFBFD;
 
     /* Text colors */
-    --text-dark: #0F172A;
-    --text-medium: #334155;
-    --text-light: #475569;
+    --text-dark: #1D1D1F;
+    --text-medium: #6E6E73;
+    --text-light: #86868B;
 
     /* UI elements */
     --border-light: #E2E8F0;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    /* Shadows (Apple Style - subtle) */
+    --shadow-none: none;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-icon: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 0 0.5px rgba(0, 0, 0, 0.1);
 
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
-    --radius-lg: 16px;
+    --radius-lg: 18px;
+    --radius-full: 980px;
 
     /* Spacing Scale (8px base) */
     --space-xs: 0.5rem;   /* 8px */
@@ -48,6 +49,8 @@
     --space-xl: 3rem;     /* 48px */
     --space-2xl: 4rem;    /* 64px */
     --space-3xl: 5rem;    /* 80px */
+    --space-4xl: 6rem;    /* 96px */
+    --space-5xl: 8rem;    /* 128px */
 
     /* Apple-style easing functions */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -72,10 +75,15 @@
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
 
+    /* Letter Spacing (Apple Design) */
+    --letter-spacing-tight: -0.022em;
+    --letter-spacing-normal: -0.016em;
+    --letter-spacing-relaxed: 0.011em;
+
     /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-base: 0.2s ease;
-    --transition-slow: 0.3s ease;
+    --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
     /* Easing Functions (Apple-style) */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -133,10 +141,10 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.3125rem);
     line-height: 1.47;
-    letter-spacing: -0.003em;
+    letter-spacing: 0.011em;
     color: var(--text-medium);
     background: var(--bg-white);
     -webkit-font-smoothing: antialiased;
@@ -180,29 +188,39 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
-    line-height: 1.1;
-    letter-spacing: -0.025em;
+    line-height: 1.05;
+    letter-spacing: var(--letter-spacing-tight);
     color: var(--text-dark);
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
-    font-weight: var(--font-weight-extrabold);
+    font-size: clamp(3rem, 5vw + 1rem, 5rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.05;
+    letter-spacing: var(--letter-spacing-tight);
     margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
+    font-size: clamp(2rem, 4vw + 0.5rem, 3rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.08;
+    letter-spacing: var(--letter-spacing-tight);
     margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
 h3 {
-    font-size: clamp(1.5rem, 3vw + 0.25rem, 2rem);
+    font-size: clamp(1.5rem, 3vw + 0.25rem, 1.75rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.14;
+    letter-spacing: var(--letter-spacing-normal);
     margin-bottom: var(--space-md);
 }
 
 h4 {
     font-size: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
     margin-bottom: var(--space-sm);
 }
 
@@ -213,11 +231,13 @@ p {
 a {
     color: var(--primary-color);
     text-decoration: none;
-    transition: color var(--transition-base);
+    transition: color var(--transition-base),
+                opacity var(--transition-base);
 }
 
 a:hover {
     color: var(--primary-hover);
+    opacity: 0.85;
 }
 
 /* ==========================================================================
@@ -225,14 +245,14 @@ a:hover {
    ========================================================================== */
 
 .container {
-    max-width: 1200px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 22px;
 }
 
 /* Sections */
 section {
-    padding: clamp(4rem, 8vw, 6rem) 0;
+    padding: clamp(4rem, 8vw, 6rem) 0;  /* 64px to 96px */
 }
 
 /* ==========================================================================
@@ -454,8 +474,8 @@ header nav a:active {
     width: 160px;
     height: 160px;
     margin: 0 auto var(--space-lg);
-    border-radius: var(--space-lg);
-    box-shadow: var(--shadow-lg);
+    border-radius: 28.5%;
+    box-shadow: var(--shadow-icon);
     display: block;
 }
 
@@ -500,10 +520,12 @@ header nav a:active {
 
 .btn {
     display: inline-block;
-    padding: 14px var(--space-lg);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-semibold);
-    border-radius: var(--radius-md);
+    padding: 12px var(--space-lg);
+    font-size: 17px;
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: 1.17;
+    border-radius: var(--radius-full);
     text-decoration: none;
     transition: transform var(--transition-base) var(--ease-out-expo),
                 background-color var(--transition-base),
@@ -522,7 +544,7 @@ header nav a:active {
     background: var(--primary-hover);
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
 }
 
 .btn-primary:active {
@@ -576,7 +598,8 @@ header nav a:active {
 .product-card img {
     width: 120px;
     height: 120px;
-    border-radius: 24px;
+    border-radius: 28.5%;
+    box-shadow: var(--shadow-icon);
     flex-shrink: 0;
 }
 
@@ -594,15 +617,14 @@ header nav a:active {
 
 /* Feature Cards */
 .feature-card {
-    background: white;
+    background: var(--bg-lighter);
     border-radius: var(--radius-lg);
-    padding: var(--space-lg);
+    padding: clamp(2.5rem, 3vw, 3.5rem);
     text-align: center;
-    transition: transform 0.25s var(--ease-out-expo),
+    transition: transform var(--transition-base),
                 background-color var(--transition-base),
-                box-shadow 0.25s var(--ease-in-out-smooth),
-                border-color var(--transition-base);
-    border: 1px solid var(--border-light);
+                box-shadow var(--transition-base);
+    border: none;
     aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
@@ -614,13 +636,12 @@ header nav a:active {
 @media (min-width: 769px) {
     .feature-card:hover {
         background: var(--bg-light);
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-        border-color: rgba(14, 165, 233, 0.2);
+        transform: scale(1.02);
+        box-shadow: var(--shadow-md);
     }
 
     .feature-card:active {
-        transform: translateY(-2px) scale(1.01);
+        transform: scale(1.01);
     }
 }
 
@@ -818,7 +839,7 @@ footer a:hover {
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
+    gap: var(--space-md);
     max-width: 900px;
     margin: 0 auto;
 }
@@ -826,7 +847,7 @@ footer a:hover {
 @media (max-width: 768px) {
     .features-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-md);
+        gap: var(--space-sm);
     }
 }
 
@@ -1022,7 +1043,8 @@ footer a:hover {
     width: clamp(80px, 10vw, 112px);
     height: clamp(80px, 10vw, 112px);
     margin: 0 auto clamp(1.25rem, 3vw, 2rem);
-    border-radius: 22px;
+    border-radius: 28.5%;
+    box-shadow: var(--shadow-icon);
     display: block;
 }
 
