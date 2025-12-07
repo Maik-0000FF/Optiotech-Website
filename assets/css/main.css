@@ -977,6 +977,14 @@ footer a:hover {
     list-style: none;
 }
 
+.scroll-hint {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
 .screenshot-pagination-dot {
     width: 8px;
     height: 8px;
