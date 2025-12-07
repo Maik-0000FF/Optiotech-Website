@@ -333,8 +333,8 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--text-dark);
-    background: rgba(0, 113, 227, 0.08);
+    color: var(--primary-color);
+    background: transparent;
 }
 
 header nav a:active {
@@ -357,7 +357,7 @@ header nav a:active {
 
 .lang-switch:hover {
     color: var(--primary-color);
-    background: rgba(0, 113, 227, 0.08);
+    background: transparent;
     border-color: var(--primary-color);
 }
 
