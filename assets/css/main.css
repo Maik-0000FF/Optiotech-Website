@@ -49,6 +49,11 @@
     --space-2xl: 4rem;    /* 64px */
     --space-3xl: 5rem;    /* 80px */
 
+    /* Apple-style easing functions */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     /* Typography Scale */
     --font-size-xs: 0.75rem;      /* 12px */
     --font-size-sm: 0.875rem;     /* 14px */
@@ -527,6 +532,7 @@ header nav a:active {
 
 .btn-primary:hover {
     background: var(--primary-hover);
+    color: white;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
 }
