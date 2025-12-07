@@ -634,6 +634,13 @@ header nav a:active {
     color: var(--text-medium);
 }
 
+.feature-icon-svg {
+    width: 52px;
+    height: 52px;
+    color: var(--text-medium);
+    stroke: currentColor;
+}
+
 .feature-card h3 {
     font-size: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
     margin: 0;
@@ -835,6 +842,11 @@ footer a:hover {
 
     .feature-icon {
         font-size: 42px;
+        height: 42px;
+    }
+
+    .feature-icon-svg {
+        width: 42px;
         height: 42px;
     }
 
