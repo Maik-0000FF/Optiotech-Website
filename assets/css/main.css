@@ -19,8 +19,8 @@
 
     /* Backgrounds */
     --bg-white: #FFFFFF;
-    --bg-light: #F8FAFC;
-    --bg-lighter: #F1F5F9;
+    --bg-light: #FFFFFF;
+    --bg-lighter: #FFFFFF;
 
     /* Text colors */
     --text-dark: #0F172A;
@@ -90,22 +90,6 @@
     --z-modal: 1050;
     --z-popover: 1060;
     --z-tooltip: 1070;
-}
-
-/* Dark Mode Variables */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-white: #1d1d1f;
-        --bg-light: #2c2c2e;
-        --bg-lighter: #38383a;
-        --text-dark: #f5f5f7;
-        --text-medium: #d1d1d6;
-        --text-light: #a1a1a6;
-        --border-light: #38383a;
-        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-        --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-    }
 }
 
 /* ==========================================================================
@@ -269,11 +253,6 @@ header {
     transform: translateY(0);
 }
 
-@media (prefers-color-scheme: dark) {
-    header {
-        background: rgba(29, 29, 31, 0.95);
-    }
-}
 
 header.header-hidden {
     transform: translateY(-100%);
@@ -480,10 +459,19 @@ header nav a:active {
     display: block;
 }
 
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+}
+
 .hero .subtitle {
     font-size: clamp(1.25rem, 2.5vw + 0.5rem, 1.75rem);
     color: var(--primary-color);
-    font-weight: var(--font-weight-semibold);
+    font-weight: 600;
     margin-bottom: clamp(1.25rem, 3vw, 2rem);
     letter-spacing: -0.015em;
     line-height: 1.2;
@@ -779,8 +767,13 @@ footer a:hover {
 }
 
 .video-section h2 {
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
+    font-weight: 700;
+    color: var(--text-dark);
     text-align: center;
     margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
 }
 
 .video-wrapper {
@@ -806,8 +799,13 @@ footer a:hover {
 }
 
 .features h2 {
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
+    font-weight: 700;
+    color: var(--text-dark);
     text-align: center;
     margin-bottom: clamp(3rem, 6vw, 4.5rem);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
 }
 
 .features-grid {
@@ -944,10 +942,12 @@ footer a:hover {
     background: var(--bg-light);
 }
 
-.screenshot-caption h4 {
+.screenshot-caption h3 {
     font-size: clamp(1rem, 1.75vw + 0.25rem, 1.25rem);
     font-weight: var(--font-weight-semibold);
+    color: var(--text-dark);
     margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+    letter-spacing: -0.01em;
 }
 
 .screenshot-caption p {
@@ -1007,7 +1007,13 @@ footer a:hover {
 }
 
 .download h2 {
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
     margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
 }
 
 .download .price-tag {
@@ -1082,7 +1088,12 @@ footer a:hover {
 
 .support h2 {
     font-size: clamp(1.75rem, 3.5vw + 0.5rem, 2.25rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
     margin-bottom: clamp(0.875rem, 2vw, 1.25rem);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
 }
 
 .support p {
