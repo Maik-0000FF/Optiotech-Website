@@ -69,8 +69,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-snippets/en.html">
 
     <!-- Preload critical CSS for faster LCP -->
-    <link rel="preload" href="../assets/css/velocity-accents.css" as="style">
-    <link rel="stylesheet" href="../assets/css/velocity-accents.css" fetchpriority="high">
+    <link rel="preload" href="../assets/css/main.css" as="style">
+    <link rel="stylesheet" href="../assets/css/main.css" fetchpriority="high">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/velocity-snippets-favicon-16x16.png">
@@ -93,7 +93,7 @@
         "operatingSystem": "macOS 14.0 or later",
         "offers": {
             "@type": "Offer",
-            "price": "9.99",
+            "price": "4.99",
             "priceCurrency": "USD",
             "url": "https://optiotech.gumroad.com/l/velocity-snippets"
         },
@@ -271,8 +271,13 @@
             <p class="subtitle">Intelligente Text-Expansion für macOS</p>
             <p class="description">Erweitere Text so schnell wie du denkst. Snippets, Emojis, Symbole&nbsp;– alles per Geste. Inspiriert von PowerToys Quick Accent, optimiert für unbegrenzte Möglichkeiten.</p>
             <div class="hero-buttons">
-                <a href="https://optiotech.gumroad.com/l/velocity-snippets" class="btn btn-primary" target="_blank" rel="noopener">Jetzt kaufen - $9.99</a>
+                <a href="https://optiotech.gumroad.com/l/velocity-snippets" class="btn btn-primary" data-buy-button="velocity-snippets" data-base-text="Jetzt kaufen" target="_blank" rel="noopener">Jetzt kaufen - $4.99</a>
                 <a href="#demo" class="btn btn-secondary">Demo ansehen</a>
+            </div>
+            <div class="price-container" style="margin-top: 20px;">
+                <span class="price-original" data-product="velocity-snippets" data-price-type="original">$9.99</span>
+                <span class="price-current" data-product="velocity-snippets" data-price-type="current">$4.99</span>
+                <span class="price-badge" data-discount-banner="velocity-snippets">50% Launch-Rabatt</span>
             </div>
         </div>
     </section>
@@ -455,8 +460,13 @@
         <div class="container">
             <img src="../assets/images/velocity-snippets-icon.png" alt="Velocity Snippets Icon" class="download-app-icon" width="1024" height="1024">
             <h2>Velocity Snippets erhalten</h2>
+            <div class="price-container" style="margin-bottom: 20px;">
+                <span class="price-original" data-product="velocity-snippets" data-price-type="original">$9.99</span>
+                <span class="price-current" data-product="velocity-snippets" data-price-type="current">$4.99</span>
+                <span class="price-badge" data-discount-banner="velocity-snippets">50% Launch-Rabatt</span>
+            </div>
             <p class="price-tag">Einmaliger Kauf • Kostenlose Updates bis Version 2 • Kein Abo</p>
-            <a href="https://optiotech.gumroad.com/l/velocity-snippets" class="btn btn-primary" target="_blank" rel="noopener">Jetzt kaufen - $9.99</a>
+            <a href="https://optiotech.gumroad.com/l/velocity-snippets" class="btn btn-primary" data-buy-button="velocity-snippets" data-base-text="Jetzt kaufen" target="_blank" rel="noopener">Jetzt kaufen - $4.99</a>
             <p style="margin-top: 12px; font-size: 14px; color: var(--text-light); opacity: 0.9;">✓ Apple notarisiert • Sicher installieren</p>
 
             <div class="requirements-box">
@@ -510,107 +520,17 @@
         </div>
     </footer>
 
+    <!-- JavaScript - Common Functions -->
+    <script src="../assets/js/pricing-config.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page-Specific JavaScript -->
     <script>
         // Track product visit for breadcrumb navigation
         localStorage.setItem('lastVisitedProduct', 'velocity-snippets');
 
-        // Language Switch - Save preference and preserve scroll position
-        document.querySelectorAll('.lang-switch').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetLang = this.textContent.trim().toLowerCase();
-                localStorage.setItem('preferredLanguage', targetLang);
-                sessionStorage.setItem('scrollPosition', window.pageYOffset);
-                window.location.href = this.getAttribute('href');
-            });
-        });
-
-        // Restore scroll position after language switch
-        window.addEventListener('load', function() {
-            const scrollPosition = sessionStorage.getItem('scrollPosition');
-            if (scrollPosition) {
-                setTimeout(() => {
-                    window.scrollTo(0, parseInt(scrollPosition));
-                    sessionStorage.removeItem('scrollPosition');
-                }, 100);
-            }
-        });
-
-        // Hamburger Menu Toggle & Hide-on-Scroll Header
+        // Set video playback speed to normal
         document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-            const header = document.querySelector('header');
-
-            // Toggle menu
-            function toggleMenu() {
-                hamburger.classList.toggle('active');
-                mobileNavOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileNavOverlay.classList.contains('active') ? 'hidden' : '';
-            }
-
-            // Open/close menu on hamburger click
-            hamburger.addEventListener('click', toggleMenu);
-
-            // Close menu when clicking overlay
-            mobileNavOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileNavOverlay) {
-                    toggleMenu();
-                }
-            });
-
-            // Close menu when clicking any link
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
-
-            // Close menu on ESC key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && mobileNavOverlay.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-
-            // Hide-on-Scroll Header
-            let lastScrollTop = 0;
-            const scrollThreshold = 100;
-            let ticking = false;
-
-            function updateHeaderVisibility() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                // Don't hide if menu is open
-                if (mobileNavOverlay.classList.contains('active')) {
-                    ticking = false;
-                    return;
-                }
-
-                // Show header at top of page
-                if (scrollTop < scrollThreshold) {
-                    header.classList.remove('header-hidden');
-                }
-                // Hide on scroll down, show on scroll up
-                else if (scrollTop > lastScrollTop) {
-                    // Scrolling down
-                    header.classList.add('header-hidden');
-                } else {
-                    // Scrolling up
-                    header.classList.remove('header-hidden');
-                }
-
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', function() {
-                if (!ticking) {
-                    window.requestAnimationFrame(updateHeaderVisibility);
-                    ticking = true;
-                }
-            });
-
-            // Set video playback speed to normal
             const video = document.getElementById('demoVideo');
             if (video) {
                 video.playbackRate = 1.0;

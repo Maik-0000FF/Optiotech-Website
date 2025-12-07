@@ -3,6 +3,9 @@
 /* Import Inter Font */
 @import url('inter-font.css');
 
+/* Import Pricing Styles */
+@import url('pricing.css');
+
 :root {
     /* Friendly, modern colors */
     --primary-color: #0EA5E9;
@@ -1009,7 +1012,7 @@ footer a:focus-visible {
     }
 
     .hero-buttons {
-        flex-direction: column;
+        gap: 12px;
     }
 
     .video-section h2,

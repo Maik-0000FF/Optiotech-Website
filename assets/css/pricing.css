@@ -1,0 +1,153 @@
+/* Pricing & Discount Styles */
+
+/* Discount Banner */
+[data-discount-banner] {
+    display: none; /* Hidden by default, shown by JavaScript if discount is active */
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1rem);
+    border-radius: var(--radius-md, 12px);
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Price Display with Discount */
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.price-original {
+    font-size: clamp(1rem, 2vw + 0.25rem, 1.25rem);
+    color: var(--text-light, #86868b);
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.price-current {
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+    color: var(--primary-color, #0EA5E9);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.price-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: clamp(0.75rem, 1.5vw + 0.125rem, 0.875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+/* Price in Buy Button */
+.btn[data-buy-button] .price-highlight {
+    font-weight: 700;
+}
+
+/* Discount Countdown Timer (Optional) */
+.discount-countdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    padding: 8px 16px;
+    border-radius: var(--radius-md, 12px);
+    font-size: clamp(0.875rem, 1.5vw + 0.125rem, 1rem);
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.discount-countdown::before {
+    content: "⏰";
+    font-size: 1.2em;
+}
+
+/* Product Status Badges */
+.product-status {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--bg-lighter, #f1f5f9);
+    color: var(--text-dark, #0f172a);
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.product-status.on-sale {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .price-container {
+        gap: 8px;
+    }
+
+    .price-original {
+        font-size: 1rem;
+    }
+
+    .price-current {
+        font-size: 1.5rem;
+    }
+
+    .price-badge {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
+
+    [data-discount-banner] {
+        font-size: 0.875rem;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-container {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .price-badge {
+        margin-top: 4px;
+    }
+}

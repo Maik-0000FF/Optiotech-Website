@@ -55,8 +55,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optiotech.de/">
 
     <!-- Preload critical CSS for faster LCP -->
-    <link rel="preload" href="assets/css/velocity-accents.css" as="style">
-    <link rel="stylesheet" href="assets/css/velocity-accents.css" fetchpriority="high">
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="stylesheet" href="assets/css/main.css" fetchpriority="high">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/velocity-favicon-16x16.png">
@@ -109,7 +109,7 @@
                     "operatingSystem": "macOS 14.0 or later",
                     "offers": {
                         "@type": "Offer",
-                        "price": "4.99",
+                        "price": "1.99",
                         "priceCurrency": "USD"
                     }
                 }
@@ -126,7 +126,7 @@
                     "operatingSystem": "macOS 14.0 or later",
                     "offers": {
                         "@type": "Offer",
-                        "price": "9.99",
+                        "price": "4.99",
                         "priceCurrency": "USD"
                     }
                 }
@@ -321,7 +321,11 @@
                         <div class="product-info">
                             <h3>Velocity Accents</h3>
                             <p>Tippe Umlaute und Akzente so schnell wie du denkst. Perfekt für mehrsprachige Aufgaben. 7 Sprachen inklusive. Inspiriert von Windows PowerToys Quick Accent.</p>
-                            <span class="product-status">$4.99</span>
+                            <div class="price-container">
+                                <span class="price-original" data-product="velocity-accents" data-price-type="original">$4.99</span>
+                                <span class="price-current" data-product="velocity-accents" data-price-type="current">$1.99</span>
+                                <span class="price-badge" data-discount-banner="velocity-accents">60% Launch-Rabatt</span>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -333,7 +337,11 @@
                         <div class="product-info">
                             <h3>Velocity Snippets</h3>
                             <p>Alles was Velocity Accents kann&nbsp;– und noch viel mehr. Erweitere Sonderzeichen, Emojis, Mathe-Symbole und ganze Text-Snippets mit der gleichen schnellen Geste. Unbegrenzte Möglichkeiten.</p>
-                            <span class="product-status">$9.99</span>
+                            <div class="price-container">
+                                <span class="price-original" data-product="velocity-snippets" data-price-type="original">$9.99</span>
+                                <span class="price-current" data-product="velocity-snippets" data-price-type="current">$4.99</span>
+                                <span class="price-badge" data-discount-banner="velocity-snippets">50% Launch-Rabatt</span>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -354,103 +362,8 @@
         </div>
     </footer>
 
-    <script>
-        // Language Switch - Save preference and preserve scroll position
-        document.querySelectorAll('.lang-switch').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetLang = this.textContent.trim().toLowerCase();
-                localStorage.setItem('preferredLanguage', targetLang);
-                sessionStorage.setItem('scrollPosition', window.pageYOffset);
-                window.location.href = this.getAttribute('href');
-            });
-        });
-
-        // Restore scroll position after language switch
-        window.addEventListener('load', function() {
-            const scrollPosition = sessionStorage.getItem('scrollPosition');
-            if (scrollPosition) {
-                setTimeout(() => {
-                    window.scrollTo(0, parseInt(scrollPosition));
-                    sessionStorage.removeItem('scrollPosition');
-                }, 100);
-            }
-        });
-
-        // Hamburger Menu Toggle & Hide-on-Scroll Header
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-            const header = document.querySelector('header');
-
-            // Toggle menu
-            function toggleMenu() {
-                hamburger.classList.toggle('active');
-                mobileNavOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileNavOverlay.classList.contains('active') ? 'hidden' : '';
-            }
-
-            // Open/close menu on hamburger click
-            hamburger.addEventListener('click', toggleMenu);
-
-            // Close menu when clicking overlay
-            mobileNavOverlay.addEventListener('click', function(e) {
-                if (e.target === mobileNavOverlay) {
-                    toggleMenu();
-                }
-            });
-
-            // Close menu when clicking any link
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
-
-            // Close menu on ESC key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && mobileNavOverlay.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-
-            // Hide-on-Scroll Header
-            let lastScrollTop = 0;
-            const scrollThreshold = 100;
-            let ticking = false;
-
-            function updateHeaderVisibility() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                // Don't hide if menu is open
-                if (mobileNavOverlay.classList.contains('active')) {
-                    ticking = false;
-                    return;
-                }
-
-                // Show header at top of page
-                if (scrollTop < scrollThreshold) {
-                    header.classList.remove('header-hidden');
-                }
-                // Hide on scroll down, show on scroll up
-                else if (scrollTop > lastScrollTop) {
-                    // Scrolling down
-                    header.classList.add('header-hidden');
-                } else {
-                    // Scrolling up
-                    header.classList.remove('header-hidden');
-                }
-
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', function() {
-                if (!ticking) {
-                    window.requestAnimationFrame(updateHeaderVisibility);
-                    ticking = true;
-                }
-            });
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="assets/js/pricing-config.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
