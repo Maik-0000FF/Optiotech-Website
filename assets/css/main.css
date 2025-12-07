@@ -979,8 +979,7 @@ footer a:hover {
 }
 
 .screenshot-scroll-container {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     width: min(900px, calc(100vw - 48px));
     margin: 0 auto;
     border-radius: var(--radius-lg);
@@ -1035,6 +1034,35 @@ footer a:hover {
 .screenshot-caption p {
     font-size: clamp(0.875rem, 1.5vw + 0.125rem, 1.0625rem);
     color: var(--text-light);
+}
+
+/* Mobile: Natural scrolling instead of synchronized scroll */
+@media (max-width: 768px) {
+    .screenshot-scroll-wrapper {
+        min-height: auto;
+        padding: var(--space-2xl) 0; /* Normal section padding instead of 100vh */
+    }
+
+    .screenshot-scroll-wrapper-inner {
+        position: static;
+        padding-bottom: 0; /* Remove extra padding */
+    }
+
+    .screenshot-scroll-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+
+    .screenshot-scroll-container::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+    .screenshot-item {
+        scroll-snap-align: center;
+    }
 }
 
 /* Screenshot Pagination */

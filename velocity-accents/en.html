@@ -692,8 +692,18 @@
                     dot.addEventListener('click', () => {
                         const itemWidth = items[0].offsetWidth + 24; // item width + gap
                         const targetScrollLeft = i * itemWidth;
+                        const isMobile = window.innerWidth <= 768;
 
-                        // Calculate required vertical scroll position
+                        // On mobile: scroll horizontally directly
+                        if (isMobile) {
+                            section.container.scrollTo({
+                                left: targetScrollLeft,
+                                behavior: 'smooth'
+                            });
+                            return;
+                        }
+
+                        // On desktop: scroll vertically (synchronized scroll)
                         const containerWidth = section.container.scrollWidth;
                         const viewportWidth = section.container.offsetWidth;
                         const maxScroll = containerWidth - viewportWidth;
@@ -707,9 +717,8 @@
                         }
 
                         // Calculate vertical scroll position needed
-                        const isMobile = window.innerWidth <= 768;
-                        const baseMultiplier = isMobile ? 0.45 : 0.8;
-                        const horizontalSpeedFactor = isMobile ? 0.67 : 1.0;
+                        const baseMultiplier = 0.8;
+                        const horizontalSpeedFactor = 1.0;
                         const horizontalScrollDistance = containerWidth - viewportWidth;
                         const scrollRange = (horizontalScrollDistance / baseMultiplier) / horizontalSpeedFactor;
 
