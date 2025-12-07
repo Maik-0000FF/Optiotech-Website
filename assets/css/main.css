@@ -554,7 +554,6 @@ header nav a:active {
     color: white;
     border-color: var(--primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
 }
 
 .btn-primary:active {
