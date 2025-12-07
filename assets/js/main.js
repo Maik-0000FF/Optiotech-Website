@@ -68,6 +68,7 @@ function initHamburgerMenu() {
     // Hide-on-Scroll Header
     let lastScrollTop = 0;
     const scrollThreshold = 100;
+    const scrollDelta = 10; // Minimum scroll distance to trigger hide/show
     let ticking = false;
 
     function updateHeaderVisibility() {
@@ -79,27 +80,34 @@ function initHamburgerMenu() {
             return;
         }
 
+        // Calculate scroll difference
+        const scrollDiff = Math.abs(scrollTop - lastScrollTop);
+
         // Show header at top of page
         if (scrollTop < scrollThreshold) {
             header.classList.remove('header-hidden');
         }
-        // Hide on scroll down, show on scroll up
-        else if (scrollTop > lastScrollTop) {
-            header.classList.add('header-hidden');
-        } else {
-            header.classList.remove('header-hidden');
+        // Only trigger hide/show if scrolled more than delta (reduces jitter)
+        else if (scrollDiff > scrollDelta) {
+            // Hide on scroll down, show on scroll up
+            if (scrollTop > lastScrollTop) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         ticking = false;
     }
 
+    // Use passive event listener for better iOS scroll performance
     window.addEventListener('scroll', function() {
         if (!ticking) {
             window.requestAnimationFrame(updateHeaderVisibility);
             ticking = true;
         }
-    });
+    }, { passive: true });
 }
 
 // Initialize all common functionality

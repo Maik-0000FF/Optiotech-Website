@@ -263,6 +263,7 @@ section {
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-light);
     position: fixed;
     top: 0;
@@ -271,12 +272,18 @@ header {
     z-index: var(--z-fixed);
     padding: var(--space-sm) 0;
     transition: transform var(--transition-slow);
-    transform: translateY(0);
+    /* Hardware acceleration for smooth scrolling on iOS */
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 
 header.header-hidden {
-    transform: translateY(-100%);
+    -webkit-transform: translateZ(0) translateY(-100%);
+    transform: translateZ(0) translateY(-100%);
 }
 
 header .container {
