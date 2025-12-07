@@ -468,7 +468,7 @@ header nav a:active {
 
 .mobile-nav a:hover,
 .mobile-nav a:active {
-    background: var(--bg-light);
+    background: transparent;
     color: var(--primary-color);
 }
 
@@ -772,25 +772,39 @@ header nav a:active {
     letter-spacing: -0.02em;
 }
 
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.price-row .price-current,
+.price-row .price-badge {
+    line-height: 1;
+}
+
 .price-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background: #10B981;
     color: white;
-    padding: 6px var(--space-sm);
+    padding: 8px 12px;
     border-radius: 20px;
     font-size: clamp(0.75rem, 1.5vw + 0.125rem, 0.875rem);
     font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.5px;
-    animation: pulse 2s ease-in-out infinite;
+    animation: pulse-badge 2s ease-in-out infinite;
 }
 
-@keyframes pulse {
+@keyframes pulse-badge {
     0%, 100% {
-        transform: scale(1);
+        transform: scale(1) translateY(5px);
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.05) translateY(5px);
     }
 }
 
@@ -1276,7 +1290,12 @@ footer a:hover {
 }
 
 .faq-question:hover {
-    background: rgba(0, 113, 227, 0.04);
+    background: transparent;
+}
+
+.faq-question:hover h3,
+.faq-question:hover .faq-icon {
+    color: var(--primary-color);
 }
 
 .faq-question h3 {
@@ -1289,8 +1308,8 @@ footer a:hover {
 
 .faq-icon {
     font-size: 32px;
-    color: var(--primary-color);
-    transition: transform var(--transition-base);
+    color: var(--text-dark);
+    transition: transform var(--transition-base), color var(--transition-base);
     flex-shrink: 0;
     font-weight: var(--font-weight-normal);
     line-height: 1;
