@@ -362,8 +362,7 @@ header nav a:active {
 }
 
 .lang-switch:active {
-    background: rgba(0, 113, 227, 0.15);
-    transform: scale(0.98);
+    color: var(--primary-color);
 }
 
 /* Mobile Header */
@@ -415,6 +414,7 @@ header nav a:active {
 
 /* Mobile Navigation Overlay */
 .mobile-nav-overlay {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -425,12 +425,15 @@ header nav a:active {
     z-index: var(--z-modal-backdrop);
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-slow);
+    pointer-events: none;
+    transition: opacity var(--transition-slow), visibility var(--transition-slow);
 }
 
 .mobile-nav-overlay.active {
+    display: block;
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 .mobile-nav {
