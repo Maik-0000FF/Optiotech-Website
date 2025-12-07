@@ -861,6 +861,10 @@ footer a:hover {
         grid-template-columns: 1fr;
         gap: var(--space-sm);
     }
+
+    .feature-card {
+        aspect-ratio: auto;
+    }
 }
 
 @media (max-width: 480px) {
