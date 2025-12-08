@@ -482,6 +482,10 @@ header nav a:active {
     overflow: hidden;
 }
 
+.hero.hero-animated {
+    overflow: visible;
+}
+
 /* Keycap Pyramid Animation */
 .keycap-pyramid {
     position: absolute;
