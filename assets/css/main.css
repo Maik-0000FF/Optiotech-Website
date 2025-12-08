@@ -686,7 +686,7 @@ main {
         transform: translate(var(--start-x, 0), var(--start-y, -30px)) rotate(0deg);
     }
     50% {
-        opacity: 0.6;
+        opacity: 1;
         transform: translate(0, 0) rotate(calc(var(--wobble, 8deg) * 1));
     }
     70% {
@@ -696,7 +696,7 @@ main {
         transform: translate(0, 0) rotate(calc(var(--wobble, 8deg) * 0.3));
     }
     100% {
-        opacity: 0.6;
+        opacity: 1;
         transform: translate(0, 0) rotate(0deg);
     }
 }
