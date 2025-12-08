@@ -695,6 +695,10 @@ header nav a:active {
 .hero .container {
     position: relative;
     z-index: 1;
+}
+
+/* Hero animation only on product pages (with keycap pyramid) */
+.hero:has(.hero-app-icon) .container {
     opacity: 0;
     animation: heroContentFadeIn 0.8s ease-out 3.0s forwards;
 }
@@ -715,7 +719,7 @@ header nav a:active {
         display: none;
     }
 
-    .hero .container {
+    .hero:has(.hero-app-icon) .container {
         opacity: 1;
         animation: none;
     }
@@ -732,7 +736,7 @@ header nav a:active {
     display: none;
 }
 
-.skip-hero-animation .hero .container {
+.skip-hero-animation .hero:has(.hero-app-icon) .container {
     opacity: 1;
     animation: none;
 }
