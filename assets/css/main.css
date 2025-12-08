@@ -110,6 +110,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Respect user's motion preferences */
@@ -147,6 +148,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     padding-top: 64px;
+    overflow-x: hidden;
 }
 
 /* ==========================================================================
@@ -474,6 +476,10 @@ header nav a:active {
    6. COMPONENTS - Hero
    ========================================================================== */
 
+main {
+    overflow-x: clip;
+}
+
 .hero {
     background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
     padding: clamp(4rem, 8vw, 6rem) 0 clamp(5rem, 10vw, 8rem);
@@ -483,7 +489,8 @@ header nav a:active {
 }
 
 .hero.hero-animated {
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 /* Keycap Pyramid Animation */
