@@ -66,6 +66,10 @@
     <link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/">
     <link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/en.html">
 
+    <!-- Preload critical fonts for faster LCP -->
+    <link rel="preload" href="../assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- Preload critical CSS for faster LCP -->
     <link rel="preload" href="../assets/css/main.css" as="style">
     <link rel="stylesheet" href="../assets/css/main.css" fetchpriority="high">
@@ -709,10 +713,10 @@
     </footer>
 
     <!-- JavaScript - Common Functions -->
-    <script src="../assets/js/logo.js"></script>
-    <script src="../assets/js/pricing-config.js"></script>
-    <script src="../assets/js/faq.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/logo.js" defer></script>
+    <script src="../assets/js/pricing-config.js" defer></script>
+    <script src="../assets/js/faq.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
 
     <!-- Page-Specific JavaScript -->
     <script>
