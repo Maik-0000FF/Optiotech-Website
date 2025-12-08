@@ -485,8 +485,8 @@ header nav a:active {
 /* Keycap Pyramid Animation */
 .keycap-pyramid {
     position: absolute;
-    top: 0;
     left: 50%;
+    bottom: 100%;
     transform: translateX(-50%);
     z-index: 0;
     pointer-events: none;
@@ -494,29 +494,25 @@ header nav a:active {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    padding-top: 20px;
-    animation: keycapFadeOut 0.8s ease-out 4.5s forwards;
+    margin-bottom: -30px;
+    animation: keycapFadeOut 0.6s ease-out 2.5s forwards;
 }
 
 .keycap-row {
     display: flex;
-    gap: 10px;
+    gap: 100px;
     justify-content: center;
-    margin-top: -20px;
+    align-items: center;
+    margin-top: -30px;
 }
 
 .keycap-row:first-child {
     margin-top: 0;
 }
 
-.keycap-row:nth-child(odd) .keycap:nth-child(even),
-.keycap-row:nth-child(even) .keycap:nth-child(odd) {
-    transform: translateY(30px);
-}
-
 .keycap {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(180deg, #fafafa 0%, #e8e8e8 100%);
     border: 1px solid #d1d1d1;
     border-radius: 12px;
@@ -531,23 +527,25 @@ header nav a:active {
         0 -2px 0 0 #c4c4c4 inset,
         0 2px 4px rgba(0,0,0,0.15);
     opacity: 0;
-    animation: keycapDrop 0.4s ease-out forwards;
+    animation: keycapDrop 0.15s ease-out forwards;
 }
+
 
 /* Hero App Icon - appears after pyramid and stays */
 .hero-app-icon {
+    position: relative;
     text-align: center;
     margin-top: 60px;
     padding-bottom: 40px;
-    opacity: 0;
-    animation: appIconFadeIn 0.6s ease-out 2.25s forwards;
 }
 
 .hero-app-icon img {
-    width: 128px;
-    height: 128px;
-    border-radius: 28px;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    animation: appIconFadeIn 0.4s ease-out 1.5s forwards, appIconGrow 0.5s ease-out 2.5s forwards;
 }
 
 @keyframes appIconFadeIn {
@@ -561,17 +559,117 @@ header nav a:active {
     }
 }
 
-/* Staggered animation delays - Row by row */
-.keycap-row:nth-child(1) .keycap { animation-delay: calc(0.03s * var(--i, 0)); }
-.keycap-row:nth-child(2) .keycap { animation-delay: calc(0.25s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(3) .keycap { animation-delay: calc(0.5s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(4) .keycap { animation-delay: calc(0.75s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(5) .keycap { animation-delay: calc(1.0s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(6) .keycap { animation-delay: calc(1.25s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(7) .keycap { animation-delay: calc(1.5s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(8) .keycap { animation-delay: calc(1.75s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(9) .keycap { animation-delay: calc(2.0s + 0.03s * var(--i, 0)); }
-.keycap-row:nth-child(10) .keycap { animation-delay: 2.25s; }
+@keyframes appIconGrow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.6);
+    }
+}
+
+/* Staggered animation delays - Random-artiges schnelles Tippen */
+.keycap-row:nth-child(1) .keycap:nth-child(1) { animation-delay: 0.02s; }
+.keycap-row:nth-child(1) .keycap:nth-child(2) { animation-delay: 0.05s; }
+.keycap-row:nth-child(1) .keycap:nth-child(3) { animation-delay: 0.03s; }
+.keycap-row:nth-child(1) .keycap:nth-child(4) { animation-delay: 0.08s; }
+.keycap-row:nth-child(1) .keycap:nth-child(5) { animation-delay: 0.04s; }
+.keycap-row:nth-child(1) .keycap:nth-child(6) { animation-delay: 0.09s; }
+.keycap-row:nth-child(1) .keycap:nth-child(7) { animation-delay: 0.01s; }
+.keycap-row:nth-child(1) .keycap:nth-child(8) { animation-delay: 0.07s; }
+.keycap-row:nth-child(1) .keycap:nth-child(9) { animation-delay: 0.06s; }
+.keycap-row:nth-child(1) .keycap:nth-child(10) { animation-delay: 0.03s; }
+.keycap-row:nth-child(1) .keycap:nth-child(11) { animation-delay: 0.08s; }
+.keycap-row:nth-child(1) .keycap:nth-child(12) { animation-delay: 0.05s; }
+.keycap-row:nth-child(1) .keycap:nth-child(13) { animation-delay: 0.02s; }
+
+.keycap-row:nth-child(2) .keycap:nth-child(1) { animation-delay: 0.14s; }
+.keycap-row:nth-child(2) .keycap:nth-child(2) { animation-delay: 0.11s; }
+.keycap-row:nth-child(2) .keycap:nth-child(3) { animation-delay: 0.17s; }
+.keycap-row:nth-child(2) .keycap:nth-child(4) { animation-delay: 0.13s; }
+.keycap-row:nth-child(2) .keycap:nth-child(5) { animation-delay: 0.19s; }
+.keycap-row:nth-child(2) .keycap:nth-child(6) { animation-delay: 0.12s; }
+.keycap-row:nth-child(2) .keycap:nth-child(7) { animation-delay: 0.16s; }
+.keycap-row:nth-child(2) .keycap:nth-child(8) { animation-delay: 0.10s; }
+.keycap-row:nth-child(2) .keycap:nth-child(9) { animation-delay: 0.18s; }
+.keycap-row:nth-child(2) .keycap:nth-child(10) { animation-delay: 0.15s; }
+.keycap-row:nth-child(2) .keycap:nth-child(11) { animation-delay: 0.11s; }
+.keycap-row:nth-child(2) .keycap:nth-child(12) { animation-delay: 0.14s; }
+
+.keycap-row:nth-child(3) .keycap:nth-child(1) { animation-delay: 0.23s; }
+.keycap-row:nth-child(3) .keycap:nth-child(2) { animation-delay: 0.26s; }
+.keycap-row:nth-child(3) .keycap:nth-child(3) { animation-delay: 0.21s; }
+.keycap-row:nth-child(3) .keycap:nth-child(4) { animation-delay: 0.28s; }
+.keycap-row:nth-child(3) .keycap:nth-child(5) { animation-delay: 0.22s; }
+.keycap-row:nth-child(3) .keycap:nth-child(6) { animation-delay: 0.27s; }
+.keycap-row:nth-child(3) .keycap:nth-child(7) { animation-delay: 0.24s; }
+.keycap-row:nth-child(3) .keycap:nth-child(8) { animation-delay: 0.20s; }
+.keycap-row:nth-child(3) .keycap:nth-child(9) { animation-delay: 0.25s; }
+.keycap-row:nth-child(3) .keycap:nth-child(10) { animation-delay: 0.29s; }
+.keycap-row:nth-child(3) .keycap:nth-child(11) { animation-delay: 0.22s; }
+
+.keycap-row:nth-child(4) .keycap:nth-child(1) { animation-delay: 0.34s; }
+.keycap-row:nth-child(4) .keycap:nth-child(2) { animation-delay: 0.31s; }
+.keycap-row:nth-child(4) .keycap:nth-child(3) { animation-delay: 0.38s; }
+.keycap-row:nth-child(4) .keycap:nth-child(4) { animation-delay: 0.32s; }
+.keycap-row:nth-child(4) .keycap:nth-child(5) { animation-delay: 0.36s; }
+.keycap-row:nth-child(4) .keycap:nth-child(6) { animation-delay: 0.30s; }
+.keycap-row:nth-child(4) .keycap:nth-child(7) { animation-delay: 0.37s; }
+.keycap-row:nth-child(4) .keycap:nth-child(8) { animation-delay: 0.33s; }
+.keycap-row:nth-child(4) .keycap:nth-child(9) { animation-delay: 0.39s; }
+.keycap-row:nth-child(4) .keycap:nth-child(10) { animation-delay: 0.35s; }
+
+.keycap-row:nth-child(5) .keycap:nth-child(1) { animation-delay: 0.44s; }
+.keycap-row:nth-child(5) .keycap:nth-child(2) { animation-delay: 0.48s; }
+.keycap-row:nth-child(5) .keycap:nth-child(3) { animation-delay: 0.41s; }
+.keycap-row:nth-child(5) .keycap:nth-child(4) { animation-delay: 0.46s; }
+.keycap-row:nth-child(5) .keycap:nth-child(5) { animation-delay: 0.42s; }
+.keycap-row:nth-child(5) .keycap:nth-child(6) { animation-delay: 0.49s; }
+.keycap-row:nth-child(5) .keycap:nth-child(7) { animation-delay: 0.43s; }
+.keycap-row:nth-child(5) .keycap:nth-child(8) { animation-delay: 0.47s; }
+.keycap-row:nth-child(5) .keycap:nth-child(9) { animation-delay: 0.45s; }
+
+.keycap-row:nth-child(6) .keycap:nth-child(1) { animation-delay: 0.53s; }
+.keycap-row:nth-child(6) .keycap:nth-child(2) { animation-delay: 0.57s; }
+.keycap-row:nth-child(6) .keycap:nth-child(3) { animation-delay: 0.51s; }
+.keycap-row:nth-child(6) .keycap:nth-child(4) { animation-delay: 0.58s; }
+.keycap-row:nth-child(6) .keycap:nth-child(5) { animation-delay: 0.54s; }
+.keycap-row:nth-child(6) .keycap:nth-child(6) { animation-delay: 0.50s; }
+.keycap-row:nth-child(6) .keycap:nth-child(7) { animation-delay: 0.56s; }
+.keycap-row:nth-child(6) .keycap:nth-child(8) { animation-delay: 0.52s; }
+
+.keycap-row:nth-child(7) .keycap:nth-child(1) { animation-delay: 0.64s; }
+.keycap-row:nth-child(7) .keycap:nth-child(2) { animation-delay: 0.61s; }
+.keycap-row:nth-child(7) .keycap:nth-child(3) { animation-delay: 0.67s; }
+.keycap-row:nth-child(7) .keycap:nth-child(4) { animation-delay: 0.62s; }
+.keycap-row:nth-child(7) .keycap:nth-child(5) { animation-delay: 0.66s; }
+.keycap-row:nth-child(7) .keycap:nth-child(6) { animation-delay: 0.60s; }
+.keycap-row:nth-child(7) .keycap:nth-child(7) { animation-delay: 0.65s; }
+
+.keycap-row:nth-child(8) .keycap:nth-child(1) { animation-delay: 0.73s; }
+.keycap-row:nth-child(8) .keycap:nth-child(2) { animation-delay: 0.76s; }
+.keycap-row:nth-child(8) .keycap:nth-child(3) { animation-delay: 0.70s; }
+.keycap-row:nth-child(8) .keycap:nth-child(4) { animation-delay: 0.77s; }
+.keycap-row:nth-child(8) .keycap:nth-child(5) { animation-delay: 0.72s; }
+.keycap-row:nth-child(8) .keycap:nth-child(6) { animation-delay: 0.75s; }
+
+.keycap-row:nth-child(9) .keycap:nth-child(1) { animation-delay: 0.84s; }
+.keycap-row:nth-child(9) .keycap:nth-child(2) { animation-delay: 0.81s; }
+.keycap-row:nth-child(9) .keycap:nth-child(3) { animation-delay: 0.86s; }
+.keycap-row:nth-child(9) .keycap:nth-child(4) { animation-delay: 0.82s; }
+.keycap-row:nth-child(9) .keycap:nth-child(5) { animation-delay: 0.85s; }
+
+.keycap-row:nth-child(10) .keycap:nth-child(1) { animation-delay: 0.92s; }
+.keycap-row:nth-child(10) .keycap:nth-child(2) { animation-delay: 0.95s; }
+.keycap-row:nth-child(10) .keycap:nth-child(3) { animation-delay: 0.90s; }
+.keycap-row:nth-child(10) .keycap:nth-child(4) { animation-delay: 0.94s; }
+
+.keycap-row:nth-child(11) .keycap:nth-child(1) { animation-delay: 1.01s; }
+.keycap-row:nth-child(11) .keycap:nth-child(2) { animation-delay: 1.04s; }
+.keycap-row:nth-child(11) .keycap:nth-child(3) { animation-delay: 1.00s; }
+
+.keycap-row:nth-child(12) .keycap:nth-child(1) { animation-delay: 1.10s; }
+.keycap-row:nth-child(12) .keycap:nth-child(2) { animation-delay: 1.13s; }
 
 @keyframes keycapDrop {
     0% {
@@ -594,17 +692,11 @@ header nav a:active {
     }
 }
 
-/* Maintain vertical offset for staggered rows */
-.keycap-row:nth-child(odd) .keycap:nth-child(odd),
-.keycap-row:nth-child(even) .keycap:nth-child(even) {
-    margin-top: 22px;
-}
-
 .hero .container {
     position: relative;
     z-index: 1;
     opacity: 0;
-    animation: heroContentFadeIn 0.8s ease-out 4.5s forwards;
+    animation: heroContentFadeIn 0.8s ease-out 3.0s forwards;
 }
 
 @keyframes heroContentFadeIn {
@@ -622,6 +714,33 @@ header nav a:active {
     .keycap-pyramid {
         display: none;
     }
+
+    .hero .container {
+        opacity: 1;
+        animation: none;
+    }
+
+    .hero-app-icon img {
+        opacity: 1;
+        animation: none;
+        transform: scale(1.6);
+    }
+}
+
+/* Skip animation on language switch */
+.skip-hero-animation .keycap-pyramid {
+    display: none;
+}
+
+.skip-hero-animation .hero .container {
+    opacity: 1;
+    animation: none;
+}
+
+.skip-hero-animation .hero-app-icon img {
+    opacity: 1;
+    animation: none;
+    transform: scale(1.6);
 }
 
 .hero .app-icon {

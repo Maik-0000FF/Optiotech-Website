@@ -22,6 +22,19 @@
             sessionStorage.removeItem('languageRedirecting');
         });
     })();
+
+    // Skip hero animation on language switch
+    (function() {
+        const referrer = document.referrer;
+        const isLanguageSwitch = referrer && (
+            referrer.includes('/velocity-accents/en.html') ||
+            referrer.includes('/velocity-accents/') ||
+            referrer.includes('/velocity-accents/index.html')
+        );
+        if (isLanguageSwitch) {
+            document.documentElement.classList.add('skip-hero-animation');
+        }
+    })();
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -356,6 +369,139 @@
                 <span class="price-current" data-product="velocity-accents" data-price-type="current">$1.99</span>
                 <span class="price-badge" data-discount-banner="velocity-accents">60% Launch Discount</span>
             </div>
+        </div>
+        <!-- App Icon with Pyramid above it -->
+        <div class="hero-app-icon">
+            <!-- Keycap Pyramid - App-Icon is the tip -->
+            <div class="keycap-pyramid" aria-hidden="true">
+                <!-- Base: 13 Keycaps (top) -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">±</span>
+                    <span class="keycap" style="--i:1">÷</span>
+                    <span class="keycap" style="--i:2">×</span>
+                    <span class="keycap" style="--i:3">≈</span>
+                    <span class="keycap" style="--i:4">←</span>
+                    <span class="keycap" style="--i:5">→</span>
+                    <span class="keycap" style="--i:6">↑</span>
+                    <span class="keycap" style="--i:7">↓</span>
+                    <span class="keycap" style="--i:8">ð</span>
+                    <span class="keycap" style="--i:9">þ</span>
+                    <span class="keycap" style="--i:10">ä</span>
+                    <span class="keycap" style="--i:11">ö</span>
+                    <span class="keycap" style="--i:12">ü</span>
+                </div>
+                <!-- Row 2: 12 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">Ω</span>
+                    <span class="keycap" style="--i:1">≠</span>
+                    <span class="keycap" style="--i:2">©</span>
+                    <span class="keycap" style="--i:3">®</span>
+                    <span class="keycap" style="--i:4">™</span>
+                    <span class="keycap" style="--i:5">€</span>
+                    <span class="keycap" style="--i:6">£</span>
+                    <span class="keycap" style="--i:7">¥</span>
+                    <span class="keycap" style="--i:8">¢</span>
+                    <span class="keycap" style="--i:9">ß</span>
+                    <span class="keycap" style="--i:10">Ä</span>
+                    <span class="keycap" style="--i:11">Ö</span>
+                </div>
+                <!-- Row 3: 11 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">á</span>
+                    <span class="keycap" style="--i:1">à</span>
+                    <span class="keycap" style="--i:2">â</span>
+                    <span class="keycap" style="--i:3">ã</span>
+                    <span class="keycap" style="--i:4">å</span>
+                    <span class="keycap" style="--i:5">æ</span>
+                    <span class="keycap" style="--i:6">ā</span>
+                    <span class="keycap" style="--i:7">ą</span>
+                    <span class="keycap" style="--i:8">ă</span>
+                    <span class="keycap" style="--i:9">Ü</span>
+                    <span class="keycap" style="--i:10">ÿ</span>
+                </div>
+                <!-- Row 4: 10 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">é</span>
+                    <span class="keycap" style="--i:1">è</span>
+                    <span class="keycap" style="--i:2">ê</span>
+                    <span class="keycap" style="--i:3">ë</span>
+                    <span class="keycap" style="--i:4">ē</span>
+                    <span class="keycap" style="--i:5">ę</span>
+                    <span class="keycap" style="--i:6">ė</span>
+                    <span class="keycap" style="--i:7">ě</span>
+                    <span class="keycap" style="--i:8">ẽ</span>
+                    <span class="keycap" style="--i:9">ə</span>
+                </div>
+                <!-- Row 5: 9 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">í</span>
+                    <span class="keycap" style="--i:1">ì</span>
+                    <span class="keycap" style="--i:2">î</span>
+                    <span class="keycap" style="--i:3">ï</span>
+                    <span class="keycap" style="--i:4">ī</span>
+                    <span class="keycap" style="--i:5">į</span>
+                    <span class="keycap" style="--i:6">ı</span>
+                    <span class="keycap" style="--i:7">ĩ</span>
+                    <span class="keycap" style="--i:8">ỉ</span>
+                </div>
+                <!-- Row 6: 8 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">ó</span>
+                    <span class="keycap" style="--i:1">ò</span>
+                    <span class="keycap" style="--i:2">ô</span>
+                    <span class="keycap" style="--i:3">õ</span>
+                    <span class="keycap" style="--i:4">ø</span>
+                    <span class="keycap" style="--i:5">œ</span>
+                    <span class="keycap" style="--i:6">ō</span>
+                    <span class="keycap" style="--i:7">ő</span>
+                </div>
+                <!-- Row 7: 7 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">ú</span>
+                    <span class="keycap" style="--i:1">ù</span>
+                    <span class="keycap" style="--i:2">û</span>
+                    <span class="keycap" style="--i:3">ū</span>
+                    <span class="keycap" style="--i:4">ų</span>
+                    <span class="keycap" style="--i:5">ů</span>
+                    <span class="keycap" style="--i:6">ű</span>
+                </div>
+                <!-- Row 8: 6 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">ñ</span>
+                    <span class="keycap" style="--i:1">ń</span>
+                    <span class="keycap" style="--i:2">ň</span>
+                    <span class="keycap" style="--i:3">ņ</span>
+                    <span class="keycap" style="--i:4">ŋ</span>
+                    <span class="keycap" style="--i:5">ṅ</span>
+                </div>
+                <!-- Row 9: 5 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">ç</span>
+                    <span class="keycap" style="--i:1">ć</span>
+                    <span class="keycap" style="--i:2">č</span>
+                    <span class="keycap" style="--i:3">ċ</span>
+                    <span class="keycap" style="--i:4">ĉ</span>
+                </div>
+                <!-- Row 10: 4 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">ś</span>
+                    <span class="keycap" style="--i:1">š</span>
+                    <span class="keycap" style="--i:2">ş</span>
+                    <span class="keycap" style="--i:3">ŝ</span>
+                </div>
+                <!-- Row 11: 3 Keycaps -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">ź</span>
+                    <span class="keycap" style="--i:1">ž</span>
+                    <span class="keycap" style="--i:2">ż</span>
+                </div>
+                <!-- Row 12: 2 Keycaps (tip) -->
+                <div class="keycap-row">
+                    <span class="keycap" style="--i:0">ł</span>
+                    <span class="keycap" style="--i:1">đ</span>
+                </div>
+            </div>
+            <img src="../assets/images/products/velocity-accents-icon.png" alt="Velocity Accents App Icon" width="80" height="80">
         </div>
     </section>
 
