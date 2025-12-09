@@ -1769,13 +1769,8 @@ footer {
    8. RESPONSIVE BREAKPOINTS
    ========================================================================== */
 
-/* Tablet: 768px and below */
-@media (max-width: 768px) {
-    body {
-        padding-top: 64px;
-    }
-
-    /* Mobile Header */
+/* Navigation Breakpoint: 1000px and below */
+@media (max-width: 1000px) {
     .mobile-header-right {
         display: flex;
     }
@@ -1786,6 +1781,13 @@ footer {
 
     .desktop-nav {
         display: none;
+    }
+}
+
+/* Tablet: 768px and below */
+@media (max-width: 768px) {
+    body {
+        padding-top: 64px;
     }
 
     header .logo-container .logo {
