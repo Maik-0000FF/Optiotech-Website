@@ -84,7 +84,7 @@
 
         <!-- App Icon -->
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/products/velocity-accents-icon.png</image:loc>
+            <image:loc>https://optiotech.de/assets/images/products/velocity-accents-icon.webp</image:loc>
             <image:title>Velocity Accents App Icon</image:title>
             <image:caption>Velocity Accents - Schnelle Akzente für macOS</image:caption>
         </image:image>
@@ -148,7 +148,7 @@
 
         <!-- App Icon -->
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/products/velocity-accents-icon.png</image:loc>
+            <image:loc>https://optiotech.de/assets/images/products/velocity-accents-icon.webp</image:loc>
             <image:title>Velocity Accents App Icon</image:title>
             <image:caption>Velocity Accents - Quick Accent for macOS</image:caption>
         </image:image>
@@ -166,7 +166,7 @@
 
         <!-- App Icon -->
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/products/velocity-snippets-icon.png</image:loc>
+            <image:loc>https://optiotech.de/assets/images/products/velocity-snippets-icon.webp</image:loc>
             <image:title>Velocity Snippets App Icon</image:title>
             <image:caption>Velocity Snippets - Intelligente Text-Expansion für macOS</image:caption>
         </image:image>
@@ -184,7 +184,7 @@
 
         <!-- App Icon -->
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/products/velocity-snippets-icon.png</image:loc>
+            <image:loc>https://optiotech.de/assets/images/products/velocity-snippets-icon.webp</image:loc>
             <image:title>Velocity Snippets App Icon</image:title>
             <image:caption>Velocity Snippets - Smart Text Expansion for macOS</image:caption>
         </image:image>

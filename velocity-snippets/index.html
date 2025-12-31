@@ -52,7 +52,7 @@
     <meta property="og:url" content="https://optiotech.de/velocity-snippets/">
     <meta property="og:title" content="Velocity Snippets - Quick Accent Alternative + Text-Expansion für macOS">
     <meta property="og:description" content="Quick Accent Alternative + Text-Expansion für Mac. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets und Emojis.">
-    <meta property="og:image" content="https://optiotech.de/assets/images/products/velocity-snippets-icon.png">
+    <meta property="og:image" content="https://optiotech.de/assets/images/products/velocity-snippets-icon.webp">
     <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
     <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
     <meta property="og:video:secure_url" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
@@ -67,7 +67,7 @@
     <meta property="twitter:url" content="https://optiotech.de/velocity-snippets/">
     <meta property="twitter:title" content="Velocity Snippets - Quick Accent Alternative + Text-Expansion für macOS">
     <meta property="twitter:description" content="Quick Accent Alternative + Text-Expansion für Mac. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets und Emojis.">
-    <meta property="twitter:image" content="https://optiotech.de/assets/images/products/velocity-snippets-icon.png">
+    <meta property="twitter:image" content="https://optiotech.de/assets/images/products/velocity-snippets-icon.webp">
     <meta name="twitter:player" content="https://optiotech.de/velocity-snippets/#demo">
     <meta name="twitter:player:width" content="3840">
     <meta name="twitter:player:height" content="2160">
@@ -85,7 +85,9 @@
     <link rel="preload" href="../assets/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Preload critical CSS for faster LCP -->
+    <link rel="preload" href="../assets/css/inter-font.css" as="style">
     <link rel="preload" href="../assets/css/main.css" as="style">
+    <link rel="stylesheet" href="../assets/css/inter-font.css">
     <link rel="stylesheet" href="../assets/css/main.css" fetchpriority="high">
 
     <!-- Favicons -->
@@ -105,7 +107,7 @@
         "@type": "VideoObject",
         "name": "Velocity Snippets Demo - Intelligente Text-Expansion für macOS",
         "description": "Echtzeit-Demo von Velocity Snippets. Custom Mappings, Bracket Pairs, Bullet Styles, Mathematik-Symbole, Neovim Markdown Rendering, WezTerm Terminal-Befehle. Unbegrenzte Möglichkeiten mit der Quick Accent Geste.",
-        "thumbnailUrl": "https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.jpg",
+        "thumbnailUrl": "https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp",
         "uploadDate": "2025-11-12T10:00:00+01:00",
         "duration": "PT2M34S",
         "contentUrl": "https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4",
@@ -133,11 +135,15 @@
             "@type": "Offer",
             "price": "4.99",
             "priceCurrency": "USD",
-            "url": "https://optiotech.gumroad.com/l/velocity-snippets"
+            "url": "https://optiotech.gumroad.com/l/velocity-snippets",
+            "availability": "https://schema.org/InStock"
         },
+        "downloadUrl": "https://optiotech.gumroad.com/l/velocity-snippets",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1",
             "ratingCount": "1"
         },
         "brand": {
@@ -145,7 +151,7 @@
             "name": "optiotech"
         },
         "description": "Quick Accent Alternative + Text-Expansion für macOS mit 50% Launch-Rabatt. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets, Emojis und Mathe-Symbole.",
-        "image": "https://optiotech.de/assets/images/products/velocity-snippets-icon.png",
+        "image": "https://optiotech.de/assets/images/products/velocity-snippets-icon.webp",
         "softwareVersion": "0.1.1",
         "releaseNotes": "Version 0.1.1 - Jetzt verfügbar mit Quick Accent Geste, unbegrenzten Snippets, Emoji-Unterstützung und Text-Expansion",
         "featureList": [
@@ -497,7 +503,7 @@
                     <span class="keycap" style="--i:1">≠</span>
                 </div>
             </div>
-            <img src="../assets/images/products/velocity-snippets-icon.png" alt="Velocity Snippets App Icon" width="80" height="80">
+            <img src="../assets/images/products/velocity-snippets-icon.webp" alt="Velocity Snippets App Icon" width="80" height="80">
         </div>
     </section>
 
@@ -506,7 +512,7 @@
         <div class="container">
             <h2>In Aktion erleben&nbsp;– Echtzeit-Performance</h2>
             <div class="video-wrapper">
-                <video id="demoVideo" autoplay controls loop muted playsinline poster="../assets/images/thumbnails/velocity-snippets-video.jpg">
+                <video id="demoVideo" autoplay controls loop muted playsinline poster="../assets/images/thumbnails/velocity-snippets-video.webp">
                     <source src="../videos/Demo_VelocitySnippets_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
                     <source src="../videos/Demo_VelocitySnippets_desktop.mp4" type="video/mp4" media="(min-width: 1025px)">
                     <track kind="captions" src="../videos/captions-velocity-snippets-de.vtt" srclang="de" label="Deutsch" default>
@@ -589,28 +595,28 @@
                     <div class="screenshot-scroll-container">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/preferences_dropdown_presets_velocitysnippets.webp" alt="Voreingestellte Sprach-Mappings auswählen">
+                            <img src="../screenshots/velocity-snippets/preferences_dropdown_presets_velocitysnippets.webp" alt="Voreingestellte Sprach-Mappings auswählen" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Voreingestellte Mappings</h3>
                                 <p>Wähle aus 10+ Sprachen und Presets</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/multilingual_mapping_velocitysnippets.webp" alt="Mehrsprachige Zeichen-Mappings">
+                            <img src="../screenshots/velocity-snippets/multilingual_mapping_velocitysnippets.webp" alt="Mehrsprachige Zeichen-Mappings" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Mehrsprachig</h3>
                                 <p>Deutsch, Französisch, Spanisch & mehr</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/emoji_mapping_velocitysnippets.webp" alt="Emoji Mappings">
+                            <img src="../screenshots/velocity-snippets/emoji_mapping_velocitysnippets.webp" alt="Emoji Mappings" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Emoji Support</h3>
                                 <p>Schneller Zugriff auf Herzen, Smileys & mehr</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/math_mapping_velocitysnippets.webp" alt="Mathematik-Symbole">
+                            <img src="../screenshots/velocity-snippets/math_mapping_velocitysnippets.webp" alt="Mathematik-Symbole" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Mathematik-Symbole</h3>
                                 <p>Tippe π, α, β, √, ∫ sofort</p>
@@ -638,28 +644,28 @@
                     <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/emoji_in_action_velocitysnippets.webp" alt="Emoji Snippets in Aktion">
+                            <img src="../screenshots/velocity-snippets/emoji_in_action_velocitysnippets.webp" alt="Emoji Snippets in Aktion" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Emoji in Aktion</h3>
                                 <p>Schnelle Emojis während des Tippens</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/math_in_action_velocitysnippets.webp" alt="Mathematik-Symbole in Aktion">
+                            <img src="../screenshots/velocity-snippets/math_in_action_velocitysnippets.webp" alt="Mathematik-Symbole in Aktion" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Mathe-Symbole Live</h3>
                                 <p>Mathematische Zeichen sofort verfügbar</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/spanish_in_action_velocitysnippets.webp" alt="Spanische Akzente in Aktion">
+                            <img src="../screenshots/velocity-snippets/spanish_in_action_velocitysnippets.webp" alt="Spanische Akzente in Aktion" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Spanisch in Aktion</h3>
                                 <p>Akzente erscheinen sofort beim Tippen</p>
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/custom_mapping_velocitysnippets.webp" alt="Benutzerdefinierte Zeichen-Mappings">
+                            <img src="../screenshots/velocity-snippets/custom_mapping_velocitysnippets.webp" alt="Benutzerdefinierte Zeichen-Mappings" loading="lazy">
                             <div class="screenshot-caption">
                                 <h3>Eigene Mappings</h3>
                                 <p>Erstelle deine eigenen Shortcuts und Cycling</p>
@@ -790,7 +796,7 @@
     <!-- Download Section -->
     <section class="download" id="download">
         <div class="container">
-            <img src="../assets/images/products/velocity-snippets-icon.png" alt="Velocity Snippets Icon" class="download-app-icon" width="1024" height="1024">
+            <img src="../assets/images/products/velocity-snippets-icon.webp" alt="Velocity Snippets - Intelligente Text-Expansion für macOS" class="download-app-icon" width="1024" height="1024" loading="lazy">
             <h2>Velocity Snippets erhalten</h2>
             <div class="price-container" style="margin-bottom: 20px;">
                 <span class="price-original" data-product="velocity-snippets" data-price-type="original">$9.99</span>

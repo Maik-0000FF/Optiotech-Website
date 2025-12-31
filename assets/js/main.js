@@ -16,7 +16,7 @@ function initLanguageSwitch() {
 
 // Restore scroll position after language switch
 function restoreScrollPosition() {
-    window.addEventListener('load', function() {
+    function doRestore() {
         const scrollPosition = sessionStorage.getItem('scrollPosition');
         if (scrollPosition) {
             setTimeout(() => {
@@ -24,7 +24,14 @@ function restoreScrollPosition() {
                 sessionStorage.removeItem('scrollPosition');
             }, 100);
         }
-    });
+    }
+
+    // Check if page is already loaded to avoid race condition
+    if (document.readyState === 'complete') {
+        doRestore();
+    } else {
+        window.addEventListener('load', doRestore);
+    }
 }
 
 // Hamburger Menu Toggle & Hide-on-Scroll Header

@@ -147,11 +147,7 @@ function updateAllPrices() {
             const product = PRICING_CONFIG.products[productId];
 
             if (product) {
-                const text = lang === 'de'
-                    ? `${product.discountPercentage}% ${PricingHelper.getDiscountLabel(lang)}`
-                    : `${product.discountPercentage}% ${PricingHelper.getDiscountLabel(lang)}`;
-
-                banner.textContent = text;
+                banner.textContent = `${product.discountPercentage}% ${PricingHelper.getDiscountLabel(lang)}`;
                 banner.style.display = 'block';
             }
         });

@@ -6,7 +6,7 @@
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
 
-            question.addEventListener('click', () => {
+            function toggleFAQ() {
                 const isActive = item.classList.contains('active');
 
                 // Close all other FAQ items
@@ -25,6 +25,16 @@
                 } else {
                     item.classList.add('active');
                     question.setAttribute('aria-expanded', 'true');
+                }
+            }
+
+            question.addEventListener('click', toggleFAQ);
+
+            // Keyboard support for Enter and Space
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFAQ();
                 }
             });
         });

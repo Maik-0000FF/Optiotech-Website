@@ -4,6 +4,7 @@
    Apple Design System Implementation
    ========================================================================== */
 
+
 /* ==========================================================================
    1. CSS CUSTOM PROPERTIES (Design Tokens)
    ========================================================================== */
@@ -112,6 +113,12 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Unstyled link wrapper */
+.link-unstyled {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -137,7 +144,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
     font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.3125rem);
     line-height: 1.47;
     letter-spacing: 0.011em;

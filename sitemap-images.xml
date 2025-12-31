@@ -100,7 +100,7 @@
     <url>
         <loc>https://optiotech.de/velocity-accents/</loc>
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/products/velocity-accents-icon.png</image:loc>
+            <image:loc>https://optiotech.de/assets/images/products/velocity-accents-icon.webp</image:loc>
             <image:title>Velocity Accents App Icon - Quick Accent für macOS</image:title>
             <image:caption>Velocity Accents App Icon. PowerToys Quick Accent Alternative für macOS - Schnelle Akzente und Umlaute für US-Tastatur.</image:caption>
         </image:image>
@@ -109,7 +109,7 @@
     <url>
         <loc>https://optiotech.de/velocity-snippets/</loc>
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/products/velocity-snippets-icon.png</image:loc>
+            <image:loc>https://optiotech.de/assets/images/products/velocity-snippets-icon.webp</image:loc>
             <image:title>Velocity Snippets App Icon - Text-Expansion für macOS</image:title>
             <image:caption>Velocity Snippets App Icon. Quick Accent Alternative mit Text-Expansion für macOS - Snippets, Emojis und unbegrenzte Möglichkeiten.</image:caption>
         </image:image>
@@ -119,7 +119,7 @@
     <url>
         <loc>https://optiotech.de/velocity-accents/</loc>
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/thumbnails/velocity-accents-video.jpg</image:loc>
+            <image:loc>https://optiotech.de/assets/images/thumbnails/velocity-accents-video.webp</image:loc>
             <image:title>Velocity Accents Demo Video Thumbnail - Quick Accent für macOS</image:title>
             <image:caption>Velocity Accents Demo Video zeigt die App in Aktion. PowerToys Quick Accent equivalent für macOS - Deutsche Umlaute, französische Akzente, spanische Sonderzeichen.</image:caption>
         </image:image>
@@ -128,7 +128,7 @@
     <url>
         <loc>https://optiotech.de/velocity-snippets/</loc>
         <image:image>
-            <image:loc>https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.jpg</image:loc>
+            <image:loc>https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp</image:loc>
             <image:title>Velocity Snippets Demo Video Thumbnail - Text-Expansion für macOS</image:title>
             <image:caption>Velocity Snippets Demo Video zeigt Text-Expansion in Aktion. Quick Accent Alternative mit Snippets, Emojis und Custom Mappings für macOS.</image:caption>
         </image:image>
