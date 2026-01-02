@@ -1694,7 +1694,7 @@ footer {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
+    max-height: 1000px;
     padding: 0 clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 1.75rem);
 }
 
