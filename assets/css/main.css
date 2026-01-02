@@ -1686,6 +1686,8 @@ footer {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     transition: max-height var(--transition-slow),
                 padding var(--transition-slow);
     padding: 0 clamp(1.25rem, 3vw, 2rem);
