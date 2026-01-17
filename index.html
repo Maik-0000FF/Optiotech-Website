@@ -31,12 +31,28 @@
     <meta name="author" content="optiotech">
     <title>optiotech - Productivity Tools für macOS</title>
 
+    <!-- Geo-Targeting Meta Tags for International SEO -->
+    <meta name="geo.region" content="DE">
+    <meta name="geo.placename" content="Germany">
+    <meta name="ICBM" content="51.1657, 10.4515">
+    <meta name="DC.language" content="de">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://optiotech.de/">
     <meta property="og:title" content="optiotech - Productivity Tools für macOS">
     <meta property="og:description" content="Velocity Accents und Velocity Snippets - Professionelle Productivity Tools für macOS-Nutzer.">
     <meta property="og:image" content="https://optiotech.de/assets/images/logos/optiotech.svg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="de_AT">
+    <meta property="og:locale:alternate" content="de_CH">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:locale:alternate" content="en_CA">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="fr_CA">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="es_MX">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -50,8 +66,32 @@
 
     <!-- Canonical & Language -->
     <link rel="canonical" href="https://optiotech.de/">
+
+    <!-- hreflang for International SEO - DACH, UK, US, CA, FR -->
+    <!-- German variants (DACH) -->
     <link rel="alternate" hreflang="de" href="https://optiotech.de/">
+    <link rel="alternate" hreflang="de-DE" href="https://optiotech.de/">
+    <link rel="alternate" hreflang="de-AT" href="https://optiotech.de/">
+    <link rel="alternate" hreflang="de-CH" href="https://optiotech.de/">
+
+    <!-- English variants (UK, US, CA) -->
     <link rel="alternate" hreflang="en" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="en-GB" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="en-US" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="en-CA" href="https://optiotech.de/en.html">
+
+    <!-- French variants (FR, CA) - fallback to English -->
+    <link rel="alternate" hreflang="fr" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="fr-CA" href="https://optiotech.de/en.html">
+
+    <!-- Spanish variants (ES, MX, AR) - fallback to English -->
+    <link rel="alternate" hreflang="es" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="es-ES" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="es-MX" href="https://optiotech.de/en.html">
+    <link rel="alternate" hreflang="es-AR" href="https://optiotech.de/en.html">
+
+    <!-- Default -->
     <link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html">
 
     <!-- Preload critical fonts for faster LCP -->
@@ -87,7 +127,19 @@
             "name": "optiotech"
         },
         "description": "Productivity Tools für macOS - Quick Accent und Text Expansion Apps",
-        "email": "optiotech@web.de"
+        "email": "optiotech@web.de",
+        "areaServed": [
+            {"@type": "Country", "name": "Germany"},
+            {"@type": "Country", "name": "Austria"},
+            {"@type": "Country", "name": "Switzerland"},
+            {"@type": "Country", "name": "United States"},
+            {"@type": "Country", "name": "United Kingdom"},
+            {"@type": "Country", "name": "Canada"},
+            {"@type": "Country", "name": "France"},
+            {"@type": "Country", "name": "Spain"},
+            {"@type": "Country", "name": "Mexico"}
+        ],
+        "knowsLanguage": ["de", "en", "fr", "es"]
     }
     </script>
 

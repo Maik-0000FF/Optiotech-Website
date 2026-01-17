@@ -4,37 +4,91 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-    <!-- Main Page (German) -->
+    <!-- Main Page (German) - DACH, UK, US, CA, FR, ES -->
     <url>
         <loc>https://optiotech.de/</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <!-- German variants (DACH) -->
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/"/>
+        <!-- English variants (UK, US, CA) -->
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/en.html"/>
+        <!-- French variants (FR, CA) -->
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://optiotech.de/en.html"/>
+        <!-- Spanish variants (ES, MX, AR) -->
+        <xhtml:link rel="alternate" hreflang="es" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-AR" href="https://optiotech.de/en.html"/>
+        <!-- Default -->
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html"/>
     </url>
 
-    <!-- Main Page (English) -->
+    <!-- Main Page (English) - International -->
     <url>
         <loc>https://optiotech.de/en.html</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
+        <!-- German variants (DACH) -->
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/"/>
+        <!-- English variants (UK, US, CA) -->
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/en.html"/>
+        <!-- French variants (FR, CA) -->
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://optiotech.de/en.html"/>
+        <!-- Spanish variants (ES, MX, AR) -->
+        <xhtml:link rel="alternate" hreflang="es" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://optiotech.de/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-AR" href="https://optiotech.de/en.html"/>
+        <!-- Default -->
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/en.html"/>
     </url>
 
-    <!-- Velocity Accents Product Page (German) -->
+    <!-- Velocity Accents Product Page (German) - International -->
     <url>
         <loc>https://optiotech.de/velocity-accents/</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+        <!-- German variants (DACH) -->
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-accents/"/>
+        <!-- English variants (UK, US, CA) -->
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-accents/en.html"/>
+        <!-- French variants (FR, CA) -->
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://optiotech.de/velocity-accents/en.html"/>
+        <!-- Spanish variants (ES, MX, AR) -->
+        <xhtml:link rel="alternate" hreflang="es" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-AR" href="https://optiotech.de/velocity-accents/en.html"/>
+        <!-- Default -->
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/en.html"/>
 
         <!-- Screenshots -->
         <image:image>
@@ -90,15 +144,33 @@
         </image:image>
     </url>
 
-    <!-- Velocity Accents Product Page (English) -->
+    <!-- Velocity Accents Product Page (English) - International -->
     <url>
         <loc>https://optiotech.de/velocity-accents/en.html</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
+        <!-- German variants (DACH) -->
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-accents/"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-accents/"/>
+        <!-- English variants (UK, US, CA) -->
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-accents/en.html"/>
+        <!-- French variants (FR, CA) -->
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://optiotech.de/velocity-accents/en.html"/>
+        <!-- Spanish variants (ES, MX, AR) -->
+        <xhtml:link rel="alternate" hreflang="es" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://optiotech.de/velocity-accents/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-AR" href="https://optiotech.de/velocity-accents/en.html"/>
+        <!-- Default -->
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/en.html"/>
 
         <!-- Screenshots -->
         <image:image>
@@ -154,14 +226,32 @@
         </image:image>
     </url>
 
-    <!-- Velocity Snippets Product Page (German) -->
+    <!-- Velocity Snippets Product Page (German) - International -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+        <!-- German variants (DACH) -->
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-snippets/"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-snippets/"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-snippets/"/>
+        <!-- English variants (UK, US, CA) -->
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <!-- French variants (FR, CA) -->
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <!-- Spanish variants (ES, MX, AR) -->
+        <xhtml:link rel="alternate" hreflang="es" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-AR" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <!-- Default -->
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-snippets/en.html"/>
 
         <!-- App Icon -->
@@ -172,14 +262,32 @@
         </image:image>
     </url>
 
-    <!-- Velocity Snippets Product Page (English) -->
+    <!-- Velocity Snippets Product Page (English) - International -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/en.html</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <!-- German variants (DACH) -->
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-snippets/"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-snippets/"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-snippets/"/>
+        <!-- English variants (UK, US, CA) -->
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <!-- French variants (FR, CA) -->
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-FR" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <!-- Spanish variants (ES, MX, AR) -->
+        <xhtml:link rel="alternate" hreflang="es" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-ES" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-MX" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <xhtml:link rel="alternate" hreflang="es-AR" href="https://optiotech.de/velocity-snippets/en.html"/>
+        <!-- Default -->
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-snippets/en.html"/>
 
         <!-- App Icon -->
@@ -193,44 +301,68 @@
     <!-- Velocity Snippets Demo Playback Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/demo.html</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-snippets/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-snippets/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-snippets/demo.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
     </url>
 
     <!-- Velocity Snippets Demo Playback Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/demo-en.html</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-snippets/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-snippets/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-snippets/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
     </url>
 
     <!-- Velocity Accents Demo Playback Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/demo.html</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-accents/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-accents/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-accents/demo.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-accents/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-accents/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-accents/demo-en.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/demo-en.html"/>
     </url>
 
     <!-- Velocity Accents Demo Playback Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/demo-en.html</loc>
-        <lastmod>2025-12-07</lastmod>
+        <lastmod>2026-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/demo-en.html"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-accents/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-accents/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-accents/demo.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-accents/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-accents/demo-en.html"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-accents/demo-en.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/demo-en.html"/>
     </url>
 
