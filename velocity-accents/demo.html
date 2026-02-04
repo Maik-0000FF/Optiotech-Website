@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <script>
+    // Language Persistence System with Auto-Detection for International Visitors
+    (function() {
+        const currentLang = document.documentElement.lang;
+        const savedLang = localStorage.getItem('preferredLanguage');
+        const path = window.location.pathname;
+        const langMap = {
+            '/velocity-accents/demo.html': '/velocity-accents/demo-en.html'
+        };
+
+        if (sessionStorage.getItem('languageRedirecting')) return;
+
+        if (savedLang) {
+            // Returning visitor - use saved preference
+            if (savedLang !== currentLang && savedLang === 'en') {
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            }
+        } else {
+            // First visit - detect browser language
+            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            const isGerman = browserLang.startsWith('de');
+
+            if (!isGerman) {
+                // International visitor - redirect to English
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    localStorage.setItem('preferredLanguage', 'en');
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            } else {
+                // German visitor - save preference
+                localStorage.setItem('preferredLanguage', 'de');
+            }
+        }
+
+        window.addEventListener('load', function() {
+            sessionStorage.removeItem('languageRedirecting');
+        });
+    })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Velocity Accents Demo - Schnelle Akzente für macOS in Aktion. Demo-Video zeigt deutsche Umlaute, französische Akzente und spanische Sonderzeichen in Echtzeit.">

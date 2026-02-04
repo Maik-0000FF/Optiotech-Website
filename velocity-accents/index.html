@@ -2,23 +2,46 @@
 <html lang="de">
 <head>
     <script>
-    // Language Persistence System
+    // Language Persistence System with Auto-Detection for International Visitors
     (function() {
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
         const path = window.location.pathname;
+        const langMap = {
+            '/velocity-accents/': '/velocity-accents/en.html',
+            '/velocity-accents/index.html': '/velocity-accents/en.html'
+        };
 
-        if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
-            const langMap = {
-                '/velocity-accents/': '/velocity-accents/en.html',
-                '/velocity-accents/index.html': '/velocity-accents/en.html'
-            };
-            const targetUrl = langMap[path];
-            if (targetUrl && savedLang === 'en') {
-                sessionStorage.setItem('languageRedirecting', '1');
-                window.location.replace(targetUrl);
+        if (sessionStorage.getItem('languageRedirecting')) return;
+
+        if (savedLang) {
+            // Returning visitor - use saved preference
+            if (savedLang !== currentLang && savedLang === 'en') {
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            }
+        } else {
+            // First visit - detect browser language
+            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            const isGerman = browserLang.startsWith('de');
+
+            if (!isGerman) {
+                // International visitor - redirect to English
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    localStorage.setItem('preferredLanguage', 'en');
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            } else {
+                // German visitor - save preference
+                localStorage.setItem('preferredLanguage', 'de');
             }
         }
+
         window.addEventListener('load', function() {
             sessionStorage.removeItem('languageRedirecting');
         });
@@ -39,8 +62,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Velocity Accents - Quick Accent Alternative für macOS. Tippe Akzente und Umlaute so schnell wie du denkst. Inspiriert von Windows PowerToys Quick Accent.">
-    <meta name="keywords" content="quick accent alternative mac, quick accent equivalent mac, quick accent mac replacement, powertoys equivalent mac, quick accent for mac alternative, powertoys quick accent alternative, quick accent macos alternative, quick accent äquivalent mac, macOS, Akzente, Umlaute, US Tastatur, Velocity Accents, PowerToys, Quick Accent, Produktivität, Mehrsprachig">
+    <meta name="description" content="Velocity Accents - Quick Accent Alternative für macOS. Vollständig konfigurierbar mit Unicode-Support: Akzente, Umlaute, Braille, Mathe-Symbole und jedes Unicode-Zeichen. 7 Sprach-Presets inklusive.">
+    <meta name="keywords" content="quick accent mac, quick accent for mac, quick accent macOS, quick accent alternative mac, quick accent equivalent mac, quick accent mac replacement, powertoys equivalent mac, powertoys mac, powertoys quick accent alternative, special characters mac, accents mac, umlauts mac, unicode mac, braille mac, custom mappings mac, macOS, Akzente, Umlaute, Sonderzeichen, Unicode, Braille, US Tastatur, Velocity Accents, PowerToys, Quick Accent, Produktivität">
     <meta name="author" content="optiotech">
     <title>Velocity Accents - Schnelle Akzente für macOS</title>
 
@@ -48,7 +71,7 @@
     <meta property="og:type" content="video.other">
     <meta property="og:url" content="https://optiotech.de/velocity-accents/">
     <meta property="og:title" content="Velocity Accents - Quick Accent Alternative für macOS">
-    <meta property="og:description" content="Quick Accent Alternative für Mac. Tippe Akzente und Umlaute so schnell wie du denkst. Perfekt für US-Tastatur-Nutzer die mehrsprachig arbeiten.">
+    <meta property="og:description" content="Quick Accent Alternative für Mac. Vollständig konfigurierbar - alle Unicode-Zeichen möglich: Akzente, Braille, Mathe-Symbole und mehr. 7 Sprach-Presets inklusive.">
     <meta property="og:image" content="https://optiotech.de/assets/images/products/velocity-accents-icon.webp">
     <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
     <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
@@ -119,6 +142,10 @@
     <!-- Preload critical CSS for faster LCP -->
     <link rel="preload" href="../assets/css/inter-font.css" as="style">
     <link rel="preload" href="../assets/css/main.css" as="style">
+
+    <!-- Preload first screenshot of each section for faster perceived load -->
+    <link rel="preload" href="../screenshots/velocity-accents/german_mapping.webp" as="image" type="image/webp">
+    <link rel="preload" href="../screenshots/velocity-accents/preferences_menu.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="../assets/css/inter-font.css">
     <link rel="stylesheet" href="../assets/css/main.css" fetchpriority="high">
 
@@ -238,10 +265,10 @@
                 "@type": "ImageObject",
                 "contentUrl": "https://optiotech.de/screenshots/velocity-accents/multilingual_mapping.webp",
                 "name": "Mehrsprachige Unterstützung - Velocity Accents",
-                "description": "Velocity Accents mehrsprachige Unterstützung 7 Sprachen macOS",
+                "description": "Velocity Accents vollständig konfigurierbar alle Unicode-Zeichen macOS",
                 "width": "1920",
                 "height": "1080",
-                "caption": "Mehrsprachig - Kombiniere verschiedene Sprachen nach Bedarf"
+                "caption": "Vollständig konfigurierbar - Alle Unicode-Zeichen möglich inkl. Braille"
             },
             {
                 "@type": "ImageObject",
@@ -614,7 +641,7 @@
                     <div class="screenshot-scroll-container">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-accents/german_mapping.webp" alt="Velocity Accents deutsche Umlaute ä ö ü ß für macOS US-Tastatur" width="1920" height="1080" loading="lazy">
+                            <img src="../screenshots/velocity-accents/german_mapping.webp" alt="Velocity Accents deutsche Umlaute ä ö ü ß für macOS US-Tastatur" width="1920" height="1080" loading="eager" fetchpriority="high">
                             <div class="screenshot-caption">
                                 <h3>Deutsche Mappings</h3>
                                 <p>Perfekte Umlaute: ä, ö, ü, ß</p>
@@ -635,10 +662,10 @@
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-accents/multilingual_mapping.webp" alt="Velocity Accents mehrsprachige Unterstützung 7 Sprachen macOS" width="1920" height="1080" loading="lazy">
+                            <img src="../screenshots/velocity-accents/multilingual_mapping.webp" alt="Velocity Accents vollständig konfigurierbar alle Unicode-Zeichen Braille macOS" width="1920" height="1080" loading="lazy">
                             <div class="screenshot-caption">
-                                <h3>Mehrsprachig</h3>
-                                <p>Kombiniere verschiedene Sprachen nach Bedarf</p>
+                                <h3>Vollständig konfigurierbar</h3>
+                                <p>Alle Unicode-Zeichen möglich - auch Braille ⠃⠗⠇</p>
                             </div>
                         </div>
                     </div>
@@ -663,7 +690,7 @@
                     <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-accents/preferences_menu.webp" alt="Velocity Accents Einstellungen Menü Overlay-Position Timing macOS" width="1920" height="1080" loading="lazy">
+                            <img src="../screenshots/velocity-accents/preferences_menu.webp" alt="Velocity Accents Einstellungen Menü Overlay-Position Timing macOS" width="1920" height="1080" loading="eager">
                             <div class="screenshot-caption">
                                 <h3>Einstellungen-Menü</h3>
                                 <p>Overlay-Position, Timing und Startup-Optionen</p>

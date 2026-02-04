@@ -2,23 +2,46 @@
 <html lang="de">
 <head>
     <script>
-    // Language Persistence System
+    // Language Persistence System with Auto-Detection for International Visitors
     (function() {
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
         const path = window.location.pathname;
+        const langMap = {
+            '/': '/en.html',
+            '/index.html': '/en.html'
+        };
 
-        if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
-            const langMap = {
-                '/': '/en.html',
-                '/index.html': '/en.html'
-            };
-            const targetUrl = langMap[path];
-            if (targetUrl && savedLang === 'en') {
-                sessionStorage.setItem('languageRedirecting', '1');
-                window.location.replace(targetUrl);
+        if (sessionStorage.getItem('languageRedirecting')) return;
+
+        if (savedLang) {
+            // Returning visitor - use saved preference
+            if (savedLang !== currentLang && savedLang === 'en') {
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            }
+        } else {
+            // First visit - detect browser language
+            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            const isGerman = browserLang.startsWith('de');
+
+            if (!isGerman) {
+                // International visitor - redirect to English
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    localStorage.setItem('preferredLanguage', 'en');
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            } else {
+                // German visitor - save preference
+                localStorage.setItem('preferredLanguage', 'de');
             }
         }
+
         window.addEventListener('load', function() {
             sessionStorage.removeItem('languageRedirecting');
         });
@@ -26,8 +49,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="optiotech - Quick Accent & Text Expansion Tools für macOS. Velocity Accents und Velocity Snippets - PowerToys Quick Accent Alternative mit Text-Expansion.">
-    <meta name="keywords" content="quick accent alternative mac, quick accent equivalent mac, powertoys equivalent mac, quick accent mac replacement, text expander alternative mac, powertoys alternative mac, velocity accents, velocity snippets, productivity tools macos, typing tools mac, macOS, Produktivität, Tools, optiotech">
+    <meta name="description" content="optiotech - Quick Accent & Text Expansion Tools für macOS. Vollständig konfigurierbar mit Unicode-Support: Akzente, Umlaute, Braille, Emojis und jedes Unicode-Zeichen.">
+    <meta name="keywords" content="quick accent mac, quick accent for mac, quick accent macOS, quick accent alternative mac, quick accent equivalent mac, text expander mac, text expansion mac, powertoys mac, powertoys equivalent mac, special characters mac, accents mac, umlauts mac, unicode mac, braille mac, emoji mac, custom mappings mac, snippets mac, velocity accents, velocity snippets, productivity tools macos, macOS, Akzente, Umlaute, Sonderzeichen, Unicode, Braille, optiotech">
     <meta name="author" content="optiotech">
     <title>optiotech - Productivity Tools für macOS</title>
 
@@ -41,7 +64,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://optiotech.de/">
     <meta property="og:title" content="optiotech - Productivity Tools für macOS">
-    <meta property="og:description" content="Velocity Accents und Velocity Snippets - Professionelle Productivity Tools für macOS-Nutzer.">
+    <meta property="og:description" content="Velocity Accents & Velocity Snippets - Vollständig konfigurierbar mit Unicode-Support: Akzente, Braille, Emojis und mehr für macOS.">
     <meta property="og:image" content="https://optiotech.de/assets/images/logos/optiotech.svg">
     <meta property="og:locale" content="de_DE">
     <meta property="og:locale:alternate" content="de_AT">

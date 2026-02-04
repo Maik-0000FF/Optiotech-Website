@@ -38,8 +38,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Velocity Accents - PowerToys Quick Accent Alternative for Mac. Type accents and umlauts as fast as you think. Quick Accent equivalent for macOS.">
-    <meta name="keywords" content="quick accent alternative mac, quick accent equivalent mac, quick accent mac replacement, powertoys equivalent mac, quick accent for mac alternative, powertoys quick accent alternative, quick accent macos alternative, quick accent mac counterpart, quick accent replacement, macOS, accents, umlauts, special characters, US keyboard, Velocity Accents, PowerToys, Quick Accent, productivity, multilingual">
+    <meta name="description" content="Velocity Accents - PowerToys Quick Accent Alternative for Mac. Fully configurable with Unicode support: accents, umlauts, Braille, math symbols, and any Unicode character. 7 language presets included.">
+    <meta name="keywords" content="quick accent mac, quick accent for mac, quick accent macOS, quick accent alternative mac, quick accent equivalent mac, quick accent mac replacement, powertoys equivalent mac, powertoys mac, powertoys quick accent alternative, special characters mac, accents mac, umlauts mac, unicode mac, braille mac, custom mappings mac, macOS, accents, umlauts, special characters, Unicode, Braille, US keyboard, Velocity Accents, PowerToys, Quick Accent, productivity">
     <meta name="author" content="optiotech">
     <title>Velocity Accents - Quick Accent for macOS</title>
 
@@ -47,7 +47,7 @@
     <meta property="og:type" content="video.other">
     <meta property="og:url" content="https://optiotech.de/velocity-accents/en.html">
     <meta property="og:title" content="Velocity Accents - PowerToys Quick Accent Alternative for Mac">
-    <meta property="og:description" content="Quick Accent alternative for Mac. Type accents and umlauts as fast as you think. Perfect for US keyboard users working multilingually.">
+    <meta property="og:description" content="Quick Accent alternative for Mac. Fully configurable - any Unicode character possible: accents, Braille, math symbols and more. 7 language presets included.">
     <meta property="og:image" content="https://optiotech.de/assets/images/products/velocity-accents-icon.webp">
     <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
     <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocityAccents.mp4">
@@ -118,6 +118,11 @@
     <!-- Preload critical CSS for faster LCP -->
     <link rel="preload" href="../assets/css/inter-font.css" as="style">
     <link rel="preload" href="../assets/css/main.css" as="style">
+
+    <!-- Preload first screenshot of each section for faster perceived load -->
+    <link rel="preload" href="../screenshots/velocity-accents/german_mapping.webp" as="image" type="image/webp">
+    <link rel="preload" href="../screenshots/velocity-accents/preferences_menu.webp" as="image" type="image/webp">
+
     <link rel="stylesheet" href="../assets/css/inter-font.css">
     <link rel="stylesheet" href="../assets/css/main.css" fetchpriority="high">
 
@@ -237,10 +242,10 @@
                 "@type": "ImageObject",
                 "contentUrl": "https://optiotech.de/screenshots/velocity-accents/multilingual_mapping.webp",
                 "name": "Multilingual Support - Velocity Accents",
-                "description": "Velocity Accents multilingual support 7 languages macOS",
+                "description": "Velocity Accents fully configurable any Unicode character macOS",
                 "width": "1920",
                 "height": "1080",
-                "caption": "Multilingual - Combine different languages as needed"
+                "caption": "Fully Configurable - Any Unicode character possible incl. Braille"
             },
             {
                 "@type": "ImageObject",
@@ -613,7 +618,7 @@
                     <div class="screenshot-scroll-container">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-accents/german_mapping.webp" alt="Velocity Accents German umlauts ä ö ü ß for macOS US keyboard" width="1920" height="1080" loading="lazy">
+                            <img src="../screenshots/velocity-accents/german_mapping.webp" alt="Velocity Accents German umlauts ä ö ü ß for macOS US keyboard" width="1920" height="1080" loading="eager" fetchpriority="high">
                             <div class="screenshot-caption">
                                 <h3>German Mappings</h3>
                                 <p>Perfect umlauts: ä, ö, ü, ß</p>
@@ -634,10 +639,10 @@
                             </div>
                         </div>
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-accents/multilingual_mapping.webp" alt="Velocity Accents multilingual support 7 languages macOS" width="1920" height="1080" loading="lazy">
+                            <img src="../screenshots/velocity-accents/multilingual_mapping.webp" alt="Velocity Accents fully configurable any Unicode character Braille macOS" width="1920" height="1080" loading="lazy">
                             <div class="screenshot-caption">
-                                <h3>Multilingual</h3>
-                                <p>Combine different languages as needed</p>
+                                <h3>Fully Configurable</h3>
+                                <p>Any Unicode character possible - including Braille ⠃⠗⠇</p>
                             </div>
                         </div>
                     </div>
@@ -662,7 +667,7 @@
                     <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-accents/preferences_menu.webp" alt="Velocity Accents preferences menu overlay position timing macOS" width="1920" height="1080" loading="lazy">
+                            <img src="../screenshots/velocity-accents/preferences_menu.webp" alt="Velocity Accents preferences menu overlay position timing macOS" width="1920" height="1080" loading="eager">
                             <div class="screenshot-caption">
                                 <h3>Preferences Menu</h3>
                                 <p>Overlay position, timing and startup options</p>

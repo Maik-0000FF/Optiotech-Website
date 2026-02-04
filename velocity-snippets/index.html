@@ -2,23 +2,46 @@
 <html lang="de">
 <head>
     <script>
-    // Language Persistence System
+    // Language Persistence System with Auto-Detection for International Visitors
     (function() {
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
         const path = window.location.pathname;
+        const langMap = {
+            '/velocity-snippets/': '/velocity-snippets/en.html',
+            '/velocity-snippets/index.html': '/velocity-snippets/en.html'
+        };
 
-        if (savedLang && savedLang !== currentLang && !sessionStorage.getItem('languageRedirecting')) {
-            const langMap = {
-                '/velocity-snippets/': '/velocity-snippets/en.html',
-                '/velocity-snippets/index.html': '/velocity-snippets/en.html'
-            };
-            const targetUrl = langMap[path];
-            if (targetUrl && savedLang === 'en') {
-                sessionStorage.setItem('languageRedirecting', '1');
-                window.location.replace(targetUrl);
+        if (sessionStorage.getItem('languageRedirecting')) return;
+
+        if (savedLang) {
+            // Returning visitor - use saved preference
+            if (savedLang !== currentLang && savedLang === 'en') {
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            }
+        } else {
+            // First visit - detect browser language
+            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            const isGerman = browserLang.startsWith('de');
+
+            if (!isGerman) {
+                // International visitor - redirect to English
+                const targetUrl = langMap[path];
+                if (targetUrl) {
+                    localStorage.setItem('preferredLanguage', 'en');
+                    sessionStorage.setItem('languageRedirecting', '1');
+                    window.location.replace(targetUrl);
+                }
+            } else {
+                // German visitor - save preference
+                localStorage.setItem('preferredLanguage', 'de');
             }
         }
+
         window.addEventListener('load', function() {
             sessionStorage.removeItem('languageRedirecting');
         });
@@ -39,8 +62,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Velocity Snippets - Quick Accent Alternative + Text-Expansion für macOS. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets und Emojis.">
-    <meta name="keywords" content="quick accent alternative mac, quick accent equivalent mac, quick accent mac replacement, text expander alternative mac, text expander equivalent mac, powertoys equivalent mac, velocity accents plus, quick accent with text expansion, snippet manager alternative mac, all in one typing tool mac, emoji snippet tool mac, powertoys quick accent alternative, velocity accents alternative, text expansion with quick accent">
+    <meta name="description" content="Velocity Snippets - Quick Accent Alternative + Text-Expansion für macOS. Vollständig konfigurierbar mit Unicode-Support: Akzente, Emojis, Braille, Mathe-Symbole und jedes Unicode-Zeichen. Unbegrenzte Snippets.">
+    <meta name="keywords" content="quick accent mac, quick accent for mac, quick accent macOS, quick accent alternative mac, quick accent equivalent mac, text expander mac, text expander alternative mac, text expansion mac, snippets mac, powertoys mac, powertoys equivalent mac, special characters mac, accents mac, umlauts mac, unicode mac, braille mac, emoji mac, custom mappings mac, snippet manager mac, macOS, Akzente, Umlaute, Sonderzeichen, Unicode, Braille, Emojis, Text-Expansion, Velocity Snippets, PowerToys, Quick Accent">
     <meta name="author" content="optiotech">
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self' https://optiotech.gumroad.com;">
@@ -51,7 +74,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://optiotech.de/velocity-snippets/">
     <meta property="og:title" content="Velocity Snippets - Quick Accent Alternative + Text-Expansion für macOS">
-    <meta property="og:description" content="Quick Accent Alternative + Text-Expansion für Mac. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets und Emojis.">
+    <meta property="og:description" content="Quick Accent Alternative + Text-Expansion für Mac. Vollständig konfigurierbar - alle Unicode-Zeichen möglich: Akzente, Emojis, Braille und mehr.">
     <meta property="og:image" content="https://optiotech.de/assets/images/products/velocity-snippets-icon.webp">
     <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
     <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
@@ -119,6 +142,11 @@
     <!-- Preload critical CSS for faster LCP -->
     <link rel="preload" href="../assets/css/inter-font.css" as="style">
     <link rel="preload" href="../assets/css/main.css" as="style">
+
+    <!-- Preload first screenshot of each section for faster perceived load -->
+    <link rel="preload" href="../screenshots/velocity-snippets/preferences_dropdown_presets_velocitysnippets.webp" as="image" type="image/webp">
+    <link rel="preload" href="../screenshots/velocity-snippets/emoji_in_action_velocitysnippets.webp" as="image" type="image/webp">
+
     <link rel="stylesheet" href="../assets/css/inter-font.css">
     <link rel="stylesheet" href="../assets/css/main.css" fetchpriority="high">
 
@@ -625,7 +653,7 @@
                     <div class="screenshot-scroll-container">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/preferences_dropdown_presets_velocitysnippets.webp" alt="Voreingestellte Sprach-Mappings auswählen" loading="lazy">
+                            <img src="../screenshots/velocity-snippets/preferences_dropdown_presets_velocitysnippets.webp" alt="Voreingestellte Sprach-Mappings auswählen" width="1920" height="1080" loading="eager" fetchpriority="high">
                             <div class="screenshot-caption">
                                 <h3>Voreingestellte Mappings</h3>
                                 <p>Wähle aus 10+ Sprachen und Presets</p>
@@ -674,7 +702,7 @@
                     <div class="screenshot-scroll-container screenshot-scroll-container-reverse">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
-                            <img src="../screenshots/velocity-snippets/emoji_in_action_velocitysnippets.webp" alt="Emoji Snippets in Aktion" loading="lazy">
+                            <img src="../screenshots/velocity-snippets/emoji_in_action_velocitysnippets.webp" alt="Emoji Snippets in Aktion" width="1920" height="1080" loading="eager">
                             <div class="screenshot-caption">
                                 <h3>Emoji in Aktion</h3>
                                 <p>Schnelle Emojis während des Tippens</p>
