@@ -7,7 +7,7 @@
     <loc>https://optiotech.de/velocity-accents/demo.html</loc>
     <video:video>
       <video:title>Velocity Accents Demo - Schnelle Akzente für macOS</video:title>
-      <video:description>Demo-Video von Velocity Accents in Aktion. Tippe Sonderzeichen so schnell wie du denkst mit der PowerToys-Geste. Zeigt deutsche Umlaute, französische Akzente und spanische Sonderzeichen in Echtzeit.</video:description>
+      <video:description>Sehe wie man Umlaute und Akzente auf Mac mit US-Tastatur tippt. Demo zeigt deutsche Umlaute ä ö ü, französische Akzente é è ê und spanisches ñ in Echtzeit - ohne Tastaturlayout zu wechseln. Akzent-Menü Alternative für macOS.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/thumbnails/velocity-accents-video.webp</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
       <video:duration>125</video:duration>
@@ -17,6 +17,10 @@
       <video:tag>Text-Expansion</video:tag>
       <video:tag>Akzente</video:tag>
       <video:tag>Umlaute</video:tag>
+      <video:tag>Umlaute tippen Mac</video:tag>
+      <video:tag>Akzent-Menü Alternative</video:tag>
+      <video:tag>US Tastatur Umlaute</video:tag>
+      <video:tag>Sonderzeichen Mac</video:tag>
       <video:category>Technology</video:category>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -27,7 +31,7 @@
     <loc>https://optiotech.de/velocity-accents/demo-en.html</loc>
     <video:video>
       <video:title>Velocity Accents Demo - Quick Accent for macOS</video:title>
-      <video:description>Demo video of Velocity Accents in action. Type special characters as fast as you think with the PowerToys gesture. Shows German umlauts, French accents, and Spanish special characters in real-time.</video:description>
+      <video:description>Watch how to type accents on a Mac with a US keyboard using Velocity Accents. Demo shows German umlauts ä ö ü, French accents é è ê, and Spanish ñ typed in real-time without changing keyboard layout. Accent menu alternative for macOS.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/thumbnails/velocity-accents-video.webp</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocityAccents.mp4</video:content_loc>
       <video:duration>125</video:duration>
@@ -37,6 +41,10 @@
       <video:tag>text expansion</video:tag>
       <video:tag>accents</video:tag>
       <video:tag>umlauts</video:tag>
+      <video:tag>type accents on mac</video:tag>
+      <video:tag>accent menu alternative</video:tag>
+      <video:tag>US keyboard accents mac</video:tag>
+      <video:tag>special characters mac</video:tag>
       <video:category>Technology</video:category>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -47,7 +55,7 @@
     <loc>https://optiotech.de/velocity-snippets/demo.html</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Intelligente Text-Expansion für macOS</video:title>
-      <video:description>Echtzeit-Demo von Velocity Snippets. Custom Mappings, Bracket Pairs, Bullet Styles, Mathematik-Symbole, Neovim Markdown Rendering, WezTerm Terminal-Befehle. Unbegrenzte Möglichkeiten mit der Quick Accent Geste.</video:description>
+      <video:description>Text-Expansion und Akzente tippen auf Mac in Aktion. Velocity Snippets Demo mit Custom Mappings, Emojis, Mathe-Symbolen und unbegrenzter Snippet-Expansion. Quick Accent Alternative mit Text-Expansion für macOS.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4</video:content_loc>
       <video:duration>154</video:duration>
@@ -57,6 +65,9 @@
       <video:tag>Snippets</video:tag>
       <video:tag>Text-Expansion</video:tag>
       <video:tag>Emojis</video:tag>
+      <video:tag>Text Expander Mac</video:tag>
+      <video:tag>Umlaute tippen Mac</video:tag>
+      <video:tag>Akzent-Menü Alternative</video:tag>
       <video:category>Technology</video:category>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
@@ -67,7 +78,7 @@
     <loc>https://optiotech.de/velocity-snippets/demo-en.html</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Smart Text Expansion for macOS</video:title>
-      <video:description>Real-time demo of Velocity Snippets. Custom mappings, bracket pairs, bullet styles, math symbols, Neovim markdown rendering, WezTerm terminal commands. Unlimited possibilities with the Quick Accent gesture.</video:description>
+      <video:description>Text expansion and accent typing on Mac in real-time. Velocity Snippets demo with custom mappings, emojis, math symbols, and unlimited snippet expansion. Quick Accent alternative with text expansion for macOS.</video:description>
       <video:thumbnail_loc>https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp</video:thumbnail_loc>
       <video:content_loc>https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4</video:content_loc>
       <video:duration>154</video:duration>
@@ -77,6 +88,9 @@
       <video:tag>snippets</video:tag>
       <video:tag>text expansion</video:tag>
       <video:tag>emojis</video:tag>
+      <video:tag>text expander mac</video:tag>
+      <video:tag>type accents on mac</video:tag>
+      <video:tag>accent menu alternative</video:tag>
       <video:category>Technology</video:category>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
