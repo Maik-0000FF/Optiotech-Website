@@ -4,6 +4,9 @@
     <script>
     // Language Persistence System with Auto-Detection for International Visitors
     (function() {
+        // Don't redirect search engine bots - they need to index both language versions
+        if (/bot|crawl|spider|slurp|Googlebot|Bingbot|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
+
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
         const path = window.location.pathname;
@@ -65,14 +68,23 @@
     <meta name="description" content="Velocity Snippets - PowerToys Quick Accent Alternative + Text-Expansion für Mac. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets. Quick Accent Ersatz mit Text-Expansion für macOS.">
     <meta name="keywords" content="quick accent alternative mac, quick accent equivalent mac, powertoys quick accent alternative, text expander alternative mac, Text-Expansion Mac, quick accent, powertoys, quick accent with text expansion, powertoys equivalent mac, Snippets Mac, Umlaute Mac, Sonderzeichen Mac, Emojis Mac, velocity snippets, US Tastatur Umlaute Mac, quick accent ersatz mac, macOS Produktivität">
     <meta name="author" content="optiotech">
+    <meta name="robots" content="index, follow">
+
+    <!-- Geo-Targeting Meta Tags -->
+    <meta name="geo.region" content="DE">
+    <meta name="geo.placename" content="Germany">
+    <meta name="ICBM" content="51.1657, 10.4515">
+    <meta name="DC.language" content="de">
+
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self' https://optiotech.gumroad.com;">
 
     <title>Velocity Snippets - Intelligente Text-Expansion für macOS</title>
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="video.other">
     <meta property="og:url" content="https://optiotech.de/velocity-snippets/">
+    <meta property="og:site_name" content="optiotech">
     <meta property="og:title" content="Velocity Snippets - Quick Accent Alternative + Text-Expansion für macOS">
     <meta property="og:description" content="PowerToys Quick Accent Alternative + Text-Expansion für Mac. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets. Quick Accent Ersatz mit Text-Expansion für macOS.">
     <meta property="og:image" content="https://optiotech.de/assets/images/products/velocity-snippets-icon.webp">
@@ -90,11 +102,11 @@
     <meta property="og:locale:alternate" content="en_CA">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://optiotech.de/velocity-snippets/">
-    <meta property="twitter:title" content="Velocity Snippets - PowerToys Quick Accent Alternative + Text-Expansion für Mac">
-    <meta property="twitter:description" content="PowerToys Quick Accent Alternative + Text-Expansion für Mac. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets. Quick Accent Ersatz mit Text-Expansion für macOS.">
-    <meta property="twitter:image" content="https://optiotech.de/assets/images/products/velocity-snippets-icon.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://optiotech.de/velocity-snippets/">
+    <meta name="twitter:title" content="Velocity Snippets - PowerToys Quick Accent Alternative + Text-Expansion für Mac">
+    <meta name="twitter:description" content="PowerToys Quick Accent Alternative + Text-Expansion für Mac. Alle Velocity Accents Features inklusive, plus unbegrenzte Snippets. Quick Accent Ersatz mit Text-Expansion für macOS.">
+    <meta name="twitter:image" content="https://optiotech.de/assets/images/thumbnails/velocity-snippets-social.webp">
     <meta name="twitter:player" content="https://optiotech.de/velocity-snippets/#demo">
     <meta name="twitter:player:width" content="3840">
     <meta name="twitter:player:height" content="2160">
@@ -184,13 +196,6 @@
             "availability": "https://schema.org/InStock"
         },
         "downloadUrl": "https://optiotech.gumroad.com/l/velocity-snippets",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "1"
-        },
         "brand": {
             "@type": "Brand",
             "name": "optiotech"
@@ -1002,9 +1007,6 @@
                 const calculatedHeight = window.innerHeight + (scrollDistance / baseMultiplier) / horizontalSpeedFactor;
 
                 wrapper.style.height = `${calculatedHeight}px`;
-
-                // Debug: verify sticky behavior
-                console.log(`Wrapper: ${wrapper.classList.contains('screenshot-scroll-wrapper-reverse') ? 'REVERSE' : 'NORMAL'}, Height: ${calculatedHeight}px, Viewport: ${window.innerHeight}px, Ratio: ${(calculatedHeight / window.innerHeight).toFixed(2)}x`);
             });
         }
 

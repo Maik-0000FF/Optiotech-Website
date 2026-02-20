@@ -13,6 +13,9 @@
 
         if (sessionStorage.getItem('languageRedirecting')) return;
 
+        // Don't redirect search engine bots - let them index the German page
+        if (/bot|crawl|spider|slurp|Googlebot|Bingbot|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
+
         if (savedLang) {
             // Returning visitor - use saved preference
             if (savedLang !== currentLang && savedLang === 'en') {
@@ -70,11 +73,11 @@
     <meta property="og:video:height" content="2160">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="player">
-    <meta property="twitter:url" content="https://optiotech.de/velocity-accents/demo.html">
-    <meta property="twitter:title" content="Velocity Accents Demo - Schnelle Akzente für macOS">
-    <meta property="twitter:description" content="Sehe wie man Umlaute auf Mac mit US-Tastatur tippt. Velocity Accents Akzent-Menü Alternative Demo mit Umlauten, französischen Akzenten, spanischen Sonderzeichen.">
-    <meta property="twitter:image" content="https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg">
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:url" content="https://optiotech.de/velocity-accents/demo.html">
+    <meta name="twitter:title" content="Velocity Accents Demo - Schnelle Akzente für macOS">
+    <meta name="twitter:description" content="Sehe wie man Umlaute auf Mac mit US-Tastatur tippt. Velocity Accents Akzent-Menü Alternative Demo mit Umlauten, französischen Akzenten, spanischen Sonderzeichen.">
+    <meta name="twitter:image" content="https://optiotech.de/assets/images/velocity-accents-video-thumbnail.jpg">
     <meta name="twitter:player" content="https://optiotech.de/velocity-accents/demo.html">
     <meta name="twitter:player:width" content="3840">
     <meta name="twitter:player:height" content="2160">

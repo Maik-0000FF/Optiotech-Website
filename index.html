@@ -4,6 +4,9 @@
     <script>
     // Language Persistence System with Auto-Detection for International Visitors
     (function() {
+        // Don't redirect search engine bots - they need to index both language versions
+        if (/bot|crawl|spider|slurp|Googlebot|Bingbot|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
+
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
         const path = window.location.pathname;
@@ -49,10 +52,11 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <meta name="description" content="optiotech - PowerToys Quick Accent Alternative für Mac. Umlaute und Sonderzeichen auf macOS mit US-Tastatur tippen. Velocity Accents und Velocity Snippets - Quick Accent Ersatz mit Text-Expansion.">
     <meta name="keywords" content="quick accent alternative mac, quick accent equivalent mac, quick accent mac replacement, powertoys quick accent alternative, powertoys equivalent mac, quick accent, powertoys, quick accent for mac, quick accent macOS, Umlaute Mac, Sonderzeichen Mac, Akzente Mac, US Tastatur Umlaute Mac, velocity accents, Akzent-Menü Alternative Mac, quick accent ersatz mac, macOS Produktivität">
     <meta name="author" content="optiotech">
-    <title>optiotech - Productivity Tools für macOS</title>
+    <title>optiotech - Quick Accent Alternative für Mac | Productivity Tools für macOS</title>
 
     <!-- Geo-Targeting Meta Tags for International SEO -->
     <meta name="geo.region" content="DE">
@@ -63,9 +67,12 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://optiotech.de/">
-    <meta property="og:title" content="optiotech - Productivity Tools für macOS">
+    <meta property="og:title" content="optiotech - Quick Accent Alternative für Mac | Productivity Tools für macOS">
     <meta property="og:description" content="PowerToys Quick Accent Alternative für Mac. Umlaute und Sonderzeichen auf macOS mit US-Tastatur tippen. Velocity Accents und Velocity Snippets - Quick Accent Ersatz mit Text-Expansion.">
-    <meta property="og:image" content="https://optiotech.de/assets/images/logos/optiotech.svg">
+    <meta property="og:image" content="https://optiotech.de/assets/images/thumbnails/velocity-accents-social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="optiotech">
     <meta property="og:locale" content="de_DE">
     <meta property="og:locale:alternate" content="de_AT">
     <meta property="og:locale:alternate" content="de_CH">
@@ -74,11 +81,11 @@
     <meta property="og:locale:alternate" content="en_CA">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://optiotech.de/">
-    <meta property="twitter:title" content="optiotech - Productivity Tools für macOS">
-    <meta property="twitter:description" content="PowerToys Quick Accent Alternative für Mac. Umlaute und Sonderzeichen auf macOS mit US-Tastatur tippen. Velocity Accents und Velocity Snippets - Quick Accent Ersatz mit Text-Expansion.">
-    <meta property="twitter:image" content="https://optiotech.de/assets/images/logos/optiotech.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://optiotech.de/">
+    <meta name="twitter:title" content="optiotech - Quick Accent Alternative für Mac | Productivity Tools für macOS">
+    <meta name="twitter:description" content="PowerToys Quick Accent Alternative für Mac. Umlaute und Sonderzeichen auf macOS mit US-Tastatur tippen. Velocity Accents und Velocity Snippets - Quick Accent Ersatz mit Text-Expansion.">
+    <meta name="twitter:image" content="https://optiotech.de/assets/images/thumbnails/velocity-accents-social.webp">
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self' https://optiotech.gumroad.com;">
@@ -142,12 +149,9 @@
             {"@type": "Country", "name": "Switzerland"},
             {"@type": "Country", "name": "United States"},
             {"@type": "Country", "name": "United Kingdom"},
-            {"@type": "Country", "name": "Canada"},
-            {"@type": "Country", "name": "France"},
-            {"@type": "Country", "name": "Spain"},
-            {"@type": "Country", "name": "Mexico"}
+            {"@type": "Country", "name": "Canada"}
         ],
-        "knowsLanguage": ["de", "en", "fr", "es"]
+        "knowsLanguage": ["de", "en"]
     }
     </script>
 
