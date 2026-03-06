@@ -4,6 +4,9 @@
     <script>
     // Language Persistence System with Auto-Detection for International Visitors
     (function() {
+        // Don't redirect search engine bots
+        if (/bot|crawl|spider|slurp|Googlebot|Bingbot|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
+
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
         const path = window.location.pathname;
@@ -50,6 +53,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Impressum - optiotech">
     <title>Impressum - optiotech</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://optiotech.de/impressum.html">
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self' https://optiotech.gumroad.com;">

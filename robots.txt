@@ -3,11 +3,8 @@
 User-agent: *
 Allow: /
 
-# Prevent indexing of legal pages (keep them accessible but not in search results)
-Disallow: /impressum.html
-Disallow: /imprint.html
-Disallow: /datenschutz.html
-Disallow: /privacy.html
+# Legal pages use noindex meta tags instead of Disallow
+# (Disallow prevents Google from seeing noindex, causing indexing confusion)
 
 # Sitemaps
 Sitemap: https://optiotech.de/sitemap.xml
