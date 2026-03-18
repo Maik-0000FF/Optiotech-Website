@@ -5,7 +5,7 @@
     // Language Persistence System with Auto-Detection for International Visitors
     (function() {
         // Don't redirect search engine bots - they need to index both language versions
-        if (/bot|crawl|spider|slurp|Googlebot|Bingbot|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
+        if (/bot|crawl|spider|slurp|Googlebot|Bingbot|BraveSearch|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
 
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
