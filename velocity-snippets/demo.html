@@ -14,7 +14,7 @@
         if (sessionStorage.getItem('languageRedirecting')) return;
 
         // Don't redirect search engine bots - let them index the German page
-        if (/bot|crawl|spider|slurp|Googlebot|Bingbot|BraveSearch|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
+        if (navigator.webdriver || /bot|crawl|spider|slurp|Googlebot|Bingbot|BraveSearch|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
 
         if (savedLang) {
             // Returning visitor - use saved preference
