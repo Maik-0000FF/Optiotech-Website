@@ -4,6 +4,9 @@
     <script>
     // Language Persistence System
     (function() {
+        // Don't redirect search engine bots
+        if (navigator.webdriver || /bot|crawl|spider|slurp|Googlebot|Bingbot|BraveBot|DuckDuckBot|Yandex|Baidu/i.test(navigator.userAgent)) return;
+
         const currentLang = document.documentElement.lang;
         const savedLang = localStorage.getItem('preferredLanguage');
         const path = window.location.pathname;
