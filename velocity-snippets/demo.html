@@ -64,7 +64,7 @@
     <meta property="og:url" content="https://optiotech.de/velocity-snippets/demo.html">
     <meta property="og:title" content="Velocity Snippets Demo - Intelligente Text-Expansion für macOS">
     <meta property="og:description" content="Sehe Text-Expansion und Akzente tippen auf Mac in Echtzeit. Velocity Snippets Demo mit Custom Mappings, Emojis, Mathe-Symbolen und unbegrenzter Snippet-Expansion.">
-    <meta property="og:image" content="https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg">
+    <meta property="og:image" content="https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp">
     <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
     <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
     <meta property="og:video:secure_url" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
@@ -77,7 +77,7 @@
     <meta name="twitter:url" content="https://optiotech.de/velocity-snippets/demo.html">
     <meta name="twitter:title" content="Velocity Snippets Demo - Intelligente Text-Expansion für macOS">
     <meta name="twitter:description" content="Echtzeit-Demo von Velocity Snippets. Custom Mappings, Bracket Pairs, Mathematik-Symbole und mehr.">
-    <meta name="twitter:image" content="https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg">
+    <meta name="twitter:image" content="https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp">
     <meta name="twitter:player" content="https://optiotech.de/velocity-snippets/demo.html">
     <meta name="twitter:player:width" content="3840">
     <meta name="twitter:player:height" content="2160">
@@ -112,7 +112,7 @@
         "@type": "VideoObject",
         "name": "Velocity Snippets Demo - Intelligente Text-Expansion für macOS",
         "description": "Echtzeit-Demo von Velocity Snippets. Custom Mappings, Bracket Pairs, Bullet Styles, Mathematik-Symbole, Neovim Markdown Rendering, WezTerm Terminal-Befehle. Unbegrenzte Möglichkeiten mit der Quick Accent Geste.",
-        "thumbnailUrl": "https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg",
+        "thumbnailUrl": "https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp",
         "uploadDate": "2025-11-12T10:00:00+01:00",
         "duration": "PT2M34S",
         "contentUrl": "https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4",
@@ -229,12 +229,18 @@
         <div class="video-playback-container">
             <div class="video-playback-wrapper">
                 <video controls autoplay playsinline poster="../assets/images/thumbnails/velocity-snippets-video.webp">
-                    <source src="../videos/Demo_VelocitySnippets_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
-                    <source src="../videos/Demo_VelocitySnippets_desktop.mp4" type="video/mp4" media="(min-width: 1025px)">
+                    <source src="../videos/Demo_VelocitySnippets_desktop.mp4" type="video/mp4">
                     <track kind="captions" src="../videos/captions-velocity-snippets-de.vtt" srclang="de" label="Deutsch" default>
                     <track kind="captions" src="../videos/captions-velocity-snippets-en.vtt" srclang="en" label="English">
                     Dein Browser unterstützt das Video-Tag nicht.
                 </video>
+                <script>
+                    if (window.matchMedia('(max-width: 1024px)').matches) {
+                        var v = document.querySelector('.video-playback-wrapper video');
+                        v.querySelector('source').src = '../videos/Demo_VelocitySnippets_mobile.mp4';
+                        v.load();
+                    }
+                </script>
             </div>
 
             <div class="video-playback-info">

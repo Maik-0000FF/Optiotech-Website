@@ -2,29 +2,34 @@
 (function() {
     function initFAQ() {
         const faqItems = document.querySelectorAll('.faq-item');
+        let activeItem = null;
 
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
 
+            // Track initially active item
+            if (item.classList.contains('active')) {
+                activeItem = item;
+            }
+
             function toggleFAQ() {
                 const isActive = item.classList.contains('active');
 
-                // Close all other FAQ items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                        const otherQuestion = otherItem.querySelector('.faq-question');
-                        otherQuestion.setAttribute('aria-expanded', 'false');
-                    }
-                });
+                // Close previously active item (O(1) instead of O(n))
+                if (activeItem && activeItem !== item) {
+                    activeItem.classList.remove('active');
+                    activeItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                }
 
                 // Toggle current item
                 if (isActive) {
                     item.classList.remove('active');
                     question.setAttribute('aria-expanded', 'false');
+                    activeItem = null;
                 } else {
                     item.classList.add('active');
                     question.setAttribute('aria-expanded', 'true');
+                    activeItem = item;
                 }
             }
 

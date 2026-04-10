@@ -7,8 +7,10 @@ function initLanguageSwitch() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetLang = this.textContent.trim().toLowerCase();
-            localStorage.setItem('preferredLanguage', targetLang);
-            sessionStorage.setItem('scrollPosition', window.pageYOffset);
+            try {
+                localStorage.setItem('preferredLanguage', targetLang);
+                sessionStorage.setItem('scrollPosition', window.pageYOffset);
+            } catch (e) { /* Storage unavailable (private browsing) */ }
             window.location.href = this.getAttribute('href');
         });
     });
@@ -17,13 +19,15 @@ function initLanguageSwitch() {
 // Restore scroll position after language switch
 function restoreScrollPosition() {
     function doRestore() {
-        const scrollPosition = sessionStorage.getItem('scrollPosition');
-        if (scrollPosition) {
-            setTimeout(() => {
-                window.scrollTo(0, parseInt(scrollPosition));
-                sessionStorage.removeItem('scrollPosition');
-            }, 100);
-        }
+        try {
+            const scrollPosition = sessionStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                setTimeout(() => {
+                    window.scrollTo(0, parseInt(scrollPosition, 10));
+                    sessionStorage.removeItem('scrollPosition');
+                }, 100);
+            }
+        } catch (e) { /* Storage unavailable */ }
     }
 
     // Check if page is already loaded to avoid race condition
@@ -47,8 +51,15 @@ function initHamburgerMenu() {
     function toggleMenu() {
         hamburger.classList.toggle('active');
         mobileNavOverlay.classList.toggle('active');
-        document.body.style.overflow = mobileNavOverlay.classList.contains('active') ? 'hidden' : '';
+        const isOpen = mobileNavOverlay.classList.contains('active');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+        mobileNavOverlay.setAttribute('aria-hidden', !isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
     }
+
+    // Initial ARIA state
+    mobileNavOverlay.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
 
     // Open/close menu on hamburger click
     hamburger.addEventListener('click', toggleMenu);

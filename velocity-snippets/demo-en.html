@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://optiotech.de/velocity-snippets/demo-en.html">
     <meta property="og:title" content="Velocity Snippets Demo - Smart Text Expansion for macOS">
     <meta property="og:description" content="Watch text expansion and accent typing on Mac in real-time. Velocity Snippets demo with custom mappings, emojis, math symbols, and unlimited snippet expansion.">
-    <meta property="og:image" content="https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg">
+    <meta property="og:image" content="https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp">
     <meta property="og:video" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
     <meta property="og:video:url" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
     <meta property="og:video:secure_url" content="https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4">
@@ -29,7 +29,7 @@
     <meta name="twitter:url" content="https://optiotech.de/velocity-snippets/demo-en.html">
     <meta name="twitter:title" content="Velocity Snippets Demo - Smart Text Expansion for macOS">
     <meta name="twitter:description" content="Real-time demo of Velocity Snippets. Custom mappings, bracket pairs, math symbols, and more.">
-    <meta name="twitter:image" content="https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg">
+    <meta name="twitter:image" content="https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp">
     <meta name="twitter:player" content="https://optiotech.de/velocity-snippets/demo-en.html">
     <meta name="twitter:player:width" content="3840">
     <meta name="twitter:player:height" content="2160">
@@ -64,7 +64,7 @@
         "@type": "VideoObject",
         "name": "Velocity Snippets Demo - Smart Text Expansion for macOS",
         "description": "Real-time demo of Velocity Snippets. Custom mappings, bracket pairs, bullet styles, math symbols, Neovim markdown rendering, WezTerm terminal commands. Unlimited possibilities with the Quick Accent gesture.",
-        "thumbnailUrl": "https://optiotech.de/assets/images/velocity-snippets-video-thumbnail.jpg",
+        "thumbnailUrl": "https://optiotech.de/assets/images/thumbnails/velocity-snippets-video.webp",
         "uploadDate": "2025-11-12T10:00:00+01:00",
         "duration": "PT2M34S",
         "contentUrl": "https://optiotech.de/videos/Demo_VelocitySnippets_desktop.mp4",
@@ -148,7 +148,7 @@
 <body class="video-playback-page">
     <header>
         <div class="container">
-            <div class="logo-container"><a href="/en.html"><!-- Logo dynamically inserted by logo.js --></a></div>
+            <div class="logo-container"><a href="/en.html" aria-label="optiotech"></a></div>
 
             <!-- Mobile Header Right (Language + Hamburger) -->
             <div class="mobile-header-right">
@@ -181,12 +181,18 @@
         <div class="video-playback-container">
             <div class="video-playback-wrapper">
                 <video controls autoplay playsinline poster="../assets/images/thumbnails/velocity-snippets-video.webp">
-                    <source src="../videos/Demo_VelocitySnippets_mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
-                    <source src="../videos/Demo_VelocitySnippets_desktop.mp4" type="video/mp4" media="(min-width: 1025px)">
+                    <source src="../videos/Demo_VelocitySnippets_desktop.mp4" type="video/mp4">
                     <track kind="captions" src="../videos/captions-velocity-snippets-de.vtt" srclang="de" label="Deutsch">
                     <track kind="captions" src="../videos/captions-velocity-snippets-en.vtt" srclang="en" label="English" default>
                     Your browser does not support the video tag.
                 </video>
+                <script>
+                    if (window.matchMedia('(max-width: 1024px)').matches) {
+                        var v = document.querySelector('.video-playback-wrapper video');
+                        v.querySelector('source').src = '../videos/Demo_VelocitySnippets_mobile.mp4';
+                        v.load();
+                    }
+                </script>
             </div>
 
             <div class="video-playback-info">

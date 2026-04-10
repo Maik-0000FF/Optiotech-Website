@@ -6,7 +6,7 @@
         const logoLinks = document.querySelectorAll('.logo-container a');
         logoLinks.forEach(link => {
             if (!link.querySelector('.logo')) {
-                link.innerHTML = logoSVG;
+                link.insertAdjacentHTML('afterbegin', logoSVG);
             }
         });
     }

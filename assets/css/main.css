@@ -160,8 +160,8 @@ body {
    3. ACCESSIBILITY
    ========================================================================== */
 
-/* Remove default focus outline */
-*:focus {
+/* Remove default focus outline only when :focus-visible is supported */
+*:focus:not(:focus-visible) {
     outline: none;
 }
 
