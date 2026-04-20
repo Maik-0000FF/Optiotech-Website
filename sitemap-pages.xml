@@ -7,7 +7,7 @@
     <!-- Main Page (German) - DACH, UK, US, CA -->
     <url>
         <loc>https://optiotech.de/</loc>
-        <lastmod>2026-04-10</lastmod>
+        <lastmod>2026-04-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <!-- German variants (DACH) -->
@@ -27,7 +27,7 @@
     <!-- Main Page (English) - International -->
     <url>
         <loc>https://optiotech.de/en.html</loc>
-        <lastmod>2026-04-10</lastmod>
+        <lastmod>2026-04-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <!-- German variants (DACH) -->
@@ -47,7 +47,7 @@
     <!-- Velocity Accents Product Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/</loc>
-        <lastmod>2026-04-10</lastmod>
+        <lastmod>2026-04-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <!-- German variants (DACH) -->
@@ -120,7 +120,7 @@
     <!-- Velocity Accents Product Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-accents/en.html</loc>
-        <lastmod>2026-04-10</lastmod>
+        <lastmod>2026-04-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <!-- German variants (DACH) -->
@@ -193,7 +193,7 @@
     <!-- Velocity Snippets Product Page (German) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/</loc>
-        <lastmod>2026-04-10</lastmod>
+        <lastmod>2026-04-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <!-- German variants (DACH) -->
@@ -262,7 +262,7 @@
     <!-- Velocity Snippets Product Page (English) -->
     <url>
         <loc>https://optiotech.de/velocity-snippets/en.html</loc>
-        <lastmod>2026-04-10</lastmod>
+        <lastmod>2026-04-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <!-- German variants (DACH) -->
@@ -328,72 +328,5 @@
         </image:image>
     </url>
 
-    <!-- Velocity Snippets Demo Playback Page (German) -->
-    <url>
-        <loc>https://optiotech.de/velocity-snippets/demo.html</loc>
-        <lastmod>2026-04-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-    </url>
-
-    <!-- Velocity Snippets Demo Playback Page (English) -->
-    <url>
-        <loc>https://optiotech.de/velocity-snippets/demo-en.html</loc>
-        <lastmod>2026-04-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-snippets/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-snippets/demo-en.html"/>
-    </url>
-
-    <!-- Velocity Accents Demo Playback Page (German) -->
-    <url>
-        <loc>https://optiotech.de/velocity-accents/demo.html</loc>
-        <lastmod>2026-04-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-    </url>
-
-    <!-- Velocity Accents Demo Playback Page (English) -->
-    <url>
-        <loc>https://optiotech.de/velocity-accents/demo-en.html</loc>
-        <lastmod>2026-04-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-DE" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-AT" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="de-CH" href="https://optiotech.de/velocity-accents/demo.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-US" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-GB" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="en-CA" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://optiotech.de/velocity-accents/demo-en.html"/>
-    </url>
 
 </urlset>

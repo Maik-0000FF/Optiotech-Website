@@ -4,7 +4,7 @@
 
   <!-- Velocity Accents Demo Video (German) -->
   <url>
-    <loc>https://optiotech.de/velocity-accents/demo.html</loc>
+    <loc>https://optiotech.de/velocity-accents/</loc>
     <video:video>
       <video:title>Velocity Accents Demo - Schnelle Akzente für macOS</video:title>
       <video:description>Sehe wie man Umlaute und Akzente auf Mac mit US-Tastatur tippt. Demo zeigt deutsche Umlaute ä ö ü, französische Akzente é è ê und spanisches ñ in Echtzeit - ohne Tastaturlayout zu wechseln. Akzent-Menü Alternative für macOS.</video:description>
@@ -28,7 +28,7 @@
 
   <!-- Velocity Accents Demo Video (English) -->
   <url>
-    <loc>https://optiotech.de/velocity-accents/demo-en.html</loc>
+    <loc>https://optiotech.de/velocity-accents/en.html</loc>
     <video:video>
       <video:title>Velocity Accents Demo - Quick Accent for macOS</video:title>
       <video:description>Watch how to type accents on a Mac with a US keyboard using Velocity Accents. Demo shows German umlauts ä ö ü, French accents é è ê, and Spanish ñ typed in real-time without changing keyboard layout. Accent menu alternative for macOS.</video:description>
@@ -52,7 +52,7 @@
 
   <!-- Velocity Snippets Demo Video (German) -->
   <url>
-    <loc>https://optiotech.de/velocity-snippets/demo.html</loc>
+    <loc>https://optiotech.de/velocity-snippets/</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Intelligente Text-Expansion für macOS</video:title>
       <video:description>Text-Expansion und Akzente tippen auf Mac in Aktion. Velocity Snippets Demo mit Custom Mappings, Emojis, Mathe-Symbolen und unbegrenzter Snippet-Expansion. Quick Accent Alternative mit Text-Expansion für macOS.</video:description>
@@ -75,7 +75,7 @@
 
   <!-- Velocity Snippets Demo Video (English) -->
   <url>
-    <loc>https://optiotech.de/velocity-snippets/demo-en.html</loc>
+    <loc>https://optiotech.de/velocity-snippets/en.html</loc>
     <video:video>
       <video:title>Velocity Snippets Demo - Smart Text Expansion for macOS</video:title>
       <video:description>Text expansion and accent typing on Mac in real-time. Velocity Snippets demo with custom mappings, emojis, math symbols, and unlimited snippet expansion. Quick Accent alternative with text expansion for macOS.</video:description>
