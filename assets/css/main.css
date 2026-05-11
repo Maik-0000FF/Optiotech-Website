@@ -883,6 +883,23 @@ main {
     outline-offset: 3px;
 }
 
+/* Anti-wobble: hit-area below the button catches the cursor at the original
+   edge; on hover the button translates up and the pseudo grows so the cursor's
+   original Y stays inside the (transformed) area. */
+.btn { position: relative; }
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+}
+.btn:hover::after {
+    bottom: -4px;
+    height: 4px;
+}
+
 /* ==========================================================================
    6. COMPONENTS - Cards
    ========================================================================== */
